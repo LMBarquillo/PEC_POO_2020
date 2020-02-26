@@ -2,30 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5aa6636b-b521-4c61-84c4-57ef74acc779" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/excepciones/MaterialNoPermitidoException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/excepciones/MaterialNoPermitidoException.ctxt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/excepciones/MaterialNoPermitidoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/excepciones/package.bluej" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constantes/Estado.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constantes/Estado.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constantes/Estado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fabrica.class" beforeDir="false" afterPath="$PROJECT_DIR$/Fabrica.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constantes/Material.class" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Material.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constantes/Material.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Material.ctxt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constantes/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Material.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constantes/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/package.bluej" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/Mesa.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Mesa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/MesaCafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaCafe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/MesaCafeMadera.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaCafeMadera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/MesaComedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaComedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/MesaDormitorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaDormitorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constantes/Forma.class" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Forma.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/Mesa.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Mesa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/MesaCafe.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaCafe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/MesaCafeCristal.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaCafeCristal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/MesaCafeCristal.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaCafeCristal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/MesaCafeMadera.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaCafeMadera.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/MesaComedor.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaComedor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/MesaDormitorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaDormitorio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/Mueble$Estado.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Mueble$Estado.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entidades/Mueble.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Mueble.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/Mueble.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Mueble.ctxt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entidades/Mueble.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Mueble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/Silla.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Silla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/SillaCocina.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaCocina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/SillaOficina.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaOficina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/SillaOficinaConRuedas.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaOficinaConRuedas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/SillaOficinaSinRuedas.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaOficinaSinRuedas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/SillaPlegable.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaPlegable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/Silla.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Silla.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/SillaCocina.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaCocina.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/SillaOficina.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaOficina.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/SillaOficinaConRuedas.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaOficinaConRuedas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/SillaOficinaSinRuedas.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaOficinaSinRuedas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/SillaPlegable.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaPlegable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/excepciones/MaterialNoPermitidoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/excepciones/MaterialNoPermitidoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/package.bluej" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +89,7 @@
       <workItem from="1582219861732" duration="5478000" />
       <workItem from="1582736519881" duration="2247000" />
       <workItem from="1582739908528" duration="351000" />
-      <workItem from="1582740270598" duration="4349000" />
+      <workItem from="1582740270598" duration="5342000" />
     </task>
     <task id="LOCAL-00001" summary="Definición de constantes con enumeradores de todo tipo. Añadidas propiedades a varios tipos de muebles.">
       <created>1582741865136</created>
@@ -102,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582742669012</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Acabadas clases silla e hijas">
+      <created>1582744642125</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1582744642125</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,7 +136,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Definición de constantes con enumeradores de todo tipo. Añadidas propiedades a varios tipos de muebles." />
     <MESSAGE value="Acabados toString() de las mesas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Acabados toString() de las mesas" />
+    <MESSAGE value="Acabadas clases silla e hijas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Acabadas clases silla e hijas" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -138,18 +149,18 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2634" y="389" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582740257933" />
-    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1582744588106">
+    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1582745502010">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582744588106" />
+    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582745502010" />
     <state x="2728" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1582740401004">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2728" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582740401004" />
-    <state x="2343" y="114" key="CommitChangelistDialog2" timestamp="1582742667479">
+    <state x="2343" y="114" key="CommitChangelistDialog2" timestamp="1582744639961">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2343" y="114" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582742667479" />
+    <state x="2343" y="114" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582744639961" />
     <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1582740242927">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -174,9 +185,9 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2360" y="94" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582743371876" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1582741868765">
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1582744645923">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582741868765" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582744645923" />
   </component>
 </project>

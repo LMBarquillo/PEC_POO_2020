@@ -1,8 +1,16 @@
 #BlueJ class context
 comment0.target=Mueble
-comment0.text=\r\n\ Clase\ Abstracta\ Mueble.\ Clase\ padre\ de\ todos\ los\ tipos\ de\ mueble.\ Obliga\ a\ sus\ hijas\ a\ implementar\ el\ m\u00C3\u00A9todo\ getTipo()\r\n\ \r\n\ @author\:\ Luis\ Miguel\ Barquillo\ Romero\r\n\ Date\:\ 20/02/2020\r\n
+comment0.text=\r\n\ Clase\ Mueble.\ Clase\ padre\ de\ todos\ los\ tipos\ de\ mueble.\r\n\ @author\:\ Luis\ Miguel\ Barquillo\r\n
 comment1.params=
-comment1.target=java.lang.String\ getNombre()
-comment2.params=nombre
-comment2.target=void\ setNombre(java.lang.String)
-numComments=3
+comment1.target=java.lang.String\ getEstado()
+comment2.params=estado
+comment2.target=void\ setEstado(java.lang.String)
+comment3.params=
+comment3.target=constantes.Material\ getMaterial()
+comment4.params=material
+comment4.target=void\ setMaterial(constantes.Material)
+comment5.params=
+comment5.target=Artesano\ getArtesano()
+comment6.params=artesano
+comment6.target=void\ setArtesano(Artesano)
+numComments=7
