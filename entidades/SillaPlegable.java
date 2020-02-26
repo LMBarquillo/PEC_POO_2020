@@ -1,6 +1,7 @@
 package entidades;
 
 import constantes.Material;
+import excepciones.MaterialNoPermitidoException;
 
 /**
  * Clase SillaPlegable. Describe las sillas de tipo Plegable
@@ -8,9 +9,9 @@ import constantes.Material;
  */
 public class SillaPlegable extends Silla
 {
-    public Material materialPatas;
+    private Material materialPatas;
 
-    public SillaPlegable() {
+    public SillaPlegable() throws MaterialNoPermitidoException {
         this.setMaterial(Material.PLASTICO);
     }
 
@@ -23,6 +24,6 @@ public class SillaPlegable extends Silla
     }
 
     @Override public String toString() {
-        return "Silla Plegable de " + this.getMaterial().toString() + " con patas de " + this.getMaterialPatas().toString();
+        return super.toString() + " de plástico con patas de " + this.getMaterialPatas().toString();
     }
 }

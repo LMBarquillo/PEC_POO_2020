@@ -2,34 +2,22 @@ package entidades;
 
 
 /**
- * Write a description of class SillaOficinaConRuedas here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Clase SillaOficinaConRuedas. Describe las sillas oficinas con ruedas
+ * @author Luis Miguel Barquillo
  */
 public class SillaOficinaConRuedas extends SillaOficina
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private int numRuedas;
 
-    /**
-     * Constructor for objects of class SillaOficinaConRuedas
-     */
-    public SillaOficinaConRuedas()
-    {
-        // initialise instance variables
-        x = 0;
+    public int getNumRuedas() {
+        return numRuedas;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void setNumRuedas(int numRuedas) {
+        this.numRuedas = numRuedas;
+    }
+
+    @Override public String toString() {
+        return super.toString() + " con " + this.getNumRuedas() + " ruedas";
     }
 }

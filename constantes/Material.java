@@ -8,7 +8,7 @@ package constantes;
 public enum Material
 {
     // Si definimos un constructor en el enum, podemos asignar valores para luego sobrescribir el toString()
-    PLASTICO("Pl√°stico"), MADERA("Madera"), METAL("Metal"), CRISTAL("Cristal");
+    PLASTICO("Pl·stico"), MADERA("Madera"), METAL("Metal"), CRISTAL("Cristal");
 
     private String material;
 

@@ -1,6 +1,7 @@
 package entidades;
 
 import constantes.Material;
+import excepciones.MaterialNoPermitidoException;
 
 /**
  * Clase Mueble. Clase padre de todos los tipos de mueble.
@@ -30,7 +31,7 @@ public class Mueble
         return material;
     }
 
-    public void setMaterial(Material material) {
+    protected void setMaterial(Material material) throws MaterialNoPermitidoException {
         this.material = material;
     }
 }

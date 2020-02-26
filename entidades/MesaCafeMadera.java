@@ -3,6 +3,7 @@ package entidades;
 import constantes.Forma;
 import constantes.Madera;
 import constantes.Material;
+import excepciones.MaterialNoPermitidoException;
 
 /**
  * Clase MesaCafeMadera. Describe las mesas de tipo Café Madera
@@ -13,7 +14,7 @@ public class MesaCafeMadera extends MesaCafe
     private Forma forma;
     private Madera madera;
 
-    public MesaCafeMadera() {
+    public MesaCafeMadera() throws MaterialNoPermitidoException {
         this.setMaterial(Material.MADERA);
     }
 

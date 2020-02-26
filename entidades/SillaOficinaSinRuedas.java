@@ -2,34 +2,22 @@ package entidades;
 
 
 /**
- * Write a description of class SillaOficinaSinRuedas here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Clase SillaOficinaSinRuedas. Describe las sillas de oficina estáticas
+ * @author Luis Miguel Barquillo
  */
 public class SillaOficinaSinRuedas extends SillaOficina
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private boolean antideslizante;
 
-    /**
-     * Constructor for objects of class SillaOficinaSinRuedas
-     */
-    public SillaOficinaSinRuedas()
-    {
-        // initialise instance variables
-        x = 0;
+    public boolean isAntideslizante() {
+        return antideslizante;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void setAntideslizante(boolean antideslizante) {
+        this.antideslizante = antideslizante;
+    }
+
+    @Override public String toString() {
+        return super.toString() + (isAntideslizante() ? " antideslizante" : "");
     }
 }
