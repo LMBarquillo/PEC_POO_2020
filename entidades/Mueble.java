@@ -1,25 +1,36 @@
 package entidades;
 
-/**
- * Abstract class Mueble - write a description of the class here
- * 
- * @author: 
- * Date: 
- */
-public abstract class Mueble
-{
-    // instance variables - replace the example below with your own
-    int x;
+import constantes.Material;
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y    a sample parameter for a method
-     * @return        the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+/**
+ * Clase Mueble. Clase padre de todos los tipos de mueble.
+ * @author: Luis Miguel Barquillo
+ */
+public class Mueble
+{
+    public static class Estado {
+        public static final String ESTADO_PROGRESO = "En fabricación";
+        public static final String ESTADO_DETENIDO = "Fabricación detenida";
+        public static final String ESTADO_FINALIZADO = "Finalizado";
+        public static final String ESTADO_ENTREGADO = "Entregado";
+    }
+
+    private String estado;
+    private Material material;
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public Material getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(Material material) {
+        this.material = material;
     }
 }

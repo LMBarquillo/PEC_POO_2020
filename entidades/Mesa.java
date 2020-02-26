@@ -1,35 +1,29 @@
 package entidades;
 
+import constantes.Material;
 
 /**
- * Write a description of class Mesa here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Clase Mesa. Define una mesa genérica.
+ * @author Luis Miguel Barquillo
  */
 public class Mesa extends Mueble
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private int ancho;
+    private int largo;
 
-    /**
-     * Constructor for objects of class Mesa
-     */
-    public Mesa()
-    {
-        // initialise instance variables
-        x = 0;
+    public int getAncho() {
+        return ancho;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void setAncho(int ancho) {
+        this.ancho = ancho;
+    }
+
+    public int getLargo() {
+        return largo;
+    }
+
+    public void setLargo(int largo) {
+        this.largo = largo;
     }
 }

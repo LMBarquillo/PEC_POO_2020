@@ -1,35 +1,18 @@
 package entidades;
 
-
 /**
- * Write a description of class Silla here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Clase Silla. Define un objeto silla que hereda de la superclase Mueble
+ * @author Luis Miguel Barquillo
  */
 public class Silla extends Mueble
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private boolean acolchada;
 
-    /**
-     * Constructor for objects of class Silla
-     */
-    public Silla()
-    {
-        // initialise instance variables
-        x = 0;
+    public boolean isAcolchada() {
+        return acolchada;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void setAcolchada(boolean acolchada) {
+        this.acolchada = acolchada;
     }
 }
