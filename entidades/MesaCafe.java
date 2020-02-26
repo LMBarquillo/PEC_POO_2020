@@ -18,6 +18,7 @@ public class MesaCafe extends Mesa
     }
 
     @Override public String toString() {
-        return "Mesa de Café";
+        return super.toString() + " tipo Café " +
+                (isRevistero() ? " con " : " sin ") + "revistero";
     }
 }

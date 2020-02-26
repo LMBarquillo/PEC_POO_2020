@@ -34,6 +34,7 @@ public class MesaDormitorio extends Mesa
     }
 
     @Override public String toString() {
-        return "Mesa de Dormitorio ";
+        return super.toString() + " tipo Dormitorio, de " + this.getMadera().toString() +
+                " con " + this.getCajones() + " cajones";
     }
 }

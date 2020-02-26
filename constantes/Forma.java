@@ -5,7 +5,7 @@ package constantes;
  * @author Luis Miguel Barquillo
  */
 public enum Forma {
-	CUADRADO("Cuadrado"), RECTANGULO("Rectangular"), CIRCULO("Circular");
+	CUADRADO("Cuadrada"), RECTANGULO("Rectangular"), CIRCULO("Redonda");
 
 	public String forma;
 

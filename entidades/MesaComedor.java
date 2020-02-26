@@ -34,6 +34,8 @@ public class MesaComedor extends Mesa
     }
 
     @Override public String toString() {
-        return "Mesa de Comedor";
+        // el super.toString ya nos dice que es una mesa y cuáles son sus medidas.
+        return super.toString() + " tipo Comedor, de " + this.getMadera().toString() +
+                (this.isExtensible() ? " extensible" : " no extensible");
     }
 }

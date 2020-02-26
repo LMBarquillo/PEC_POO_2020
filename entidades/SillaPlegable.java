@@ -8,13 +8,21 @@ import constantes.Material;
  */
 public class SillaPlegable extends Silla
 {
-
+    public Material materialPatas;
 
     public SillaPlegable() {
         this.setMaterial(Material.PLASTICO);
     }
 
+    public Material getMaterialPatas() {
+        return materialPatas;
+    }
+
+    public void setMaterialPatas(Material materialPatas) {
+        this.materialPatas = materialPatas;
+    }
+
     @Override public String toString() {
-        return "Silla Plegable";
+        return "Silla Plegable de " + this.getMaterial().toString() + " con patas de " + this.getMaterialPatas().toString();
     }
 }

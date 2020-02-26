@@ -1,6 +1,7 @@
 package entidades;
 
 import constantes.Forma;
+import constantes.Madera;
 import constantes.Material;
 
 /**
@@ -10,6 +11,7 @@ import constantes.Material;
 public class MesaCafeMadera extends MesaCafe
 {
     private Forma forma;
+    private Madera madera;
 
     public MesaCafeMadera() {
         this.setMaterial(Material.MADERA);
@@ -23,7 +25,15 @@ public class MesaCafeMadera extends MesaCafe
         this.forma = forma;
     }
 
+    public Madera getMadera() {
+        return madera;
+    }
+
+    public void setMadera(Madera madera) {
+        this.madera = madera;
+    }
+
     @Override public String toString() {
-        return "Mesa de Café de Madera " + forma.toString();
+        return super.toString() + " de madera de " + madera.toString();
     }
 }

@@ -24,6 +24,6 @@ public class MesaCafeCristal extends MesaCafe
     }
 
     @Override public String toString() {
-        return "Mesa de Café de cristal " + (labrado ? "labrado" : "sencillo");
+        return super.toString() + " de cristal " + (labrado ? "labrado" : "sencillo");
     }
 }
