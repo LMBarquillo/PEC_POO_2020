@@ -1,7 +1,20 @@
 #BlueJ class context
 comment0.target=Persona
-comment0.text=\r\n\ Abstract\ class\ Persona\ -\ write\ a\ description\ of\ the\ class\ here\r\n\ \r\n\ @author\:\ \r\n\ Date\:\ \r\n
-comment1.params=y
-comment1.target=int\ sampleMethod(int)
-comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-numComments=2
+comment0.text=\r\n\ Clase\ Persona.\ Define\ los\ objeto\ de\ tipo\ persona\r\n\ @author\ \:\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=
+comment1.target=java.lang.String\ getNombre()
+comment2.params=nombre
+comment2.target=void\ setNombre(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getNif()
+comment4.params=nif
+comment4.target=void\ setNif(java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ getDireccion()
+comment6.params=direccion
+comment6.target=void\ setDireccion(java.lang.String)
+comment7.params=
+comment7.target=java.lang.String\ getTelefono()
+comment8.params=telefono
+comment8.target=void\ setTelefono(java.lang.String)
+numComments=9

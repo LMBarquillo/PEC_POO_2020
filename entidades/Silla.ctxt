@@ -1,4 +1,12 @@
 #BlueJ class context
 comment0.target=Silla
-comment0.text=\r\n\ Clase\ Silla.\ Define\ un\ objeto\ silla\ que\ hereda\ de\ la\ superclase\ Mueble\r\n\ @author\ Luis\ Miguel\ Barquillo\ Romero\r\n
-numComments=1
+comment0.text=\r\n\ Clase\ Silla.\ Define\ un\ objeto\ silla\ que\ hereda\ de\ la\ superclase\ Mueble\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=
+comment1.target=boolean\ isAcolchada()
+comment2.params=acolchada
+comment2.target=void\ setAcolchada(boolean)
+comment3.params=material
+comment3.target=void\ setMaterial(constantes.Material)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

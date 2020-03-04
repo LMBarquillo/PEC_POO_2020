@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Menu
+comment0.text=\r\n\ Clase\ Menu.\ Muestra\ men\u00FAs\ con\ opciones\ en\ consola\ y\ devuelve\ el\ resultado.\r\n\ \r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=
+comment1.target=int\ menuPrincipal()
+comment2.params=max
+comment2.target=int\ leerOpcion(int)
+comment3.params=s\ max
+comment3.target=boolean\ incorrecto(java.lang.String,\ int)
+comment4.params=s
+comment4.target=int\ opcion(java.lang.String)
+comment5.params=
+comment5.target=int\ mostrarMenuPrincipal()
+comment6.params=
+comment6.target=void\ mostrarCabecera()
+numComments=7
