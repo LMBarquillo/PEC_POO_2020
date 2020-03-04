@@ -1,6 +1,10 @@
 #BlueJ class context
 comment0.target=Fabrica
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Principal\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=args
-comment1.target=void\ main(java.lang.String[])
-numComments=2
+comment0.text=\r\n\ Clase\ Fabrica.\ Clase\ principal\ del\ programa,\ conteniendo\ el\ m\u00E9todo\ main\r\n\ \r\n\ @author\ Luis\ Miguel\ Barquillo\ Romero\r\n\ @since\ 19/02/2020\r\n\ @version\ 1.0.0\r\n
+comment1.params=
+comment1.target=Fabrica()
+comment2.params=args
+comment2.target=void\ main(java.lang.String[])
+comment3.params=
+comment3.target=void\ principal()
+numComments=4

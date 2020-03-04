@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=BBDDMuebles
+comment0.text=\r\n\ Clase\ BBDDMuebles.\ Crea\ un\ sistema\ de\ almacenamiento\ para\ muebles\r\n\ \r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=objeto
+comment1.target=boolean\ existe(java.lang.Object)
+comment2.params=id
+comment2.target=java.lang.Object\ obtener(java.lang.Integer)
+comment3.params=
+comment3.target=java.util.List\ listar()
+comment4.params=objeto
+comment4.target=java.lang.Object\ insertar(java.lang.Object)
+comment5.params=objeto
+comment5.target=java.lang.Object\ guardar(java.lang.Object)
+comment6.params=objeto
+comment6.target=java.lang.Integer\ eliminar(java.lang.Object)
+numComments=7

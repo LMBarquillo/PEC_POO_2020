@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=GestionMuebles
+comment0.text=\r\n\ Clase\ GestionMuebles.\ Gestiona\ los\ men\u00FAs\ de\ muebles\ y\ operaciones\ contra\ BBDDMuebles\r\n\ \r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=fabrica\ menu\ bbdd
+comment1.target=GestionMuebles(Fabrica,\ interfaz.Menu,\ repositorio.BBDD)
+comment2.params=
+comment2.target=void\ gestion()
+numComments=3
