@@ -1,7 +1,4 @@
 import constantes.Valores;
-import entidades.Mueble;
-import interfaz.Menu;
-import repositorio.BBDD;
 
 /**
  * Clase GestionMuebles. Gestiona los menús de muebles y operaciones contra BBDDMuebles
@@ -11,17 +8,13 @@ import repositorio.BBDD;
 public class GestionMuebles
 {
     private Fabrica fabrica;
-    private Menu menu;
-    private BBDD<Mueble> bbdd;
 
-    public GestionMuebles(Fabrica fabrica, Menu menu, BBDD<Mueble> bbdd) {
+    public GestionMuebles(Fabrica fabrica) {
         this.fabrica = fabrica;
-        this.menu = menu;
-        this.bbdd = bbdd;
     }
 
     public void gestionPrincipalMuebles() {
-        int opcion = menu.menuPrincipalMuebles();
+        int opcion = fabrica.getMenu().menuPrincipalMuebles();
         switch (opcion) {
             case Valores.PrincipalMuebles.JEFE:
                 gestionJefeMuebles();
@@ -34,8 +27,8 @@ public class GestionMuebles
         }
     }
 
-    public void gestionJefeMuebles() {
-        int opcion = menu.menuJefeMuebles();
+    private void gestionJefeMuebles() {
+        int opcion = fabrica.getMenu().menuJefeMuebles();
         switch (opcion) {
             case Valores.JefeMuebles.RECEPCIONAR:
                 break;
@@ -48,8 +41,8 @@ public class GestionMuebles
         }
     }
 
-    public void gestionArtesanosMuebles() {
-        int opcion = menu.menuArtesanoMuebles();
+    private void gestionArtesanosMuebles() {
+        int opcion = fabrica.getMenu().menuArtesanoMuebles();
         switch (opcion) {
             case Valores.ArtesanoMuebles.VER_TRABAJOS:
                 break;
@@ -58,5 +51,9 @@ public class GestionMuebles
             case Valores.ArtesanoMuebles.VOLVER:
                 gestionPrincipalMuebles();
         }
+    }
+
+    private void recepcionarPedido() {
+
     }
 }

@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=BBDDPersonas
+comment0.text=\r\n\ Clase\ BBDDPersonas.\ Crea\ un\ sistema\ de\ almacenamiento\ para\ personas\r\n\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=objeto
+comment1.target=boolean\ existe(entidades.Persona)
+comment2.params=id
+comment2.target=entidades.Persona\ obtener(java.lang.Integer)
+comment3.params=
+comment3.target=java.util.List\ listar()
+comment4.params=objeto
+comment4.target=entidades.Persona\ insertar(entidades.Persona)
+comment5.params=objeto
+comment5.target=entidades.Persona\ guardar(entidades.Persona)
+comment6.params=objeto
+comment6.target=java.lang.Integer\ eliminar(entidades.Persona)
+numComments=7

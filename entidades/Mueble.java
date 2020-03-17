@@ -12,7 +12,7 @@ public class Mueble
 {
     private Estado estado;
     private Material material;
-    private Artesano artesano;  // El artesano asignado para su fabricaciÃ³n
+    private Artesano artesano;  // El artesano asignado para su fabricación
     private Cliente cliente;    // El cliente que ha pedido el mueble
     private String notas;       // Las notas de progreso dejadas por el artesano
 

@@ -33,6 +33,14 @@ public class Menu
         return leerOpcion(mostrarMenuArtesanoMuebles());
     }
 
+    public int menuGestionUsuarios() {
+        return leerOpcion(mostrarMenuGestionUsuarios());
+    }
+
+    public int menuGestionClientes() {
+        return leerOpcion(mostrarMenuGestionClientes());
+    }
+
     private int leerOpcion(int max) {
         try {
             String lectura;
@@ -98,6 +106,28 @@ public class Menu
         System.out.println("- 3. Volver al menú anterior                     -");
         mostrarPie();
         return 3;
+    }
+
+    private int mostrarMenuGestionUsuarios() {
+        mostrarCabecera();
+        System.out.println("- 1. Alta de nuevo usuario                       -");
+        System.out.println("- 2. Baja de usuario                             -");
+        System.out.println("- 3. Modificar un usuario                        -");
+        System.out.println("- 4. Volver al menú anterior                     -");
+        mostrarPie();
+        return 4;
+    }
+
+    private int mostrarMenuGestionClientes() {
+        mostrarCabecera();
+        System.out.println("- 1. Alta de nuevo cliente                       -");
+        System.out.println("- 2. Baja de cliente                             -");
+        System.out.println("- 3. Modificar un cliente                        -");
+        System.out.println("- 4. Comunicación de precios de pedidos          -");
+        System.out.println("- 5. Avisar de pedido listo para entrega         -");
+        System.out.println("- 6. Volver al menú anterior                     -");
+        mostrarPie();
+        return 6;
     }
 
     private void mostrarCabecera() {

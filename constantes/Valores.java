@@ -45,4 +45,26 @@ public interface Valores
         int CAMBIAR_ESTADO = 2;
         int VOLVER = 3;
     }
+
+    /**
+     * Definición de los valores del menú de gestión de usuarios
+     */
+    interface GestionUsuarios {
+        int ALTA = 1;
+        int BAJA = 2;
+        int MODIFICACION = 3;
+        int VOLVER = 4;
+    }
+
+    /**
+     * Definición de los valores del menú de gestión de clientes
+     */
+    interface GestionClientes {
+        int ALTA = 1;
+        int BAJA = 2;
+        int MODIFICACION = 3;
+        int COMUNICAR_PRECIO = 4;
+        int AVISAR_ENTREGA = 5;
+        int VOLVER = 6;
+    }
 }
