@@ -1,8 +1,6 @@
 package entidades;
 
-
 import constantes.Material;
-import excepciones.MaterialNoPermitidoException;
 
 /**
  * Clase MesaCafeCristal. Define una mesa de tipo Café de Cristal
@@ -12,8 +10,9 @@ public class MesaCafeCristal extends MesaCafe
 {
     public boolean labrado;
 
-    public MesaCafeCristal() throws MaterialNoPermitidoException {
-        this.setMaterial(Material.CRISTAL);
+    public MesaCafeCristal(Integer codigo, Cliente cliente, int ancho, int largo, boolean revistero, boolean labrado) {
+        super(codigo, Material.CRISTAL, cliente, ancho, largo, revistero);
+        this.labrado = labrado;
     }
 
     public boolean isLabrado() {

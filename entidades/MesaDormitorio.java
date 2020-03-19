@@ -2,7 +2,6 @@ package entidades;
 
 import constantes.Madera;
 import constantes.Material;
-import excepciones.MaterialNoPermitidoException;
 
 /**
  * Clase MesaDormitorio. Define una mesa de tipo Dormitorio
@@ -13,9 +12,11 @@ public class MesaDormitorio extends Mesa
     private Madera madera;
     private int cajones;
 
-    public MesaDormitorio() throws MaterialNoPermitidoException {
+    public MesaDormitorio(Integer codigo, Cliente cliente, int ancho, int largo, Madera madera, int cajones) {
         // Las mesas de Dormitorio solo las fabricamos de madera.
-        this.setMaterial(Material.MADERA);
+        super(codigo, Material.MADERA, cliente, ancho, largo);
+        this.madera = madera;
+        this.cajones = cajones;
     }
 
     public Madera getMadera() {

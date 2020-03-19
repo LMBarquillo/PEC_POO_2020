@@ -2,15 +2,22 @@ package repositorio;
 
 import entidades.Persona;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Clase BBDDPersonas. Crea un sistema de almacenamiento para personas
  *
  * @author Luis Miguel Barquillo
  */
-public class BBDDPersonas implements BBDD<Persona>
-{
+public class BBDDPersonas implements BBDD<Persona> {
+    private Map<String, Persona> personas;
+
+    public BBDDPersonas() {
+        this.personas = new HashMap<>();
+    }
+
     @Override public boolean existe(Persona objeto) {
         return false;
     }

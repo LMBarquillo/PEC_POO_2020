@@ -1,5 +1,6 @@
 package entidades;
 
+import constantes.Material;
 
 /**
  * Clase MesaCafe. Define una mesa de tipo Café
@@ -8,6 +9,11 @@ package entidades;
 public class MesaCafe extends Mesa
 {
     private boolean revistero;
+
+    public MesaCafe(Integer codigo, Material material, Cliente cliente, int ancho, int largo, boolean revistero) {
+        super(codigo, material, cliente, ancho, largo);
+        this.revistero = revistero;
+    }
 
     public boolean isRevistero() {
         return revistero;

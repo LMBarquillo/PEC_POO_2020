@@ -1,5 +1,6 @@
 package entidades;
 
+import constantes.Material;
 
 /**
  * Clase SillaCocina. Describe las sillas de Cocina
@@ -8,6 +9,11 @@ package entidades;
 public class SillaCocina extends Silla
 {
     private boolean respaldo;
+
+    public SillaCocina(Integer codigo, Material material, Cliente cliente, boolean acolchada, boolean respaldo) {
+        super(codigo, material, cliente, acolchada);
+        this.respaldo = respaldo;
+    }
 
     public boolean isRespaldo() {
         return respaldo;

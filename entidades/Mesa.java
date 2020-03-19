@@ -1,7 +1,6 @@
 package entidades;
 
 import constantes.Material;
-import excepciones.MaterialNoPermitidoException;
 
 /**
  * Clase Mesa. Define una mesa genérica.
@@ -11,6 +10,12 @@ public class Mesa extends Mueble
 {
     private int ancho;
     private int largo;
+
+    public Mesa(Integer codigo, Material material, Cliente cliente, int ancho, int largo) {
+        super(codigo, material, cliente);
+        this.ancho = ancho;
+        this.largo = largo;
+    }
 
     public int getAncho() {
         return ancho;
@@ -26,14 +31,6 @@ public class Mesa extends Mueble
 
     public void setLargo(int largo) {
         this.largo = largo;
-    }
-
-    @Override protected void setMaterial(Material material) throws MaterialNoPermitidoException {
-        // No hacemos mesas de plástico, tenemos una reputación que mantener.
-        if(material == Material.PLASTICO) {
-            throw new MaterialNoPermitidoException();
-        }
-        super.setMaterial(material);
     }
 
     @Override public String toString() {

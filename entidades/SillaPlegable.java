@@ -1,7 +1,6 @@
 package entidades;
 
 import constantes.Material;
-import excepciones.MaterialNoPermitidoException;
 
 /**
  * Clase SillaPlegable. Describe las sillas de tipo Plegable
@@ -11,8 +10,10 @@ public class SillaPlegable extends Silla
 {
     private Material materialPatas;
 
-    public SillaPlegable() throws MaterialNoPermitidoException {
-        this.setMaterial(Material.PLASTICO);
+    public SillaPlegable(Integer codigo, Cliente cliente, boolean acolchada, Material materialPatas) {
+        // Las sillas plegables sólo las fabricamos en plástico
+        super(codigo, Material.PLASTICO, cliente, acolchada);
+        this.materialPatas = materialPatas;
     }
 
     public Material getMaterialPatas() {

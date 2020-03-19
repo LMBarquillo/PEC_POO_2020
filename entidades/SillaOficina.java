@@ -1,5 +1,6 @@
 package entidades;
 
+import constantes.Material;
 
 /**
  * Clase SillaOficina. Describe las sillas de tipo Oficina
@@ -8,6 +9,11 @@ package entidades;
 public class SillaOficina extends Silla
 {
     private boolean reclinable;
+
+    public SillaOficina(Integer codigo, Material material, Cliente cliente, boolean acolchada, boolean reclinable) {
+        super(codigo, material, cliente, acolchada);
+        this.reclinable = reclinable;
+    }
 
     public boolean isReclinable() {
         return reclinable;

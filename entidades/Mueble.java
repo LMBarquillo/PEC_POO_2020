@@ -10,14 +10,27 @@ import excepciones.MaterialNoPermitidoException;
  */
 public class Mueble
 {
+    private Integer codigo;     // Código único que utilizaremos para identificar un mueble
     private Estado estado;
     private Material material;
     private Artesano artesano;  // El artesano asignado para su fabricación
     private Cliente cliente;    // El cliente que ha pedido el mueble
     private String notas;       // Las notas de progreso dejadas por el artesano
 
-    public Mueble() {
+    public Mueble(Integer codigo, Material material, Cliente cliente) {
+        this.codigo = codigo;
         this.estado = Estado.PEDIDO;    // Cuando creamos un mueble nuevo, su estado es PEDIDO
+        this.material = material;
+        this.cliente = cliente;
+        this.notas = "";
+    }
+
+    public Integer getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
     }
 
     public Estado getEstado() {
