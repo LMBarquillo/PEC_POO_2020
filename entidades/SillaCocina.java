@@ -10,8 +10,8 @@ public class SillaCocina extends Silla
 {
     private boolean respaldo;
 
-    public SillaCocina(Integer codigo, Material material, Cliente cliente, boolean acolchada, boolean respaldo) {
-        super(codigo, material, cliente, acolchada);
+    public SillaCocina(String referencia, Material material, Cliente cliente, boolean acolchada, boolean respaldo) {
+        super(referencia, material, cliente, acolchada);
         this.respaldo = respaldo;
     }
 

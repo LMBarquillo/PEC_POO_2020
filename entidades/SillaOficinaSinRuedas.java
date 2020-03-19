@@ -10,8 +10,8 @@ public class SillaOficinaSinRuedas extends SillaOficina
 {
     private boolean antideslizante;
 
-    public SillaOficinaSinRuedas(Integer codigo, Material material, Cliente cliente, boolean acolchada, boolean reclinable, boolean antideslizante) {
-        super(codigo, material, cliente, acolchada, reclinable);
+    public SillaOficinaSinRuedas(String referencia, Material material, Cliente cliente, boolean acolchada, boolean reclinable, boolean antideslizante) {
+        super(referencia, material, cliente, acolchada, reclinable);
         this.antideslizante = antideslizante;
     }
 

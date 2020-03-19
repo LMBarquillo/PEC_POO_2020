@@ -13,8 +13,8 @@ public class MesaCafeMadera extends MesaCafe
     private Forma forma;
     private Madera madera;
 
-    public MesaCafeMadera(Integer codigo, Cliente cliente, int ancho, int largo, boolean revistero, Forma forma, Madera madera) {
-        super(codigo, Material.MADERA, cliente, ancho, largo, revistero);
+    public MesaCafeMadera(String referencia, Cliente cliente, int ancho, int largo, boolean revistero, Forma forma, Madera madera) {
+        super(referencia, Material.MADERA, cliente, ancho, largo, revistero);
         this.forma = forma;
         this.madera = madera;
     }

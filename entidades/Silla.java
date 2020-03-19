@@ -10,8 +10,8 @@ public class Silla extends Mueble
 {
     private boolean acolchada;
 
-    public Silla(Integer codigo, Material material, Cliente cliente, boolean acolchada) {
-        super(codigo, material, cliente);
+    public Silla(String referencia, Material material, Cliente cliente, boolean acolchada) {
+        super(referencia, material, cliente);
         this.acolchada = acolchada;
     }
 

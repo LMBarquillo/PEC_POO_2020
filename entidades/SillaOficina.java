@@ -10,8 +10,8 @@ public class SillaOficina extends Silla
 {
     private boolean reclinable;
 
-    public SillaOficina(Integer codigo, Material material, Cliente cliente, boolean acolchada, boolean reclinable) {
-        super(codigo, material, cliente, acolchada);
+    public SillaOficina(String referencia, Material material, Cliente cliente, boolean acolchada, boolean reclinable) {
+        super(referencia, material, cliente, acolchada);
         this.reclinable = reclinable;
     }
 

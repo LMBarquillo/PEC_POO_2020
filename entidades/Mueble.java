@@ -2,7 +2,6 @@ package entidades;
 
 import constantes.Estado;
 import constantes.Material;
-import excepciones.MaterialNoPermitidoException;
 
 /**
  * Clase Mueble. Clase padre de todos los tipos de mueble.
@@ -10,27 +9,27 @@ import excepciones.MaterialNoPermitidoException;
  */
 public class Mueble
 {
-    private Integer codigo;     // Código único que utilizaremos para identificar un mueble
+    private String referencia;     // Código único que utilizaremos para identificar un mueble
     private Estado estado;
     private Material material;
     private Artesano artesano;  // El artesano asignado para su fabricación
     private Cliente cliente;    // El cliente que ha pedido el mueble
     private String notas;       // Las notas de progreso dejadas por el artesano
 
-    public Mueble(Integer codigo, Material material, Cliente cliente) {
-        this.codigo = codigo;
+    public Mueble(String referencia, Material material, Cliente cliente) {
+        this.referencia = referencia;
         this.estado = Estado.PEDIDO;    // Cuando creamos un mueble nuevo, su estado es PEDIDO
         this.material = material;
         this.cliente = cliente;
         this.notas = "";
     }
 
-    public Integer getCodigo() {
-        return codigo;
+    public String getReferencia() {
+        return referencia;
     }
 
-    public void setCodigo(Integer codigo) {
-        this.codigo = codigo;
+    public void setReferencia(String referencia) {
+        this.referencia = referencia;
     }
 
     public Estado getEstado() {
@@ -45,7 +44,7 @@ public class Mueble
         return material;
     }
 
-    protected void setMaterial(Material material) throws MaterialNoPermitidoException {
+    protected void setMaterial(Material material) {
         this.material = material;
     }
 

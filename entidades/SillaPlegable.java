@@ -10,9 +10,9 @@ public class SillaPlegable extends Silla
 {
     private Material materialPatas;
 
-    public SillaPlegable(Integer codigo, Cliente cliente, boolean acolchada, Material materialPatas) {
+    public SillaPlegable(String referencia, Cliente cliente, boolean acolchada, Material materialPatas) {
         // Las sillas plegables sólo las fabricamos en plástico
-        super(codigo, Material.PLASTICO, cliente, acolchada);
+        super(referencia, Material.PLASTICO, cliente, acolchada);
         this.materialPatas = materialPatas;
     }
 
