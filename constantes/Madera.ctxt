@@ -1,4 +1,8 @@
 #BlueJ class context
 comment0.target=Madera
-comment0.text=\r\n\ Enumeration\ class\ Madera\ -\ write\ a\ description\ of\ the\ enum\ class\ here\r\n\ \r\n\ @author\ (your\ name\ here)\r\n\ @version\ (version\ number\ or\ date\ here)\r\n
-numComments=1
+comment0.text=\r\n\ Clase\ enumeradora\ Madera.\ Define\ los\ tipos\ de\ Maderas\ para\ los\ muebles\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=tipo
+comment1.target=Madera(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3

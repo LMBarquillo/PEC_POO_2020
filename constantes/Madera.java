@@ -5,7 +5,7 @@ package constantes;
  * @author Luis Miguel Barquillo
  */
 public enum Madera {
-	ROBLE("Roble"), PINO("Pino"), NOGAL("Nogal"), CEREZO("Cerezo"), CASTANO("CastaÃ±o"), ABEDUL("Abedul");
+	ROBLE("Roble"), PINO("Pino"), NOGAL("Nogal"), CEREZO("Cerezo"), CASTANO("Castaño"), ABEDUL("Abedul");
 
     private String tipo;
 

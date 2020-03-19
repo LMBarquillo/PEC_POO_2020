@@ -2,7 +2,7 @@ package constantes;
 
 
 /**
- * Clase enumeradora Material. Define los tipos de Materiales para los muebles *
+ * Clase enumeradora Material. Define los tipos de Materiales para los muebles
  * @author Luis Miguel Barquillo
  */
 public enum Material
@@ -12,7 +12,7 @@ public enum Material
 
     private String material;
 
-    // En los constructores de tipo enum, omitimos el modificador de √°mbito, pues siempre es private y ser√≠a redundante
+    // En los constructores de tipo enum, omitimos el modificador de ·mbito, pues siempre es private y ser· redundante
     Material(String material) {
         this.material = material;
     }

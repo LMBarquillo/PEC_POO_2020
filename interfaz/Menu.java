@@ -66,7 +66,7 @@ public class Menu
         try {
             return Integer.parseInt(s);
         } catch(NumberFormatException ex) {
-            return 0;
+            return -1;
         }
     }
 

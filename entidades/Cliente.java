@@ -2,34 +2,23 @@ package entidades;
 
 
 /**
- * Write a description of class Cliente here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Clase cliente. Define un cliente que puede comprar un mueble.
+ * @author Luis Miguel Barquillo Romero
  */
 public class Cliente extends Persona
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private String email;
 
-    /**
-     * Constructor for objects of class Cliente
-     */
-    public Cliente()
-    {
-        // initialise instance variables
-        x = 0;
+    public Cliente(String nombre, String nif, String direccion, String codigoPostal, String localidad, String telefono, String email) {
+        super(nombre, nif, direccion, codigoPostal, localidad, telefono);
+        this.email = email;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

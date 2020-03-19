@@ -2,29 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5aa6636b-b521-4c61-84c4-57ef74acc779" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/GestionPersonas.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GestionPersonas.ctxt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GestionPersonas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constantes/Valores$ArtesanoMuebles.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constantes/Valores$JefeMuebles.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repositorio/BBDDPersonas.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repositorio/BBDDPersonas.ctxt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repositorio/BBDDPersonas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constantes/Turno.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constantes/Valores$GestionClientes.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constantes/Valores$GestionUsuarios.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constantes/Valores.ctxt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entidades/ArtesanoEnPlantilla.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fabrica.class" beforeDir="false" afterPath="$PROJECT_DIR$/Fabrica.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fabrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fabrica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionMuebles.class" beforeDir="false" afterPath="$PROJECT_DIR$/GestionMuebles.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionMuebles.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/GestionMuebles.ctxt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionMuebles.java" beforeDir="false" afterPath="$PROJECT_DIR$/GestionMuebles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constantes/Valores$PrincipalMuebles.class" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Valores$PrincipalMuebles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constantes/Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Color.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constantes/Color.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Color.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constantes/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constantes/Madera.class" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Madera.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constantes/Madera.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Madera.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constantes/Madera.java" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Madera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constantes/Material.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Material.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constantes/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Material.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/constantes/Valores.class" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Valores.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constantes/Valores.java" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Valores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/Mueble.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Mueble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constantes/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/Artesano.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Artesano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/ClienteEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/ClienteEmpresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/ClientePersona.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/ClientePersona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/Comercial.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Comercial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/ContratoHora.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/ArtesanoPorHoras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/EnPlantilla.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/Jefe.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Jefe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/package.bluej" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaz/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/package.bluej" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositorio/BBDDMuebles.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/repositorio/BBDDMuebles.ctxt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositorio/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/repositorio/package.bluej" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +106,9 @@
       <workItem from="1582823578713" duration="250000" />
       <workItem from="1582823845823" duration="554000" />
       <workItem from="1583341663144" duration="7256000" />
-      <workItem from="1584465766106" duration="4535000" />
+      <workItem from="1584465766106" duration="4610000" />
+      <workItem from="1584510785347" duration="66000" />
+      <workItem from="1584609976802" duration="3220000" />
     </task>
     <task id="LOCAL-00001" summary="Definición de constantes con enumeradores de todo tipo. Añadidas propiedades a varios tipos de muebles.">
       <created>1582741865136</created>
@@ -136,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583344351694</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Creado gestión de Usuarios y Clientes">
+      <created>1584470346784</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584470346784</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +181,8 @@
     <MESSAGE value="Acabadas clases silla e hijas" />
     <MESSAGE value="Asignación de estados, clientes y artesanos a los muebles." />
     <MESSAGE value="Creado primer menú funcional" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creado primer menú funcional" />
+    <MESSAGE value="Creado gestión de Usuarios y Clientes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creado gestión de Usuarios y Clientes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -181,10 +198,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2634" y="389" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582740257933" />
-    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1584468127533">
+    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1584613358467">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584468127533" />
+    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584613358467" />
     <state x="2609" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1583343825211">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -193,30 +210,30 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2728" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582740401004" />
-    <state x="2343" y="114" key="CommitChangelistDialog2" timestamp="1583344348849">
+    <state x="2343" y="114" key="CommitChangelistDialog2" timestamp="1584470343860">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2343" y="114" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1583344348849" />
+    <state x="2343" y="114" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584470343860" />
     <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1583343757020">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1583343757020" />
-    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1584469124575">
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1584613459872">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584469124575" />
-    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1584469124575">
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584613459872" />
+    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1584613459872">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584469124575" />
-    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1584469124575">
+    <state width="1877" height="274" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584613459872" />
+    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1584613459871">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584469124575" />
-    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1584469124575">
+    <state width="1877" height="274" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584613459871" />
+    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1584613459872">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="274" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584469124575" />
+    <state width="1877" height="274" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584613459872" />
     <state width="1877" height="371" key="GridCell.Tab.1.bottom" timestamp="1583350527325">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -237,10 +254,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2360" y="94" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584468998450" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1583350443285">
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584470349126">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1583350443285" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584470349126" />
     <state x="191" y="47" width="1627" height="999" key="dock-window-1" timestamp="1584467312675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

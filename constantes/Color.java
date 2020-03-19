@@ -8,7 +8,7 @@ public enum Color
     NEGRO("Negro"),
     BLANCO("Blanco"),
     AMARILLO("Amarillo"),
-    MARRON("MarrÃ³n"),
+    MARRON("Marrón"),
     VIOLETA("Violeta");
 
     private String color;

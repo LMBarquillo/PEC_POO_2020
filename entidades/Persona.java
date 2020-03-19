@@ -9,7 +9,18 @@ public class Persona
     private String nombre;  // o Razón Social
     private String nif;     // o CIF
     private String direccion;
+    private String codigoPostal;
+    private String localidad;
     private String telefono;
+
+    public Persona(String nombre, String nif, String direccion, String codigoPostal, String localidad, String telefono) {
+        this.nombre = nombre;
+        this.nif = nif;
+        this.direccion = direccion;
+        this.codigoPostal = codigoPostal;
+        this.localidad = localidad;
+        this.telefono = telefono;
+    }
 
     public String getNombre() {
         return nombre;
@@ -33,6 +44,22 @@ public class Persona
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    public String getCodigoPostal() {
+        return codigoPostal;
+    }
+
+    public void setCodigoPostal(String codigoPostal) {
+        this.codigoPostal = codigoPostal;
+    }
+
+    public String getLocalidad() {
+        return localidad;
+    }
+
+    public void setLocalidad(String localidad) {
+        this.localidad = localidad;
     }
 
     public String getTelefono() {

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Material
-comment0.text=\r\n\ Clase\ enumeradora\ Material.\ Define\ los\ tipos\ de\ Materiales\ para\ los\ muebles\ *\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment0.text=\r\n\ Clase\ enumeradora\ Material.\ Define\ los\ tipos\ de\ Materiales\ para\ los\ muebles\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
 comment1.params=material
 comment1.target=Material(java.lang.String)
 comment2.params=

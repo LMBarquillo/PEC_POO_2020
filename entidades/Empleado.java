@@ -9,6 +9,13 @@ import java.util.Date;
 public class Empleado extends Persona
 {
     private Date antiguedad;
+    private double salario;
+
+    public Empleado(String nombre, String nif, String direccion, String codigoPostal, String localidad, String telefono, Date antiguedad, double salario) {
+        super(nombre, nif, direccion, codigoPostal, localidad, telefono);
+        this.antiguedad = antiguedad;
+        this.salario = salario;
+    }
 
     public Date getAntiguedad() {
         return antiguedad;
@@ -16,5 +23,13 @@ public class Empleado extends Persona
 
     public void setAntiguedad(Date antiguedad) {
         this.antiguedad = antiguedad;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
     }
 }

@@ -23,6 +23,9 @@ public class Fabrica
         bbddMuebles = new BBDDMuebles();
         gestionMuebles = new GestionMuebles(this);
         gestionPersonas = new GestionPersonas(this);
+
+        /** DATOS INTRODUCIDOS PARA TESTEAR LA APLICACIÓN **/
+        //bbddPersonas.insertar(new ClientePersona("Manuel Pérez","04326587R","Calle del pez, 2","28080","Madrid","658945236","manuperez@gmail.com","manu2864"));
     }
 
     public static void main(String[] args) {
