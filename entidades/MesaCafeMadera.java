@@ -5,7 +5,7 @@ import constantes.Madera;
 import constantes.Material;
 
 /**
- * Clase MesaCafeMadera. Describe las mesas de tipo CafÃ© Madera
+ * Clase MesaCafeMadera. Describe las mesas de tipo Café Madera
  * @Author Luis Miguel Barquillo
  */
 public class MesaCafeMadera extends MesaCafe

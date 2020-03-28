@@ -39,14 +39,18 @@ public class Datos
     }
 
     public Integer pedirEntero(String solicitud) {
+        return pedirEntero(solicitud, 0, Integer.MAX_VALUE);
+    }
+
+    public Integer pedirEntero(String solicitud, int min, int max) {
         try {
-            String lectura;
+            String entero;
             do {
                 System.out.print(solicitud);
-                lectura = br.readLine();
-            } while(!esEntero(lectura));
+                entero = br.readLine();
+            } while(!esEntero(entero) || !cumpleRango(entero, min, max));
 
-            return Integer.parseInt(lectura);
+            return Integer.parseInt(entero);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -55,13 +59,13 @@ public class Datos
 
     public Double pedirDecimal(String solicitud) {
         try {
-            String lectura;
+            String decimal;
             do {
                 System.out.print(solicitud);
-                lectura = br.readLine();
-            } while(!esEntero(lectura));
+                decimal = br.readLine();
+            } while(!esDecimal(decimal));
 
-            return Double.parseDouble(lectura);
+            return Double.parseDouble(decimal);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -70,17 +74,22 @@ public class Datos
 
     public Boolean pedirBooleano(String solicitud) {
         try {
-            String lectura;
+            String booleano;
             do {
                 System.out.print(solicitud);
-                lectura = br.readLine();
-            } while(!esSN(lectura));
+                booleano = br.readLine();
+            } while(!esSN(booleano));
 
-            return lectura.toUpperCase().equals(TRUE);
+            return booleano.toUpperCase().equals(TRUE);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
+    }
+
+    private boolean cumpleRango(String s, int min, int max) {
+        int value = Integer.parseInt(s);
+        return min <= value && value <= max;
     }
 
     private boolean esEntero(String s) {

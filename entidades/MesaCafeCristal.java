@@ -3,7 +3,7 @@ package entidades;
 import constantes.Material;
 
 /**
- * Clase MesaCafeCristal. Define una mesa de tipo CafÃ© de Cristal
+ * Clase MesaCafeCristal. Define una mesa de tipo Café de Cristal
  * @author Luis Miguel Barquillo
  */
 public class MesaCafeCristal extends MesaCafe

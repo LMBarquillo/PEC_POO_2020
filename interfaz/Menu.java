@@ -1,5 +1,6 @@
 package interfaz;
 
+import constantes.Forma;
 import constantes.Madera;
 
 import java.io.BufferedReader;
@@ -62,8 +63,12 @@ public class Menu
         return leerOpcion(mostrarMenuTipoSillaOficina());
     }
 
-    public int menuTipoMadera() {
-        return leerOpcion(mostrarMenuTipoMadera());
+    public int menuMadera() {
+        return leerOpcion(mostrarMenuMadera());
+    }
+
+    public int menuForma() {
+        return leerOpcion(mostrarMenuForma());
     }
 
     private int leerOpcion(int max) {
@@ -197,11 +202,20 @@ public class Menu
         return 2;
     }
 
-    private int mostrarMenuTipoMadera() {
-        Madera[] values = Madera.values();
+    private int mostrarMenuMadera() {
         System.out.println("¿Qué madera quiere para su mueble?");
-        for(int i=0; i<values.length; i++)
-        System.out.printf(" - %d. %s\n", i+1, values[i].toString());
+        return mostrarValores(Madera.values());
+    }
+
+    private int mostrarMenuForma() {
+        System.out.println("¿Qué forma desea que tenga?");
+        return mostrarValores(Forma.values());
+    }
+
+    private int mostrarValores(Object[] values) {
+        for(int i=0; i<values.length; i++){
+            System.out.printf(" - %d. %s\n", i+1, values[i].toString());
+        }
         System.out.print("Elija el tipo deseado: ");
         return values.length;
     }
