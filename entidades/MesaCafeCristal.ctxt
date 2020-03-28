@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=MesaCafeCristal
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MesaCafeCristal\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=MesaCafeCristal()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MesaCafeCristal\r\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-numComments=3
+comment0.text=\r\n\ Clase\ MesaCafeCristal.\ Define\ una\ mesa\ de\ tipo\ Caf\u00C3\u00A9\ de\ Cristal\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=referencia\ cliente\ ancho\ largo\ revistero\ labrado
+comment1.target=MesaCafeCristal(java.lang.String,\ Cliente,\ int,\ int,\ boolean,\ boolean)
+comment2.params=
+comment2.target=boolean\ isLabrado()
+comment3.params=labrado
+comment3.target=void\ setLabrado(boolean)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

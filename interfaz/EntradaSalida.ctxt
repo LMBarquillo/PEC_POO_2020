@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=EntradaSalida
+comment0.text=\r\n\ Clase\ EntradaSalida\ (IN\ OUT).\ Contiene\ subclases\ que\ se\ encargar\u00E1n\ de\ mostrar\r\n\ men\u00FAs\ o\ solicitudes\ de\ datos\ por\ pantalla\ y\ recopilar\ los\ datos\ introducidos.\r\n\ \r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=
+comment1.target=EntradaSalida()
+comment2.params=
+comment2.target=Menu\ getMenu()
+comment3.params=menu
+comment3.target=void\ setMenu(Menu)
+comment4.params=
+comment4.target=Datos\ getDatos()
+comment5.params=datos
+comment5.target=void\ setDatos(Datos)
+numComments=6

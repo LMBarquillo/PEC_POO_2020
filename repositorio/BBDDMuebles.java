@@ -20,7 +20,7 @@ public class BBDDMuebles implements BBDD<Mueble>
         this.muebles = new HashMap<>();
     }
 
-    private boolean existe(String referencia) {
+    public boolean existe(String referencia) {
         return muebles.containsKey(referencia);
     }
 

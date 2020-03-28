@@ -67,4 +67,31 @@ public interface Valores
         int AVISAR_ENTREGA = 5;
         int VOLVER = 6;
     }
+
+    interface TipoMuebles {
+        int MESA = 1;
+        int SILLA = 2;
+    }
+
+    interface TipoMesa {
+        int COMEDOR = 1;
+        int CAFE = 2;
+        int DORMITORIO = 3;
+    }
+
+    interface TipoMesaCafe {
+        int MADERA = 1;
+        int CRISTAL = 2;
+    }
+
+    interface TipoSilla {
+        int PLEGABLE = 1;
+        int COCINA = 2;
+        int OFICINA = 3;
+    }
+
+    interface TipoSillaOficina {
+        int CON_RUEDAS = 1;
+        int SIN_RUEDAS = 2;
+    }
 }

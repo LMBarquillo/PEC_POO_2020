@@ -1,8 +1,9 @@
 package interfaz;
 
+import constantes.Madera;
+
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 /**
  * Clase Menu. Muestra menús con opciones en consola y devuelve el resultado.
@@ -13,8 +14,8 @@ public class Menu
 {
     private BufferedReader br;
 
-    public Menu() {
-        br = new BufferedReader(new InputStreamReader(System.in));
+    public Menu(BufferedReader br) {
+        this.br = br;
     }
 
     public int menuPrincipal() {
@@ -39,6 +40,30 @@ public class Menu
 
     public int menuGestionClientes() {
         return leerOpcion(mostrarMenuGestionClientes());
+    }
+
+    public int menuTipoMueble() {
+        return leerOpcion(mostrarMenuTipoMueble());
+    }
+
+    public int menuTipoMesa() {
+        return leerOpcion(mostrarMenuTipoMesa());
+    }
+
+    public int menuTipoMesaCafe() {
+        return leerOpcion(mostrarMenuTipoMesaCafe());
+    }
+
+    public int menuTipoSilla() {
+        return leerOpcion(mostrarMenuTipoSilla());
+    }
+
+    public int menuTipoSillaOficina() {
+        return leerOpcion(mostrarMenuTipoSillaOficina());
+    }
+
+    public int menuTipoMadera() {
+        return leerOpcion(mostrarMenuTipoMadera());
     }
 
     private int leerOpcion(int max) {
@@ -128,6 +153,57 @@ public class Menu
         System.out.println("- 6. Volver al menú anterior                     -");
         mostrarPie();
         return 6;
+    }
+
+    private int mostrarMenuTipoMueble() {
+        System.out.println("Tipo de mueble: ");
+        System.out.println(" - 1. Mesa");
+        System.out.println(" - 2. Silla");
+        System.out.print("Elija el tipo deseado: ");
+        return 2;
+    }
+
+    private int mostrarMenuTipoMesa() {
+        System.out.println("Tipo de mesa: ");
+        System.out.println(" - 1. Mesa de Comedor");
+        System.out.println(" - 2. Mesa de Café");
+        System.out.println(" - 3. Mesa de Dormitorio");
+        System.out.print("Elija el tipo deseado: ");
+        return 3;
+    }
+
+    private int mostrarMenuTipoMesaCafe() {
+        System.out.println("Tipo de mesa de café: ");
+        System.out.println(" - 1. Mesa de Café de Madera");
+        System.out.println(" - 2. Mesa de Café de Cristal");
+        System.out.print("Elija el tipo deseado: ");
+        return 2;
+    }
+
+    private int mostrarMenuTipoSilla() {
+        System.out.println("Tipo de silla: ");
+        System.out.println(" - 1. Silla Plegable");
+        System.out.println(" - 2. Silla de Cocina");
+        System.out.println(" - 3. Silla de Oficina");
+        System.out.print("Elija el tipo deseado: ");
+        return 3;
+    }
+
+    private int mostrarMenuTipoSillaOficina() {
+        System.out.println("Tipo de silla de oficina: ");
+        System.out.println(" - 1. Con ruedas");
+        System.out.println(" - 2. Sin ruedas");
+        System.out.print("Elija el tipo deseado: ");
+        return 2;
+    }
+
+    private int mostrarMenuTipoMadera() {
+        Madera[] values = Madera.values();
+        System.out.println("¿Qué madera quiere para su mueble?");
+        for(int i=0; i<values.length; i++)
+        System.out.printf(" - %d. %s\n", i+1, values[i].toString());
+        System.out.print("Elija el tipo deseado: ");
+        return values.length;
     }
 
     private void mostrarCabecera() {

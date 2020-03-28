@@ -1,6 +1,10 @@
 #BlueJ class context
 comment0.target=GestionPersonas
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ GestionPersonas\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ GestionPersonas.\ Gestiona\ los\ men\u00FAs\ de\ Personas\ y\ Clientes\ y\ las\ operaciones\ contra\ BBDDPersonas\r\n\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
 comment1.params=fabrica
 comment1.target=GestionPersonas(Fabrica)
-numComments=2
+comment2.params=
+comment2.target=void\ gestionUsuarios()
+comment3.params=
+comment3.target=void\ gestionClientes()
+numComments=4

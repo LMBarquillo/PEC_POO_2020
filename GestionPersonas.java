@@ -14,7 +14,7 @@ public class GestionPersonas
     }
 
     public void gestionUsuarios() {
-        int opcion = fabrica.getMenu().menuGestionUsuarios();
+        int opcion = fabrica.getEs().getMenu().menuGestionUsuarios();
         switch (opcion) {
             case Valores.GestionUsuarios.ALTA:
                 break;
@@ -28,7 +28,7 @@ public class GestionPersonas
     }
 
     public void gestionClientes() {
-        int opcion = fabrica.getMenu().menuGestionClientes();
+        int opcion = fabrica.getEs().getMenu().menuGestionClientes();
         switch (opcion) {
             case Valores.GestionClientes.ALTA:
                 break;

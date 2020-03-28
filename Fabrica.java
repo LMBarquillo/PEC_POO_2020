@@ -3,7 +3,7 @@ import constantes.Material;
 import constantes.Turno;
 import constantes.Valores;
 import entidades.*;
-import interfaz.Menu;
+import interfaz.EntradaSalida;
 import repositorio.BBDDMuebles;
 import repositorio.BBDDPersonas;
 
@@ -18,20 +18,20 @@ import java.util.Date;
  */
 public class Fabrica
 {
-    private Menu menu;
+    private EntradaSalida es;
     private BBDDMuebles bbddMuebles;
     private BBDDPersonas bbddPersonas;
     private GestionMuebles gestionMuebles;
     private GestionPersonas gestionPersonas;
 
     public Fabrica() {
-        menu = new Menu();
+        es = new EntradaSalida();
         bbddMuebles = new BBDDMuebles();
         bbddPersonas = new BBDDPersonas();
         gestionMuebles = new GestionMuebles(this);
         gestionPersonas = new GestionPersonas(this);
 
-        /* DATOS INTRODUCIDOS PARA TESTEAR LA APLICACIÓN */
+        /* DATOS HARDCODED PARA TESTEAR LA APLICACIÓN */
         Cliente cliente1 = new ClientePersona("Manuel Pérez", "04326587R", "Calle del pez, 2", "28080", "Madrid", "658945236", "manuperez@gmail.com", "manu2864");
         Cliente cliente2 = new ClienteEmpresa("Bar Paco","B45956836", "Calle del Río", "45600", "Talavera", "925683641", "barpaco@gmail.com", "Paco");
         bbddPersonas.insertar(cliente1);
@@ -41,7 +41,7 @@ public class Fabrica
         bbddPersonas.insertar(new ArtesanoEnPlantilla("Juan Antúnez", "28351246A", "Calle del Ejército, 3", "45001", "Toledo", "925215432", new Date(1506816000000L), 1100D, Material.MADERA, Turno.MATINAL));
         bbddPersonas.insertar(new ArtesanoPorHoras("Pedro Romero", "06352645L", "Calle Prado, 2","45600", "Talavera", "642356412", new Date(1519862400000L), 900D, Material.MADERA, 6));
         bbddMuebles.insertar(new SillaCocina("SCMC1", Material.MADERA, cliente1, false, true));
-        bbddMuebles.insertar(new MesaComedor("MCNC2", cliente2, 100, 160, Madera.NOGAL));
+        bbddMuebles.insertar(new MesaComedor("MCNC2", cliente2, 100, 160, Madera.NOGAL, true));
         bbddMuebles.insertar(new SillaOficinaConRuedas("SOCRC2", cliente2, true, true, 5));
     }
 
@@ -52,7 +52,7 @@ public class Fabrica
     }
 
     public void principal() {
-        int opcion = menu.menuPrincipal();
+        int opcion = es.getMenu().menuPrincipal();
         switch (opcion) {
             case Valores.Principal.MUEBLES:
                 gestionMuebles.gestionPrincipalMuebles();
@@ -64,17 +64,33 @@ public class Fabrica
                 gestionPersonas.gestionUsuarios();
                 break;
             case Valores.Principal.SALIR:
-                menu.mostrarDespedida();
+                es.getMenu().mostrarDespedida();
                 System.exit(0);
         }
     }
 
-    public Menu getMenu() {
-        return menu;
+    public EntradaSalida getEs() {
+        return es;
     }
 
-    public void setMenu(Menu menu) {
-        this.menu = menu;
+    public void setEs(EntradaSalida es) {
+        this.es = es;
+    }
+
+    public GestionMuebles getGestionMuebles() {
+        return gestionMuebles;
+    }
+
+    public void setGestionMuebles(GestionMuebles gestionMuebles) {
+        this.gestionMuebles = gestionMuebles;
+    }
+
+    public GestionPersonas getGestionPersonas() {
+        return gestionPersonas;
+    }
+
+    public void setGestionPersonas(GestionPersonas gestionPersonas) {
+        this.gestionPersonas = gestionPersonas;
     }
 
     public BBDDMuebles getBbddMuebles() {

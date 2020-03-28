@@ -19,7 +19,7 @@ public class BBDDPersonas implements BBDD<Persona> {
         this.personas = new HashMap<>();
     }
 
-    private boolean existe(String nif) {
+    public boolean existe(String nif) {
         return personas.containsKey(nif);
     }
 
