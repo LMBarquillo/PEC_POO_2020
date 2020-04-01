@@ -64,6 +64,10 @@ public class BBDDMuebles implements BBDD<Integer, Mueble>
         }
     }
 
+    /**
+     * Obtiene el máximo número de trabajo y le suma 1
+     * @return número para nuevo trabajo
+     */
     public int nuevoNumeroTrabajo() {
         int max = 0;
         for(Integer i : muebles.keySet()) {

@@ -34,9 +34,10 @@ public class GestionMuebles {
 		int opcion = fabrica.getEs().getMenu().menuJefeMuebles();
 		switch (opcion) {
 			case Valores.JefeMuebles.RECEPCIONAR:
-				this.recepcionarPedido();
+				recepcionarPedido();
 				break;
 			case Valores.JefeMuebles.ASIGNAR:
+				asignarPedido();
 				break;
 			case Valores.JefeMuebles.INSPECCIONAR:
 				break;
@@ -70,6 +71,43 @@ public class GestionMuebles {
 			System.out.println("El cliente no se encuentra. Debe darlo de alta antes de crear un pedido.");
 		}
 		gestionJefeMuebles();
+	}
+
+	private void asignarPedido() {
+		int numTrabajo = fabrica.getEs().getDatos().pedirEntero("Introduce el número de trabajo: ");
+		if(fabrica.getBbddMuebles().existe(numTrabajo)) {
+			Mueble mueble = fabrica.getBbddMuebles().obtener(numTrabajo);
+			System.out.printf("Ha seleccionado: %d: %s\n", mueble.getNumTrabajo(), mueble.toString());
+			if(mueble.getArtesano() == null) {
+				asignarArtesano(mueble);
+			} else {
+				System.out.printf("El trabajo seleccionado está siendo realizado por %s\n", mueble.getArtesano().getNombre());
+				if(fabrica.getEs().getDatos().pedirBooleano("¿Desea asignarle un nuevo artesano? (S/N): ")) {
+					asignarArtesano(mueble);
+				}
+			}
+		} else {
+			System.out.printf("No existe el trabajo número %d.\n", numTrabajo);
+		}
+		gestionJefeMuebles();
+	}
+
+	private void asignarArtesano(Mueble mueble) {
+		String nif;
+		do {
+			nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF del artesano al que desea asignar el trabajo: ");
+			if(!esArtesano(nif)) {
+				System.out.println("El nif introducido no pertenece a un artesano.");
+			}
+		} while (!esArtesano(nif));
+
+		mueble.setArtesano((Artesano) fabrica.getBbddPersonas().obtener(nif));
+		System.out.printf("El trabajo número %d ha sido asignado a %s\n", mueble.getNumTrabajo(), mueble.getArtesano().getNombre());
+		gestionJefeMuebles();
+	}
+
+	private boolean esArtesano(String nif) {
+		return fabrica.getBbddPersonas().existe(nif) && (fabrica.getBbddPersonas().obtener(nif) instanceof Artesano);
 	}
 
 	private void crearMueble(Cliente cliente) {
