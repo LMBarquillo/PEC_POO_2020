@@ -1,7 +1,4 @@
-import constantes.Color;
-import constantes.Madera;
-import constantes.Material;
-import constantes.Valores;
+import constantes.*;
 import entidades.*;
 
 import java.util.ArrayList;
@@ -154,7 +151,7 @@ public class GestionMuebles {
 			if(fabrica.getBbddMuebles().existe(trabajo)) {
 				if(fabrica.getBbddMuebles().obtener(trabajo).hasArtesano() &&
 						fabrica.getBbddMuebles().obtener(trabajo).getArtesano().getNif().equals(nif)) {
-
+					cambiarEstado(fabrica.getBbddMuebles().obtener(trabajo));
 				} else {
 					System.out.println("El trabajo introducido no te ha sido asignado.");
 				}
@@ -168,7 +165,10 @@ public class GestionMuebles {
 	}
 
 	private void cambiarEstado(Mueble mueble) {
-
+		Estado estado = Estado.values()[fabrica.getEs().getMenu().menuEstado()-1];
+		mueble.setEstado(estado);
+		System.out.printf("El trabajo número %d ha pasado al estado %s", mueble.getNumTrabajo(), estado.toString());
+		gestionArtesanosMuebles();
 	}
 
 	private void asignarArtesano(Mueble mueble) {

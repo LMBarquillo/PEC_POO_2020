@@ -1,9 +1,6 @@
 package interfaz;
 
-import constantes.Color;
-import constantes.Forma;
-import constantes.Madera;
-import constantes.Material;
+import constantes.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -79,6 +76,10 @@ public class Menu
 
     public int menuMaterial() {
         return leerOpcion(mostrarMenuMaterial());
+    }
+
+    public int menuEstado() {
+        return leerOpcion(mostrarMenuEstado());
     }
 
     private int leerOpcion(int max) {
@@ -231,6 +232,11 @@ public class Menu
     private int mostrarMenuMaterial() {
         System.out.println("¿Qué tipo de material desea?");
         return mostrarValores(Material.values());
+    }
+
+    private int mostrarMenuEstado() {
+        System.out.println("¿Qué estado desea ponerle?");
+        return mostrarValores(Estado.values());
     }
 
     private int mostrarValores(Object[] values) {
