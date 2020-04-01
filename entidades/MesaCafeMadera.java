@@ -1,6 +1,5 @@
 package entidades;
 
-import constantes.Forma;
 import constantes.Madera;
 import constantes.Material;
 
@@ -10,21 +9,11 @@ import constantes.Material;
  */
 public class MesaCafeMadera extends MesaCafe
 {
-    private Forma forma;
     private Madera madera;
 
-    public MesaCafeMadera(String referencia, Cliente cliente, int ancho, int largo, boolean revistero, Forma forma, Madera madera) {
-        super(referencia, Material.MADERA, cliente, ancho, largo, revistero);
-        this.forma = forma;
+    public MesaCafeMadera(int numTrabajo, Cliente cliente, int ancho, int largo, boolean revistero, Madera madera) {
+        super(numTrabajo, Material.MADERA, cliente, ancho, largo, revistero);
         this.madera = madera;
-    }
-
-    public Forma getForma() {
-        return forma;
-    }
-
-    public void setForma(Forma forma) {
-        this.forma = forma;
     }
 
     public Madera getMadera() {

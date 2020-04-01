@@ -10,8 +10,8 @@ public class MesaCafeCristal extends MesaCafe
 {
     public boolean labrado;
 
-    public MesaCafeCristal(String referencia, Cliente cliente, int ancho, int largo, boolean revistero, boolean labrado) {
-        super(referencia, Material.CRISTAL, cliente, ancho, largo, revistero);
+    public MesaCafeCristal(int numTrabajo, Cliente cliente, int ancho, int largo, boolean revistero, boolean labrado) {
+        super(numTrabajo, Material.CRISTAL, cliente, ancho, largo, revistero);
         this.labrado = labrado;
     }
 

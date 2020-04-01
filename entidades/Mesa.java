@@ -11,8 +11,8 @@ public class Mesa extends Mueble
     private int ancho;
     private int largo;
 
-    public Mesa(String referencia, Material material, Cliente cliente, int ancho, int largo) {
-        super(referencia, material, cliente);
+    public Mesa(int numTrabajo, Material material, Cliente cliente, int ancho, int largo) {
+        super(numTrabajo, material, cliente);
         this.ancho = ancho;
         this.largo = largo;
     }

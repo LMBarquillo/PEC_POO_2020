@@ -12,9 +12,9 @@ public class MesaComedor extends Mesa
     private Madera madera;
     private boolean extensible;
 
-    public MesaComedor(String referencia, Cliente cliente, int ancho, int largo, Madera madera, boolean extensible) {
+    public MesaComedor(int numTrabajo, Cliente cliente, int ancho, int largo, Madera madera, boolean extensible) {
         // Las mesas de comedor solo las fabricamos de Madera
-        super(referencia, Material.MADERA, cliente, ancho, largo);
+        super(numTrabajo, Material.MADERA, cliente, ancho, largo);
         this.madera = madera;
         this.extensible = extensible;
     }

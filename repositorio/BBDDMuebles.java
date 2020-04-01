@@ -12,24 +12,24 @@ import java.util.Map;
  * 
  * @author Luis Miguel Barquillo
  */
-public class BBDDMuebles implements BBDD<Mueble>
+public class BBDDMuebles implements BBDD<Integer, Mueble>
 {
-    private Map<String, Mueble> muebles;
+    private Map<Integer, Mueble> muebles;
 
     public BBDDMuebles() {
         this.muebles = new HashMap<>();
     }
 
-    public boolean existe(String referencia) {
-        return muebles.containsKey(referencia);
+    public boolean existe(Integer numTrabajo) {
+        return muebles.containsKey(numTrabajo);
     }
 
     @Override public boolean existe(Mueble mueble) {
-        return existe(mueble.getReferencia());
+        return existe(mueble.getNumTrabajo());
     }
 
-    @Override public Mueble obtener(String referencia) {
-        return muebles.get(referencia);
+    @Override public Mueble obtener(Integer numTrabajo) {
+        return muebles.get(numTrabajo);
     }
 
     @Override public List<Mueble> listar() {
@@ -37,30 +37,47 @@ public class BBDDMuebles implements BBDD<Mueble>
     }
 
     @Override public Mueble insertar(Mueble mueble) {
-        if(!existe(mueble.getReferencia())) {
-            muebles.put(mueble.getReferencia(), mueble);
+        if(!existe(mueble.getNumTrabajo())) {
+            muebles.put(mueble.getNumTrabajo(), mueble);
             return mueble;
         } else {
             return null;
         }
     }
 
-    @Override public Mueble guardar(String referencia, Mueble mueble) {
-        if(existe(referencia)) {
-            muebles.put(referencia, mueble);
+    @Override public Mueble guardar(Integer numTrabajo, Mueble mueble) {
+        if(existe(numTrabajo)) {
+            muebles.put(numTrabajo, mueble);
             return mueble;
         } else {
             return null;
         }
     }
 
-    @Override public Mueble eliminar(String referencia) {
-        if(existe(referencia)) {
-            Mueble eliminado = muebles.get(referencia);
-            muebles.remove(referencia);
+    @Override public Mueble eliminar(Integer numTrabajo) {
+        if(existe(numTrabajo)) {
+            Mueble eliminado = muebles.get(numTrabajo);
+            muebles.remove(numTrabajo);
             return eliminado;
         } else {
             return null;
         }
+    }
+
+    public int nuevoNumeroTrabajo() {
+        int max = 0;
+        for(Integer i : muebles.keySet()) {
+            if(i > max) max = i;
+        }
+        return max+1;
+    }
+
+    /*
+     * Demostración del tema 5 del libro.
+     * Este método es igual que el anterior, pero usando streams y lambdas.
+     * Nótese que se reduce considerablemente la posiblidad de error.
+     */
+    public int nuevoNumeroTrabajoStream() {
+        return muebles.keySet().stream().max(Integer::compareTo).orElse(0) + 1;
     }
 }

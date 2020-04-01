@@ -10,9 +10,9 @@ public class SillaOficinaConRuedas extends SillaOficina
 {
     private int numRuedas;
 
-    public SillaOficinaConRuedas(String referencia, Cliente cliente, boolean acolchada, boolean reclinable, int numRuedas) {
+    public SillaOficinaConRuedas(int numTrabajo, Cliente cliente, boolean acolchada, boolean reclinable, int numRuedas) {
         // Las sillas de Oficina solo las hacemos metálicas.
-        super(referencia, Material.METAL, cliente, acolchada, reclinable);
+        super(numTrabajo, Material.METAL, cliente, acolchada, reclinable);
         this.numRuedas = numRuedas;
     }
 

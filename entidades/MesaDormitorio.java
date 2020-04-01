@@ -12,9 +12,9 @@ public class MesaDormitorio extends Mesa
     private Madera madera;
     private int cajones;
 
-    public MesaDormitorio(String referencia, Cliente cliente, int ancho, int largo, Madera madera, int cajones) {
+    public MesaDormitorio(int numTrabajo, Cliente cliente, int ancho, int largo, Madera madera, int cajones) {
         // Las mesas de Dormitorio solo las fabricamos de madera.
-        super(referencia, Material.MADERA, cliente, ancho, largo);
+        super(numTrabajo, Material.MADERA, cliente, ancho, largo);
         this.madera = madera;
         this.cajones = cajones;
     }

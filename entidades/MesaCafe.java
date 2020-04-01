@@ -10,8 +10,8 @@ public class MesaCafe extends Mesa
 {
     private boolean revistero;
 
-    public MesaCafe(String referencia, Material material, Cliente cliente, int ancho, int largo, boolean revistero) {
-        super(referencia, material, cliente, ancho, largo);
+    public MesaCafe(int numTrabajo, Material material, Cliente cliente, int ancho, int largo, boolean revistero) {
+        super(numTrabajo, material, cliente, ancho, largo);
         this.revistero = revistero;
     }
 

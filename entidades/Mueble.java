@@ -9,27 +9,27 @@ import constantes.Material;
  */
 public class Mueble
 {
-    private String referencia;     // Código único que utilizaremos para identificar un mueble
+    private int numTrabajo; // Número de trabajo: Código único que utilizaremos para identificar un mueble
     private Estado estado;
     private Material material;
     private Artesano artesano;  // El artesano asignado para su fabricación
     private Cliente cliente;    // El cliente que ha pedido el mueble
     private String notas;       // Las notas de progreso dejadas por el artesano
 
-    public Mueble(String referencia, Material material, Cliente cliente) {
-        this.referencia = referencia;
+    public Mueble(int numTrabajo, Material material, Cliente cliente) {
+        this.numTrabajo = numTrabajo;
         this.estado = Estado.PEDIDO;    // Cuando creamos un mueble nuevo, su estado es PEDIDO
         this.material = material;
         this.cliente = cliente;
         this.notas = "";
     }
 
-    public String getReferencia() {
-        return referencia;
+    public int getNumTrabajo() {
+        return numTrabajo;
     }
 
-    public void setReferencia(String referencia) {
-        this.referencia = referencia;
+    public void setNumTrabajo(int numTrabajo) {
+        this.numTrabajo = numTrabajo;
     }
 
     public Estado getEstado() {

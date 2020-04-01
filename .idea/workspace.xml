@@ -1,13 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5aa6636b-b521-4c61-84c4-57ef74acc779" name="Default Changelist" comment="">
+    <list default="true" id="5aa6636b-b521-4c61-84c4-57ef74acc779" name="Default Changelist" comment="Proceso de creación de mesa de todos los tipos de mesa">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fabrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fabrica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GestionMuebles.java" beforeDir="false" afterPath="$PROJECT_DIR$/GestionMuebles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/Mesa.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Mesa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/MesaCafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaCafe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/MesaCafeCristal.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaCafeCristal.ctxt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entidades/MesaCafeCristal.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaCafeCristal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/MesaCafeMadera.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaCafeMadera.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/MesaCafeMadera.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaCafeMadera.ctxt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entidades/MesaCafeMadera.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaCafeMadera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaz/Datos.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/Datos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/MesaComedor.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaComedor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/MesaComedor.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaComedor.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/MesaComedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaComedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/MesaDormitorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/MesaDormitorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/Mueble.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Mueble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/Silla.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Silla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/SillaCocina.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaCocina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/SillaOficina.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaOficina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/SillaOficinaConRuedas.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaOficinaConRuedas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/SillaOficinaSinRuedas.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaOficinaSinRuedas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/SillaPlegable.class" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaPlegable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/SillaPlegable.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaPlegable.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/SillaPlegable.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/SillaPlegable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/package.bluej" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaz/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositorio/BBDD.java" beforeDir="false" afterPath="$PROJECT_DIR$/repositorio/BBDD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositorio/BBDDMuebles.java" beforeDir="false" afterPath="$PROJECT_DIR$/repositorio/BBDDMuebles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositorio/BBDDPersonas.java" beforeDir="false" afterPath="$PROJECT_DIR$/repositorio/BBDDPersonas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +110,9 @@
       <workItem from="1584510785347" duration="66000" />
       <workItem from="1584609976802" duration="9270000" />
       <workItem from="1584683458304" duration="125000" />
-      <workItem from="1585386047691" duration="10595000" />
+      <workItem from="1585386047691" duration="14007000" />
+      <workItem from="1585544236829" duration="25000" />
+      <workItem from="1585757431681" duration="2319000" />
     </task>
     <task id="LOCAL-00001" summary="Definición de constantes con enumeradores de todo tipo. Añadidas propiedades a varios tipos de muebles.">
       <created>1582741865136</created>
@@ -158,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585394565027</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Proceso de creación de mesa de todos los tipos de mesa">
+      <created>1585397016990</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1585397016990</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +225,8 @@
     <MESSAGE value="Modificar propiedades de los Muebles para facilitar los constructores" />
     <MESSAGE value="Añadida referencias a los muebles y finalizar BBDD's" />
     <MESSAGE value="Proceso de creación de mesa de Comedor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Proceso de creación de mesa de Comedor" />
+    <MESSAGE value="Proceso de creación de mesa de todos los tipos de mesa" />
+    <option name="LAST_COMMIT_MESSAGE" value="Proceso de creación de mesa de todos los tipos de mesa" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -208,10 +242,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2634" y="389" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582740257933" />
-    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1585387097323">
+    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1585398003207">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585387097323" />
+    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585398003207" />
     <state x="2609" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1583343825211">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -220,58 +254,58 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2728" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582740401004" />
-    <state x="2369" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584618184166">
+    <state x="2369" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585758366850">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2369" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584618184166" />
-    <state x="1955" y="19" width="1810" height="955" key="CommitChangelistDialog2" timestamp="1585394560749">
+    <state x="2369" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585758366850" />
+    <state x="1955" y="19" width="1810" height="955" key="CommitChangelistDialog2" timestamp="1585402306606">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="1955" y="19" width="1810" height="955" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585394560749" />
+    <state x="1955" y="19" width="1810" height="955" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585402306606" />
     <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1583343757020">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1583343757020" />
-    <state width="1877" height="608" key="GridCell.Tab.0.bottom" timestamp="1585395355279">
+    <state width="1877" height="608" key="GridCell.Tab.0.bottom" timestamp="1585759801905">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="608" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585395355279" />
-    <state width="1877" height="608" key="GridCell.Tab.0.center" timestamp="1585395355279">
+    <state width="1877" height="608" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585759801905" />
+    <state width="1877" height="608" key="GridCell.Tab.0.center" timestamp="1585759801904">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="608" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585395355279" />
-    <state width="1877" height="608" key="GridCell.Tab.0.left" timestamp="1585395355279">
+    <state width="1877" height="608" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585759801904" />
+    <state width="1877" height="608" key="GridCell.Tab.0.left" timestamp="1585759801904">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="608" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585395355279" />
-    <state width="1877" height="608" key="GridCell.Tab.0.right" timestamp="1585395355279">
+    <state width="1877" height="608" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585759801904" />
+    <state width="1877" height="608" key="GridCell.Tab.0.right" timestamp="1585759801904">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="608" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585395355279" />
-    <state width="1877" height="608" key="GridCell.Tab.1.bottom" timestamp="1585395355279">
+    <state width="1877" height="608" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585759801904" />
+    <state width="1877" height="608" key="GridCell.Tab.1.bottom" timestamp="1585759801905">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="608" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585395355279" />
-    <state width="1877" height="608" key="GridCell.Tab.1.center" timestamp="1585395355279">
+    <state width="1877" height="608" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585759801905" />
+    <state width="1877" height="608" key="GridCell.Tab.1.center" timestamp="1585759801905">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="608" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585395355279" />
-    <state width="1877" height="608" key="GridCell.Tab.1.left" timestamp="1585395355279">
+    <state width="1877" height="608" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585759801905" />
+    <state width="1877" height="608" key="GridCell.Tab.1.left" timestamp="1585759801905">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="608" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585395355279" />
-    <state width="1877" height="608" key="GridCell.Tab.1.right" timestamp="1585395355279">
+    <state width="1877" height="608" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585759801905" />
+    <state width="1877" height="608" key="GridCell.Tab.1.right" timestamp="1585759801905">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="608" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585395355279" />
+    <state width="1877" height="608" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585759801905" />
     <state x="2360" y="94" key="SettingsEditor" timestamp="1584616561178">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2360" y="94" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584616561178" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1585394583962">
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1585397018775">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585394583962" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585397018775" />
     <state x="294" y="107" width="1615" height="999" key="dock-window-1" timestamp="1585387167542">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

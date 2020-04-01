@@ -1,5 +1,6 @@
 package entidades;
 
+import constantes.Color;
 import constantes.Material;
 
 /**
@@ -8,23 +9,23 @@ import constantes.Material;
  */
 public class SillaPlegable extends Silla
 {
-    private Material materialPatas;
+    private Color color;
 
-    public SillaPlegable(String referencia, Cliente cliente, boolean acolchada, Material materialPatas) {
-        // Las sillas plegables s√≥lo las fabricamos en pl√°stico
-        super(referencia, Material.PLASTICO, cliente, acolchada);
-        this.materialPatas = materialPatas;
+    public SillaPlegable(int numTrabajo, Cliente cliente, boolean acolchada, Color color) {
+        // Las sillas plegables solo las fabricamos en pl·stico
+        super(numTrabajo, Material.PLASTICO, cliente, acolchada);
+        this.color = color;
     }
 
-    public Material getMaterialPatas() {
-        return materialPatas;
+    public Color getColor() {
+        return color;
     }
 
-    public void setMaterialPatas(Material materialPatas) {
-        this.materialPatas = materialPatas;
+    public void setColor(Color color) {
+        this.color = color;
     }
 
     @Override public String toString() {
-        return super.toString() + " de pl√°stico con patas de " + this.getMaterialPatas().toString();
+        return super.toString() + " de pl·stico de color " + this.getColor().toString();
     }
 }
