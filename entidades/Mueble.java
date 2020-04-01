@@ -78,4 +78,8 @@ public class Mueble
     public boolean hasArtesano() {
         return getArtesano() != null;
     }
+
+    public boolean finalizado() {
+        return estado == Estado.FINALIZADO || estado == Estado.ENTREGADO;
+    }
 }

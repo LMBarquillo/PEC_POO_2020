@@ -126,7 +126,7 @@ public class GestionMuebles {
 		if(esArtesano(nif)) {
 			List<Mueble> lista = new ArrayList<>();
 			for(Mueble mueble : fabrica.getBbddMuebles().listar()) {
-				if(mueble.hasArtesano() && mueble.getArtesano().getNif().equals(nif)) {
+				if(mueble.hasArtesano() && mueble.getArtesano().getNif().equals(nif) && !mueble.finalizado()) {
 					lista.add(mueble);
 				}
 			}
