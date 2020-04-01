@@ -143,9 +143,10 @@ public class Menu
         mostrarCabecera();
         System.out.println("- 1. Ver mis trabajos por estado determinado     -");
         System.out.println("- 2. Cambiar estado de un trabajo                -");
-        System.out.println("- 3. Volver al menú anterior                     -");
+        System.out.println("- 3. Añadir anotación a un trabajo               -");
+        System.out.println("- 4. Volver al menú anterior                     -");
         mostrarPie();
-        return 3;
+        return 4;
     }
 
     private int mostrarMenuGestionUsuarios() {

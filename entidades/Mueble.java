@@ -3,6 +3,9 @@ package entidades;
 import constantes.Estado;
 import constantes.Material;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Clase Mueble. Clase padre de todos los tipos de mueble.
  * @author: Luis Miguel Barquillo
@@ -14,14 +17,14 @@ public class Mueble
     private Material material;
     private Artesano artesano;  // El artesano asignado para su fabricación
     private Cliente cliente;    // El cliente que ha pedido el mueble
-    private String notas;       // Las notas de progreso dejadas por el artesano
+    private List<String> notas;       // Las notas de progreso dejadas por el artesano
 
     public Mueble(int numTrabajo, Material material, Cliente cliente) {
         this.numTrabajo = numTrabajo;
         this.estado = Estado.PEDIDO;    // Cuando creamos un mueble nuevo, su estado es PEDIDO
         this.material = material;
         this.cliente = cliente;
-        this.notas = "";
+        this.notas = new ArrayList<>();
     }
 
     public int getNumTrabajo() {
@@ -64,11 +67,15 @@ public class Mueble
         this.cliente = cliente;
     }
 
-    public String getNotas() {
+    public List<String> getNotas() {
         return notas;
     }
 
-    public void setNotas(String notas) {
-        this.notas = notas;
+    public void addNota(String nota) {
+        notas.add(nota);
+    }
+
+    public boolean hasArtesano() {
+        return getArtesano() != null;
     }
 }

@@ -43,7 +43,8 @@ public interface Valores
     interface ArtesanoMuebles {
         int VER_TRABAJOS = 1;
         int CAMBIAR_ESTADO = 2;
-        int VOLVER = 3;
+        int ANADIR_ANOTACION = 3;
+        int VOLVER = 4;
     }
 
     /**
