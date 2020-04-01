@@ -40,6 +40,7 @@ public class GestionMuebles {
 				asignarPedido();
 				break;
 			case Valores.JefeMuebles.INSPECCIONAR:
+				inspeccionarPedido();
 				break;
 			case Valores.JefeMuebles.VOLVER:
 				gestionPrincipalMuebles();
@@ -69,6 +70,24 @@ public class GestionMuebles {
 			}
 		} else {
 			System.out.println("El cliente no se encuentra. Debe darlo de alta antes de crear un pedido.");
+		}
+		gestionJefeMuebles();
+	}
+
+	private void inspeccionarPedido() {
+		int numTrabajo = fabrica.getEs().getDatos().pedirEntero("Introduce el número de trabajo: ");
+		if(fabrica.getBbddMuebles().existe(numTrabajo)) {
+			Mueble mueble = fabrica.getBbddMuebles().obtener(numTrabajo);
+			System.out.printf("El mueble seleccionado es: %s\n", mueble.toString());
+			System.out.printf("El mueble ha sido pedido por: %s\n", mueble.getCliente().getNombre());
+			if(mueble.getArtesano() == null) {
+				System.out.println("El mueble no tiene asignado ningún artesano aún.");
+			} else {
+				System.out.printf("El mueble está siendo fabricado por: %s\n", mueble.getArtesano().getNombre());
+			}
+			System.out.printf("El estado actual del mueble es: %s\n", mueble.getEstado().toString());
+		} else {
+			System.out.printf("No existe el trabajo número %d.\n", numTrabajo);
 		}
 		gestionJefeMuebles();
 	}

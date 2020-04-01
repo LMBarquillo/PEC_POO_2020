@@ -24,6 +24,6 @@ public class Silla extends Mueble
     }
 
     @Override public String toString() {
-        return "Silla " + (isAcolchada() ? "acolchada" : "rÃ­gida");
+        return "Silla " + (isAcolchada() ? "acolchada" : "rígida");
     }
 }

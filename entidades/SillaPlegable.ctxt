@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=SillaPlegable
 comment0.text=\r\n\ Clase\ SillaPlegable.\ Describe\ las\ sillas\ de\ tipo\ Plegable\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
-comment1.params=referencia\ cliente\ acolchada\ color
-comment1.target=SillaPlegable(java.lang.String,\ Cliente,\ boolean,\ constantes.Color)
+comment1.params=numTrabajo\ cliente\ acolchada\ color
+comment1.target=SillaPlegable(int,\ Cliente,\ boolean,\ constantes.Color)
 comment2.params=
 comment2.target=constantes.Color\ getColor()
 comment3.params=color

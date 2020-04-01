@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=SillaOficina
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ SillaOficina\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=SillaOficina()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ SillaOficina\r\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-numComments=3
+comment0.text=\r\n\ Clase\ SillaOficina.\ Describe\ las\ sillas\ de\ tipo\ Oficina\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=numTrabajo\ material\ cliente\ acolchada\ reclinable
+comment1.target=SillaOficina(int,\ constantes.Material,\ Cliente,\ boolean,\ boolean)
+comment2.params=
+comment2.target=boolean\ isReclinable()
+comment3.params=reclinable
+comment3.target=void\ setReclinable(boolean)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

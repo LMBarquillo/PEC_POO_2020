@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=SillaOficinaSinRuedas
 comment0.text=\r\n\ Clase\ SillaOficinaSinRuedas.\ Describe\ las\ sillas\ de\ oficina\ est\u00E1ticas\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
-comment1.params=referencia\ material\ cliente\ acolchada\ reclinable\ antideslizante
-comment1.target=SillaOficinaSinRuedas(java.lang.String,\ constantes.Material,\ Cliente,\ boolean,\ boolean,\ boolean)
+comment1.params=numTrabajo\ cliente\ acolchada\ reclinable\ antideslizante
+comment1.target=SillaOficinaSinRuedas(int,\ Cliente,\ boolean,\ boolean,\ boolean)
 comment2.params=
 comment2.target=boolean\ isAntideslizante()
 comment3.params=antideslizante

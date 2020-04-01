@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=MesaCafeCristal
 comment0.text=\r\n\ Clase\ MesaCafeCristal.\ Define\ una\ mesa\ de\ tipo\ Caf\u00E9\ de\ Cristal\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
-comment1.params=referencia\ cliente\ ancho\ largo\ revistero\ labrado
-comment1.target=MesaCafeCristal(java.lang.String,\ Cliente,\ int,\ int,\ boolean,\ boolean)
+comment1.params=numTrabajo\ cliente\ ancho\ largo\ revistero\ labrado
+comment1.target=MesaCafeCristal(int,\ Cliente,\ int,\ int,\ boolean,\ boolean)
 comment2.params=
 comment2.target=boolean\ isLabrado()
 comment3.params=labrado

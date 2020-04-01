@@ -1,16 +1,12 @@
 #BlueJ class context
 comment0.target=MesaCafeMadera
 comment0.text=\r\n\ Clase\ MesaCafeMadera.\ Describe\ las\ mesas\ de\ tipo\ Caf\u00E9\ Madera\r\n\ @Author\ Luis\ Miguel\ Barquillo\r\n
-comment1.params=referencia\ cliente\ ancho\ largo\ revistero\ forma\ madera
-comment1.target=MesaCafeMadera(java.lang.String,\ Cliente,\ int,\ int,\ boolean,\ constantes.Forma,\ constantes.Madera)
+comment1.params=numTrabajo\ cliente\ ancho\ largo\ revistero\ madera
+comment1.target=MesaCafeMadera(int,\ Cliente,\ int,\ int,\ boolean,\ constantes.Madera)
 comment2.params=
-comment2.target=constantes.Forma\ getForma()
-comment3.params=forma
-comment3.target=void\ setForma(constantes.Forma)
+comment2.target=constantes.Madera\ getMadera()
+comment3.params=madera
+comment3.target=void\ setMadera(constantes.Madera)
 comment4.params=
-comment4.target=constantes.Madera\ getMadera()
-comment5.params=madera
-comment5.target=void\ setMadera(constantes.Madera)
-comment6.params=
-comment6.target=java.lang.String\ toString()
-numComments=7
+comment4.target=java.lang.String\ toString()
+numComments=5
