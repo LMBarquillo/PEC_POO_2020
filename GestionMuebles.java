@@ -20,7 +20,7 @@ public class GestionMuebles {
 		int opcion = fabrica.getEs().getMenu().menuPrincipalMuebles();
 		switch (opcion) {
 			case Valores.PrincipalMuebles.JEFE:
-				gestionJefeMuebles();
+				accesoMenuJefes();
 				break;
 			case Valores.PrincipalMuebles.ARTESANOS:
 				gestionArtesanosMuebles();
@@ -28,6 +28,16 @@ public class GestionMuebles {
 			case Valores.PrincipalMuebles.VOLVER:
 				fabrica.principal();
 		}
+	}
+
+	private void accesoMenuJefes() {
+		String nif = fabrica.getEs().getDatos().pedirString("Por favor, introduce tu NIF: ");
+		if(esJefe(nif)) {
+			gestionJefeMuebles();
+		} else {
+			System.out.println("El nif introducido no pertenece a un jefe.");
+		}
+		gestionPrincipalMuebles();
 	}
 
 	private void gestionJefeMuebles() {
@@ -206,6 +216,10 @@ public class GestionMuebles {
 
 	private boolean esArtesano(String nif) {
 		return fabrica.getBbddPersonas().existe(nif) && (fabrica.getBbddPersonas().obtener(nif) instanceof Artesano);
+	}
+
+	private boolean esJefe(String nif) {
+		return fabrica.getBbddPersonas().existe(nif) && (fabrica.getBbddPersonas().obtener(nif) instanceof Jefe);
 	}
 
 	private void crearMueble(Cliente cliente) {
