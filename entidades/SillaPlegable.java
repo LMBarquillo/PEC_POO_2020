@@ -26,6 +26,6 @@ public class SillaPlegable extends Silla
     }
 
     @Override public String toString() {
-        return super.toString() + " de plástico de color " + this.getColor().toString();
+        return super.toString() + " plegable de plástico de color " + this.getColor().toString();
     }
 }

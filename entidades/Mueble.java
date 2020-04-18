@@ -18,6 +18,7 @@ public class Mueble
     private Artesano artesano;          // El artesano asignado para su fabricación
     private Cliente cliente;            // El cliente que ha pedido el mueble
     private List<String> notas;         // Las notas de progreso dejadas por el artesano
+    private Double precio;              // Inicialmente es nulo hasta que se comunica al cliente, por eso usamos la clase envoltorio
 
     public Mueble(int numTrabajo, Material material, Cliente cliente) {
         this.numTrabajo = numTrabajo;
@@ -77,5 +78,13 @@ public class Mueble
 
     public boolean hasArtesano() {
         return getArtesano() != null;
+    }
+
+    public Double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Double precio) {
+        this.precio = precio;
     }
 }

@@ -253,7 +253,9 @@ public class GestionMuebles {
 		Madera madera = Madera.values()[fabrica.getEs().getMenu().menuMadera() - 1];
 		boolean extensible = fabrica.getEs().getDatos().pedirBooleano("¿Desea que la mesa sea extensible? (S/N): ");
 
-		fabrica.getBbddMuebles().insertar(new MesaComedor(numTrabajo, cliente, ancho, largo, madera, extensible));
+		Mueble mesa = new MesaComedor(numTrabajo, cliente, ancho, largo, madera, extensible);
+		fabrica.getBbddMuebles().insertar(mesa);
+		cliente.getMuebles().add(mesa);
 		System.out.printf("La Mesa de Comedor ha sido insertada correctamente, con número de trabajo: %d ", numTrabajo);
 		gestionJefeMuebles();
 	}
@@ -270,7 +272,9 @@ public class GestionMuebles {
 	private void crearMesaCafeMadera(Cliente cliente, int numTrabajo, int ancho, int largo, boolean revistero) {
 		Madera madera = Madera.values()[fabrica.getEs().getMenu().menuMadera() - 1];
 
-		fabrica.getBbddMuebles().insertar(new MesaCafeMadera(numTrabajo, cliente, ancho, largo, revistero, madera));
+		Mueble mesa = new MesaCafeMadera(numTrabajo, cliente, ancho, largo, revistero, madera);
+		fabrica.getBbddMuebles().insertar(mesa);
+		cliente.getMuebles().add(mesa);
 		System.out.printf("La Mesa de Café de madera ha sido insertada correctamente, con número de trabajo: %d ", numTrabajo);
 		gestionJefeMuebles();
 	}
@@ -278,7 +282,9 @@ public class GestionMuebles {
 	private void crearMesaCafeCristal(Cliente cliente, int numTrabajo, int ancho, int largo, boolean revistero) {
 		boolean labrado = fabrica.getEs().getDatos().pedirBooleano("¿Desea una labrado en el cristal? (S/N): ");
 
-		fabrica.getBbddMuebles().insertar(new MesaCafeCristal(numTrabajo, cliente, ancho, largo, revistero, labrado));
+		Mueble mesa = new MesaCafeCristal(numTrabajo, cliente, ancho, largo, revistero, labrado);
+		fabrica.getBbddMuebles().insertar(mesa);
+		cliente.getMuebles().add(mesa);
 		System.out.printf("La Mesa de Café de cristal ha sido insertada correctamente, con número de trabajo: %d ", numTrabajo);
 		gestionJefeMuebles();
 	}
@@ -287,7 +293,9 @@ public class GestionMuebles {
 		Madera madera = Madera.values()[fabrica.getEs().getMenu().menuMadera() - 1];
 		int cajones = fabrica.getEs().getDatos().pedirEntero("Número de cajones (1-5): ", 1, 5);
 
-		fabrica.getBbddMuebles().insertar(new MesaDormitorio(numTrabajo, cliente, ancho, largo, madera, cajones));
+		Mueble mesa = new MesaDormitorio(numTrabajo, cliente, ancho, largo, madera, cajones);
+		fabrica.getBbddMuebles().insertar(mesa);
+		cliente.getMuebles().add(mesa);
 		System.out.printf("La Mesa de Dormitorio ha sido insertada correctamente, con número de trabajo: %d ", numTrabajo);
 		gestionJefeMuebles();
 	}
@@ -311,7 +319,9 @@ public class GestionMuebles {
 	private void crearSillaPlegable(Cliente cliente, int numTrabajo, boolean acolchada) {
 		Color color = Color.values()[fabrica.getEs().getMenu().menuColor() - 1];
 
-		fabrica.getBbddMuebles().insertar(new SillaPlegable(numTrabajo, cliente, acolchada, color));
+		Silla silla = new SillaPlegable(numTrabajo, cliente, acolchada, color);
+		fabrica.getBbddMuebles().insertar(silla);
+		cliente.getMuebles().add(silla);
 		System.out.printf("La Silla Plegable ha sido insertada correctamente, con número de trabajo: %d ", numTrabajo);
 		gestionJefeMuebles();
 	}
@@ -320,7 +330,9 @@ public class GestionMuebles {
 		boolean respaldo = fabrica.getEs().getDatos().pedirBooleano("¿Desea que la silla tenga respaldo? (S/N): ");
 		Material material = Material.values()[fabrica.getEs().getMenu().menuMaterial() - 1];
 
-		fabrica.getBbddMuebles().insertar(new SillaCocina(numTrabajo, material, cliente, acolchada, respaldo));
+		Silla silla = new SillaCocina(numTrabajo, material, cliente, acolchada, respaldo);
+		fabrica.getBbddMuebles().insertar(silla);
+		cliente.getMuebles().add(silla);
 		System.out.printf("La Silla de Cocina ha sido insertada correctamente, con número de trabajo: %d ", numTrabajo);
 		gestionJefeMuebles();
 	}
@@ -338,7 +350,9 @@ public class GestionMuebles {
 	private void crearSillaOficinaConRuedas(Cliente cliente, int numTrabajo, boolean acolchada, boolean reclinable) {
 		int numRuedas = fabrica.getEs().getDatos().pedirEntero("¿Cuántas ruedas quiere que tenga? (4-7): ", 4, 7);
 
-		fabrica.getBbddMuebles().insertar(new SillaOficinaConRuedas(numTrabajo, cliente, acolchada, reclinable, numRuedas));
+		Silla silla = new SillaOficinaConRuedas(numTrabajo, cliente, acolchada, reclinable, numRuedas);
+		fabrica.getBbddMuebles().insertar(silla);
+		cliente.getMuebles().add(silla);
 		System.out.printf("La Silla de Oficina con ruedas ha sido insertada correctamente, con número de trabajo: %d ", numTrabajo);
 		gestionJefeMuebles();
 	}
@@ -346,7 +360,9 @@ public class GestionMuebles {
 	private void crearSillaOficinaSinRuedas(Cliente cliente, int numTrabajo, boolean acolchada, boolean reclinable) {
 		boolean antideslizante = fabrica.getEs().getDatos().pedirBooleano("¿Desea patas antideslizantes? (S/N): ");
 
-		fabrica.getBbddMuebles().insertar(new SillaOficinaSinRuedas(numTrabajo, cliente, acolchada, reclinable, antideslizante));
+		Silla silla = new SillaOficinaSinRuedas(numTrabajo, cliente, acolchada, reclinable, antideslizante);
+		fabrica.getBbddMuebles().insertar(silla);
+		cliente.getMuebles().add(silla);
 		System.out.printf("La Silla de Oficina sin ruedas ha sido insertada correctamente, con número de trabajo: %d ", numTrabajo);
 		gestionJefeMuebles();
 	}

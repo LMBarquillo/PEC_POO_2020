@@ -111,6 +111,7 @@ public class Fabrica
         bbddPersonas.insertar(artesano);
         Silla silla = new SillaCocina(1, Material.MADERA, cliente1, false, true);
         silla.setArtesano(artesano);
+        cliente1.getMuebles().add(silla);
         bbddMuebles.insertar(silla);
         bbddMuebles.insertar(new MesaComedor(2, cliente2, 100, 160, Madera.NOGAL, true));
         bbddMuebles.insertar(new SillaOficinaConRuedas(3, cliente2, true, true, 5));

@@ -24,6 +24,6 @@ public class SillaCocina extends Silla
     }
 
     @Override public String toString() {
-        return super.toString() + (isRespaldo() ? " con " : " sin ") + "respaldo";
+        return super.toString() + " de cocina" + (isRespaldo() ? " con " : " sin ") + "respaldo";
     }
 }

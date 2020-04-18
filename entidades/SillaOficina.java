@@ -24,6 +24,6 @@ public class SillaOficina extends Silla
     }
 
     @Override public String toString() {
-        return super.toString() + (isReclinable() ? " reclinable " : " estática ");
+        return super.toString() + " de oficina" + (isReclinable() ? " reclinable " : " estática ");
     }
 }

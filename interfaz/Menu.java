@@ -82,6 +82,10 @@ public class Menu
         return leerOpcion(mostrarMenuEstado());
     }
 
+    public int menuListado(String encabezado, Object[] listado) {
+        return leerOpcion(mostrarMenuListado(encabezado, listado));
+    }
+
     private int leerOpcion(int max) {
         try {
             String lectura;
@@ -165,11 +169,12 @@ public class Menu
         System.out.println("- 1. Alta de nuevo cliente                       -");
         System.out.println("- 2. Baja de cliente                             -");
         System.out.println("- 3. Modificar un cliente                        -");
-        System.out.println("- 4. Comunicación de precios de pedidos          -");
-        System.out.println("- 5. Avisar de pedido listo para entrega         -");
-        System.out.println("- 6. Volver al menú anterior                     -");
+        System.out.println("- 4. Listado de clientes                         -");
+        System.out.println("- 5. Comunicación de precios de pedidos          -");
+        System.out.println("- 6. Avisar de pedido listo para entrega         -");
+        System.out.println("- 7. Volver al menú anterior                     -");
         mostrarPie();
-        return 6;
+        return 7;
     }
 
     private int mostrarMenuTipoMueble() {
@@ -239,11 +244,16 @@ public class Menu
         return mostrarValores(Estado.values());
     }
 
-    private int mostrarValores(Object[] values) {
+    private int mostrarMenuListado(String encabezado, Object[] valores) {
+        System.out.println(encabezado);
+        return mostrarValores(valores);
+    }
+
+    public int mostrarValores(Object[] values) {
         for(int i=0; i<values.length; i++){
             System.out.printf(" - %d. %s\n", i+1, values[i].toString());
         }
-        System.out.print("Elija el tipo deseado: ");
+        System.out.print("Seleccione una opción: ");
         return values.length;
     }
 

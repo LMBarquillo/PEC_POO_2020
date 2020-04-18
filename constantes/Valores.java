@@ -64,9 +64,10 @@ public interface Valores
         int ALTA = 1;
         int BAJA = 2;
         int MODIFICACION = 3;
-        int COMUNICAR_PRECIO = 4;
-        int AVISAR_ENTREGA = 5;
-        int VOLVER = 6;
+        int LISTADO = 4;
+        int COMUNICAR_PRECIO = 5;
+        int AVISAR_ENTREGA = 6;
+        int VOLVER = 7;
     }
 
     interface TipoMuebles {
