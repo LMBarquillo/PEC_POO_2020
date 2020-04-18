@@ -48,15 +48,26 @@ public class GestionMuebles {
 	}
 
 	private void gestionArtesanosMuebles() {
+		String nif = fabrica.getEs().getDatos().pedirString("Por favor, introduce tu NIF: ");
+		if(esArtesano(nif)) {
+			menuGestionArtesanos(nif);
+		} else {
+			System.out.println("El nif introducido no pertenece a un artesano.");
+		}
+		gestionPrincipalMuebles();
+	}
+
+	private void menuGestionArtesanos(String nif) {
 		int opcion = fabrica.getEs().getMenu().menuArtesanoMuebles();
 		switch (opcion) {
 			case Valores.ArtesanoMuebles.VER_TRABAJOS:
-				verTrabajos();
+				verTrabajos(nif);
 				break;
 			case Valores.ArtesanoMuebles.CAMBIAR_ESTADO:
-				cambiarEstado();
+				cambiarEstado(nif);
 				break;
 			case Valores.ArtesanoMuebles.ANADIR_ANOTACION:
+				crearNotaMueble(nif);
 				break;
 			case Valores.ArtesanoMuebles.VOLVER:
 				gestionPrincipalMuebles();
@@ -121,12 +132,10 @@ public class GestionMuebles {
 		gestionJefeMuebles();
 	}
 
-	private void verTrabajos() {
-		String nif = fabrica.getEs().getDatos().pedirString("Por favor, introduce tu NIF: ");
-		if(esArtesano(nif)) {
+	private void verTrabajos(String nif) {
 			List<Mueble> lista = new ArrayList<>();
 			for(Mueble mueble : fabrica.getBbddMuebles().listar()) {
-				if(mueble.hasArtesano() && mueble.getArtesano().getNif().equals(nif) && !mueble.finalizado()) {
+				if(mueble.hasArtesano() && mueble.getArtesano().getNif().equals(nif) && mueble.getEstado() != Estado.FINALIZADO) {
 					lista.add(mueble);
 				}
 			}
@@ -138,30 +147,40 @@ public class GestionMuebles {
 			} else {
 				System.out.println("Actualmente no tienes ningún mueble asignado.");
 			}
-		} else {
-			System.out.println("El nif introducido no pertenece a un artesano.");
-		}
-		gestionArtesanosMuebles();
+
+		menuGestionArtesanos(nif);
 	}
 
-	private void cambiarEstado() {
-		String nif = fabrica.getEs().getDatos().pedirString("Por favor, introduce tu NIF: ");
-		if(esArtesano(nif)) {
-			int trabajo = fabrica.getEs().getDatos().pedirEntero("Introduce el trabajo que desea modificar: ");
-			if(fabrica.getBbddMuebles().existe(trabajo)) {
-				if(fabrica.getBbddMuebles().obtener(trabajo).hasArtesano() &&
-						fabrica.getBbddMuebles().obtener(trabajo).getArtesano().getNif().equals(nif)) {
-					cambiarEstado(fabrica.getBbddMuebles().obtener(trabajo));
-				} else {
-					System.out.println("El trabajo introducido no te ha sido asignado.");
-				}
+	private void cambiarEstado(String nif) {
+		int trabajo = fabrica.getEs().getDatos().pedirEntero("Introduce el trabajo que desea modificar: ");
+		if(fabrica.getBbddMuebles().existe(trabajo)) {
+			if(fabrica.getBbddMuebles().obtener(trabajo).hasArtesano() &&
+					fabrica.getBbddMuebles().obtener(trabajo).getArtesano().getNif().equals(nif)) {
+				cambiarEstado(fabrica.getBbddMuebles().obtener(trabajo));
 			} else {
-				System.out.println("El número de trabajo introducido no existe.");
+				System.out.println("El trabajo introducido no te ha sido asignado.");
 			}
 		} else {
-			System.out.println("El nif introducido no pertenece a un artesano.");
+			System.out.println("El número de trabajo introducido no existe.");
 		}
-		gestionArtesanosMuebles();
+
+		menuGestionArtesanos(nif);
+	}
+
+	private void crearNotaMueble(String nif) {
+		int trabajo = fabrica.getEs().getDatos().pedirEntero("Introduce el trabajo al que deseas añadir una nota: ");
+		if(fabrica.getBbddMuebles().existe(trabajo)) {
+			Mueble mueble = fabrica.getBbddMuebles().obtener(trabajo);
+			if(mueble.getArtesano() != null && mueble.getArtesano().getNif().equals(nif)) {
+				mueble.addNota(fabrica.getEs().getDatos().pedirString("Introduce la nota: "));
+			} else {
+				System.out.println("El número de trabajo introducido no te ha sido asignado, y no puedes añadir notas.");
+			}
+		} else {
+			System.out.println("El número de trabajo introducido no existe.");
+		}
+
+		menuGestionArtesanos(nif);
 	}
 
 	private void cambiarEstado(Mueble mueble) {

@@ -15,9 +15,9 @@ public class Mueble
     private int numTrabajo; // Número de trabajo: Código único que utilizaremos para identificar un mueble
     private Estado estado;
     private Material material;
-    private Artesano artesano;  // El artesano asignado para su fabricación
-    private Cliente cliente;    // El cliente que ha pedido el mueble
-    private List<String> notas;       // Las notas de progreso dejadas por el artesano
+    private Artesano artesano;          // El artesano asignado para su fabricación
+    private Cliente cliente;            // El cliente que ha pedido el mueble
+    private List<String> notas;         // Las notas de progreso dejadas por el artesano
 
     public Mueble(int numTrabajo, Material material, Cliente cliente) {
         this.numTrabajo = numTrabajo;
@@ -77,9 +77,5 @@ public class Mueble
 
     public boolean hasArtesano() {
         return getArtesano() != null;
-    }
-
-    public boolean finalizado() {
-        return estado == Estado.FINALIZADO || estado == Estado.ENTREGADO;
     }
 }

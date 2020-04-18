@@ -7,7 +7,7 @@ package constantes;
  */
 public enum Estado
 {
-    PEDIDO("Pedido"), FABRICANDO("En fabricación"), DETENIDO("Fabricación detenida"), FINALIZADO("Finalizado"), ENTREGADO("Entregado");
+    PEDIDO("Pedido"), FABRICANDO("En fabricación"), DETENIDO("Fabricación detenida"), FINALIZADO("Finalizado");
 
     private String estado;
 
