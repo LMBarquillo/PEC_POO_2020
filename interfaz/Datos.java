@@ -2,6 +2,9 @@ package interfaz;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Clase Datos. Solicita introducción de datos por teclado y gestiona la entrada.
@@ -13,7 +16,7 @@ public class Datos
     private final String TRUE = "S";
     private final String FALSE = "N";
 
-    private BufferedReader br;
+    private final BufferedReader br;
 
     public Datos(BufferedReader br) {
         this.br = br;
@@ -87,6 +90,21 @@ public class Datos
         return null;
     }
 
+    public Date pedirFecha(String solicitud) {
+        try {
+            String fecha;
+            do {
+                System.out.print(solicitud);
+                fecha = br.readLine();
+            } while(!esFecha(fecha));
+
+            return new SimpleDateFormat("dd/MM/yyyy").parse(fecha);
+        } catch (IOException | ParseException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     private boolean cumpleRango(String s, int min, int max) {
         int value = Integer.parseInt(s);
         return min <= value && value <= max;
@@ -106,6 +124,15 @@ public class Datos
             Double.parseDouble(s);
             return true;
         } catch(NumberFormatException ex) {
+            return false;
+        }
+    }
+
+    private boolean esFecha(String s) {
+        try {
+            new SimpleDateFormat("dd/MM/yyyy").parse(s);
+            return true;
+        } catch (ParseException e) {
             return false;
         }
     }

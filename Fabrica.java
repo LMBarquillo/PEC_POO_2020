@@ -50,7 +50,7 @@ public class Fabrica
                 gestionPersonas.gestionClientes();
                 break;
             case Valores.Principal.EMPLEADOS:
-                gestionPersonas.gestionUsuarios();
+                gestionPersonas.gestionEmpleados();
                 break;
             case Valores.Principal.SALIR:
                 es.getMenu().mostrarDespedida();

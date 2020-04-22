@@ -50,11 +50,12 @@ public interface Valores
     /**
      * Definición de los valores del menú de gestión de usuarios
      */
-    interface GestionUsuarios {
+    interface GestionEmpleados {
         int ALTA = 1;
         int BAJA = 2;
         int MODIFICACION = 3;
-        int VOLVER = 4;
+        int LISTADO = 4;
+        int VOLVER = 5;
     }
 
     /**
@@ -95,5 +96,11 @@ public interface Valores
     interface TipoSillaOficina {
         int CON_RUEDAS = 1;
         int SIN_RUEDAS = 2;
+    }
+
+    interface TipoEmpleado {
+        int JEFE = 1;
+        int COMERCIAL = 2;
+        int ARTESANO = 3;
     }
 }

@@ -1,6 +1,9 @@
+import constantes.Material;
+import constantes.Turno;
 import constantes.Valores;
 import entidades.*;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -15,16 +18,20 @@ public class GestionPersonas {
 		this.fabrica = fabrica;
 	}
 
-	public void gestionUsuarios() {
-		int opcion = fabrica.getEs().getMenu().menuGestionUsuarios();
+	public void gestionEmpleados() {
+		int opcion = fabrica.getEs().getMenu().menuGestionEmpleados();
 		switch (opcion) {
-			case Valores.GestionUsuarios.ALTA:
+			case Valores.GestionEmpleados.ALTA:
+				altaEmpleados();
 				break;
-			case Valores.GestionUsuarios.BAJA:
+			case Valores.GestionEmpleados.BAJA:
 				break;
-			case Valores.GestionUsuarios.MODIFICACION:
+			case Valores.GestionEmpleados.MODIFICACION:
 				break;
-			case Valores.GestionUsuarios.VOLVER:
+			case Valores.GestionEmpleados.LISTADO:
+				listadoEmpleados();
+				break;
+			case Valores.GestionEmpleados.VOLVER:
 				fabrica.principal();
 		}
 	}
@@ -53,6 +60,79 @@ public class GestionPersonas {
 			case Valores.GestionClientes.VOLVER:
 				fabrica.principal();
 		}
+	}
+
+
+	private void altaEmpleados() {
+		Empleado empleado;
+		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
+		if (!fabrica.getBbddPersonas().existe(nif)) {
+			String nombre = fabrica.getEs().getDatos().pedirString("Introduzca el nombre: ");
+			String direccion = fabrica.getEs().getDatos().pedirString("Introduzca la dirección: ");
+			String codigoPostal = fabrica.getEs().getDatos().pedirString("Introduzca el C.P.:");
+			String localidad = fabrica.getEs().getDatos().pedirString("Introduzca la localidad: ");
+			String telefono = fabrica.getEs().getDatos().pedirString("Introduzca el teléfono: ");
+			Date antiguedad = fabrica.getEs().getDatos().pedirFecha("Introduzca la antiguedad (DD/MM/AAAA): ");
+			double salario = fabrica.getEs().getDatos().pedirDecimal("Introduzca el salario: ");
+
+			switch (fabrica.getEs().getMenu().menuTipoEmpleado()) {
+				case Valores.TipoEmpleado.JEFE:
+					altaJefe(nombre, nif, direccion, codigoPostal, localidad, telefono, antiguedad, salario);
+					break;
+				case Valores.TipoEmpleado.COMERCIAL:
+					altaComercial(nombre, nif, direccion, codigoPostal, localidad, telefono, antiguedad, salario);
+					break;
+				case Valores.TipoEmpleado.ARTESANO:
+					altaArtesano(nombre, nif, direccion, codigoPostal, localidad, telefono, antiguedad, salario);
+					break;
+			}
+		} else {
+			System.out.println("El NIF introducido ya se encuentra en la base de datos.");
+		}
+		gestionEmpleados();
+	}
+
+	private void altaJefe(String nombre, String nif, String direccion, String cp, String localidad, String telefono, Date antiguedad, double salario) {
+		double acciones = fabrica.getEs().getDatos().pedirDecimal("Introduzca el porcentaje de acciones: ");
+		fabrica.getBbddPersonas().insertar(new Jefe(nombre, nif, direccion, cp, localidad, telefono, antiguedad, salario, acciones));
+		System.out.println("El nuevo jefe ha sido insertado correctamente");
+	}
+
+	private void altaComercial(String nombre, String nif, String direccion, String cp, String localidad, String telefono, Date antiguedad, double salario) {
+		double comision = fabrica.getEs().getDatos().pedirDecimal("Introduzca el porcentaje de comisión: ");
+		fabrica.getBbddPersonas().insertar(new Comercial(nombre, nif, direccion, cp, localidad, telefono, antiguedad, salario, comision));
+		System.out.println("El nuevo comercial ha sido insertado correctamente");
+	}
+
+	private void altaArtesano(String nombre, String nif, String direccion, String cp, String localidad, String telefono, Date antiguedad, double salario) {
+		Material especialidad = Material.values()[fabrica.getEs().getMenu().menuListado("¿Cuál es su especialidad?", Material.values())-1];
+		if(fabrica.getEs().getDatos().pedirBooleano("¿El artesano está en plantilla? (S/N): ")) {
+			altaArtesanoPlantilla(nombre, nif, direccion, cp, localidad, telefono, antiguedad, salario, especialidad);
+		} else {
+			altaArtesanoPorHoras(nombre, nif, direccion, cp, localidad, telefono, antiguedad, salario, especialidad);
+		}
+	}
+
+	private void altaArtesanoPlantilla(String nombre, String nif, String direccion, String cp, String localidad, String telefono, Date antiguedad, double salario, Material especialidad) {
+		Turno turno = Turno.values()[fabrica.getEs().getMenu().menuListado("¿Qué turno realiza?", Turno.values())-1];
+		fabrica.getBbddPersonas().insertar(new ArtesanoEnPlantilla(nombre, nif, direccion, cp, localidad, telefono, antiguedad, salario, especialidad, turno));
+		System.out.println("El nuevo artesano en plantilla ha sido insertado correctamente");
+	}
+
+	private void altaArtesanoPorHoras(String nombre, String nif, String direccion, String cp, String localidad, String telefono, Date antiguedad, double salario, Material especialidad) {
+		int horas = fabrica.getEs().getDatos().pedirEntero("¿Cuántas horas diarias realiza?", 1, 8);
+		fabrica.getBbddPersonas().insertar(new ArtesanoPorHoras(nombre, nif, direccion, cp, localidad, telefono, antiguedad, salario, especialidad, horas));
+		System.out.println("El nuevo artesano por horas ha sido insertado correctamente");
+	}
+
+	private void listadoEmpleados() {
+		List<Persona> personas = fabrica.getBbddPersonas().listar();
+		for (Persona p : personas) {
+			if (p instanceof Empleado) {
+				System.out.println(p.toString());
+			}
+		}
+		gestionEmpleados();
 	}
 
 	private void altaClientes() {

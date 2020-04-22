@@ -12,7 +12,7 @@ import java.io.IOException;
  */
 public class Menu
 {
-    private BufferedReader br;
+    private final BufferedReader br;
 
     public Menu(BufferedReader br) {
         this.br = br;
@@ -34,8 +34,8 @@ public class Menu
         return leerOpcion(mostrarMenuArtesanoMuebles());
     }
 
-    public int menuGestionUsuarios() {
-        return leerOpcion(mostrarMenuGestionUsuarios());
+    public int menuGestionEmpleados() {
+        return leerOpcion(mostrarMenuGestionEmpleados());
     }
 
     public int menuGestionClientes() {
@@ -60,6 +60,10 @@ public class Menu
 
     public int menuTipoSillaOficina() {
         return leerOpcion(mostrarMenuTipoSillaOficina());
+    }
+
+    public int menuTipoEmpleado() {
+        return leerOpcion(mostrarMenuTipoEmpleado());
     }
 
     public int menuMadera() {
@@ -154,14 +158,15 @@ public class Menu
         return 4;
     }
 
-    private int mostrarMenuGestionUsuarios() {
+    private int mostrarMenuGestionEmpleados() {
         mostrarCabecera();
-        System.out.println("- 1. Alta de nuevo usuario                       -");
-        System.out.println("- 2. Baja de usuario                             -");
-        System.out.println("- 3. Modificar un usuario                        -");
-        System.out.println("- 4. Volver al menú anterior                     -");
+        System.out.println("- 1. Alta de nuevo empleado                      -");
+        System.out.println("- 2. Baja de empleado                            -");
+        System.out.println("- 3. Modificar un empleado                       -");
+        System.out.println("- 4. Listado de empleados                        -");
+        System.out.println("- 5. Volver al menú anterior                     -");
         mostrarPie();
-        return 4;
+        return 5;
     }
 
     private int mostrarMenuGestionClientes() {
@@ -217,6 +222,15 @@ public class Menu
         System.out.println(" - 2. Sin ruedas");
         System.out.print("Elija el tipo deseado: ");
         return 2;
+    }
+
+    private int mostrarMenuTipoEmpleado() {
+        System.out.println("Tipo de empleado: ");
+        System.out.println(" - 1. Jefe");
+        System.out.println(" - 2. Comercial");
+        System.out.println(" - 3. Artesano");
+        System.out.print("Elija el tipo deseado: ");
+        return 3;
     }
 
     private int mostrarMenuMadera() {
