@@ -25,6 +25,7 @@ public class GestionPersonas {
 				altaEmpleados();
 				break;
 			case Valores.GestionEmpleados.BAJA:
+				bajaEmpleados();
 				break;
 			case Valores.GestionEmpleados.MODIFICACION:
 				break;
@@ -125,19 +126,18 @@ public class GestionPersonas {
 		System.out.println("El nuevo artesano por horas ha sido insertado correctamente");
 	}
 
-//	private void bajaEmpleados() {
-//		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
-//		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif) instanceof Empleado) {
-//			// Ante una eliminación, pedir siempre confirmación
-//			if (fabrica.getEs().getDatos().pedirBooleano(String.format("¿Está seguro de que desea eliminar el cliente con NIF %s? (S/N): ", nif))) {
-//				fabrica.getBbddPersonas().eliminar(nif);
-//				System.out.printf("El cliente con NIF %s ha sido eliminado.\n", nif);
-//			}
-//		} else {
-//			System.out.println("El NIF introducido no se corresponde con el de un cliente.");
-//		}
-//		gestionClientes();
-//	}
+	private void bajaEmpleados() {
+		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
+		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif).esEmpleado()) {
+			if (fabrica.getEs().getDatos().pedirBooleano(String.format("¿Está seguro de que desea eliminar el empleado con NIF %s? (S/N): ", nif))) {
+				fabrica.getBbddPersonas().eliminar(nif);
+				System.out.printf("El empleado con NIF %s ha sido eliminado.\n", nif);
+			}
+		} else {
+			System.out.println("El NIF introducido no se corresponde con el de un empleado.");
+		}
+		gestionEmpleados();
+	}
 
 	private void listadoEmpleados() {
 		List<Persona> personas = fabrica.getBbddPersonas().listar();

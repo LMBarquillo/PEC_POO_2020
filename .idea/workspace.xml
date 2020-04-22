@@ -20,16 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aa6636b-b521-4c61-84c4-57ef74acc779" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/GestionMuebles.java" beforeDir="false" afterPath="$PROJECT_DIR$/GestionMuebles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GestionPersonas.java" beforeDir="false" afterPath="$PROJECT_DIR$/GestionPersonas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/Artesano.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Artesano.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/ClienteEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/ClienteEmpresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/ClientePersona.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/ClientePersona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/Comercial.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Comercial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/Jefe.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Jefe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entidades/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/Persona.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +111,7 @@
       <workItem from="1585803399496" duration="71000" />
       <workItem from="1587198729414" duration="10655000" />
       <workItem from="1587358470794" duration="21000" />
-      <workItem from="1587571819013" duration="4351000" />
+      <workItem from="1587571819013" duration="4491000" />
     </task>
     <task id="LOCAL-00001" summary="Definición de constantes con enumeradores de todo tipo. Añadidas propiedades a varios tipos de muebles.">
       <created>1582741865136</created>
@@ -283,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587575389887</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Añadir clases abstractas para identificar tipos de objeto.">
+      <created>1587576220649</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1587576220649</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +327,8 @@
     <MESSAGE value="Comunicación de precios de muebles a clientes y listado de clientes." />
     <MESSAGE value="Avisar entregas" />
     <MESSAGE value="Alta y listado de empleados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alta y listado de empleados" />
+    <MESSAGE value="Añadir clases abstractas para identificar tipos de objeto." />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadir clases abstractas para identificar tipos de objeto." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -361,10 +360,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2369" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585758366850" />
-    <state x="1955" y="19" width="1810" height="955" key="CommitChangelistDialog2" timestamp="1587575389061">
+    <state x="1955" y="19" width="1810" height="955" key="CommitChangelistDialog2" timestamp="1587576219656">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="1955" y="19" width="1810" height="955" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1587575389061" />
+    <state x="1955" y="19" width="1810" height="955" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1587576219656" />
     <state x="2012" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1585763586361">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -409,10 +408,14 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2360" y="94" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584616561178" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587575392715">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1587576301727">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1587575392715" />
+    <state width="498" height="446" key="SwitcherDM/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1587576301727" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587576223073">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1587576223073" />
     <state x="223" y="30" width="1597" height="999" key="dock-window-1" timestamp="1587575072178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
