@@ -9,7 +9,7 @@ import java.util.List;
  * @author Luis Miguel Barquillo
  */
 public class GestionPersonas {
-	private Fabrica fabrica;
+	private final Fabrica fabrica;
 
 	public GestionPersonas(Fabrica fabrica) {
 		this.fabrica = fabrica;
@@ -45,7 +45,7 @@ public class GestionPersonas {
 				listadoClientes();
 				break;
 			case Valores.GestionClientes.COMUNICAR_PRECIO:
-			    comunicarPrecio();
+				comunicarPrecio();
 				break;
 			case Valores.GestionClientes.AVISAR_ENTREGA:
 				avisarEntrega();
@@ -84,10 +84,10 @@ public class GestionPersonas {
 	private void bajaClientes() {
 		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
 		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif) instanceof Cliente) {
-		    // Ante una eliminación, pedir siempre confirmación
+			// Ante una eliminación, pedir siempre confirmación
 			if (fabrica.getEs().getDatos().pedirBooleano(String.format("¿Está seguro de que desea eliminar el cliente con NIF %s? (S/N): ", nif))) {
-			    fabrica.getBbddPersonas().eliminar(nif);
-                System.out.printf("El cliente con NIF %s ha sido eliminado.\n", nif);
+				fabrica.getBbddPersonas().eliminar(nif);
+				System.out.printf("El cliente con NIF %s ha sido eliminado.\n", nif);
 			}
 		} else {
 			System.out.println("El NIF introducido no se corresponde con el de un cliente.");
@@ -131,8 +131,8 @@ public class GestionPersonas {
 
 	private void listadoClientes() {
 		List<Persona> personas = fabrica.getBbddPersonas().listar();
-		for(Persona p : personas) {
-			if(p instanceof Cliente) {
+		for (Persona p : personas) {
+			if (p instanceof Cliente) {
 				System.out.println(p.toString());
 			}
 		}
@@ -140,13 +140,13 @@ public class GestionPersonas {
 	}
 
 	private void comunicarPrecio() {
-        String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
-        if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif) instanceof Cliente) {
-            Cliente cliente = (Cliente) fabrica.getBbddPersonas().obtener(nif);
-            if(cliente.getMuebles().size() > 0) {
-				int pos = fabrica.getEs().getMenu().menuListado("Elija el mueble del cliente: ", cliente.getMuebles().toArray())-1;
+		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
+		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif) instanceof Cliente) {
+			Cliente cliente = (Cliente) fabrica.getBbddPersonas().obtener(nif);
+			if (cliente.getMuebles().size() > 0) {
+				int pos = fabrica.getEs().getMenu().menuListado("Elija el mueble del cliente: ", cliente.getMuebles().toArray()) - 1;
 				Mueble mueble = cliente.getMuebles().get(pos);
-				if(mueble.getPrecio() == null) {
+				if (mueble.getPrecio() == null) {
 					Double precio = fabrica.getEs().getDatos().pedirDecimal("Introduzca el precio del mueble: ");
 					mueble.setPrecio(precio);
 				}
@@ -156,13 +156,25 @@ public class GestionPersonas {
 			} else {
 				System.out.println("El cliente introducido no ha pedido ningún mueble.");
 			}
-        } else {
-            System.out.println("El nif introducido no se corresponde con el de un cliente.");
-        }
-        gestionClientes();
-    }
+		} else {
+			System.out.println("El nif introducido no se corresponde con el de un cliente.");
+		}
+		gestionClientes();
+	}
 
-    private void avisarEntrega() {
-
+	private void avisarEntrega() {
+		int id = fabrica.getEs().getDatos().pedirEntero("Introduzca el Número de Trabajo: ");
+		if (fabrica.getBbddMuebles().existe(id)) {
+			Mueble mueble = fabrica.getBbddMuebles().obtener(id);
+			System.out.printf("El mueble introducido ha sido pedido por %s\n", mueble.getCliente().getNombre());
+			if(fabrica.getEs().getDatos().pedirBooleano("¿Desea notificarle que ya está disponible para la recogida? (S/N): ")) {
+				// En este punto enviaríamos un email.
+				System.out.printf("Se le ha enviado una notificación al cliente al email: %s\n", mueble.getCliente().getEmail());
+				System.out.printf("Puede avisarle personalmente en el teléfono: %s\n", mueble.getCliente().getTelefono());
+			}
+		} else {
+			System.out.println("El trabajo introducido no existe.");
+		}
+		gestionClientes();
 	}
 }

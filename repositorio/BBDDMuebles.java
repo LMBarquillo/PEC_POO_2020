@@ -14,7 +14,7 @@ import java.util.Map;
  */
 public class BBDDMuebles implements BBDD<Integer, Mueble>
 {
-    private Map<Integer, Mueble> muebles;
+    private final Map<Integer, Mueble> muebles;
 
     public BBDDMuebles() {
         this.muebles = new HashMap<>();

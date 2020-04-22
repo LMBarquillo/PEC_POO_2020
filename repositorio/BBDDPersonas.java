@@ -13,7 +13,7 @@ import java.util.Map;
  * @author Luis Miguel Barquillo
  */
 public class BBDDPersonas implements BBDD<String, Persona> {
-    private Map<String, Persona> personas;
+    private final Map<String, Persona> personas;
 
     public BBDDPersonas() {
         this.personas = new HashMap<>();

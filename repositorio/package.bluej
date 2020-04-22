@@ -36,6 +36,6 @@ target3.height=50
 target3.name=BBDD
 target3.showInterface=false
 target3.type=InterfaceTarget
-target3.width=90
+target3.width=100
 target3.x=220
 target3.y=70
