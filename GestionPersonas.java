@@ -125,10 +125,24 @@ public class GestionPersonas {
 		System.out.println("El nuevo artesano por horas ha sido insertado correctamente");
 	}
 
+//	private void bajaEmpleados() {
+//		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
+//		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif) instanceof Empleado) {
+//			// Ante una eliminación, pedir siempre confirmación
+//			if (fabrica.getEs().getDatos().pedirBooleano(String.format("¿Está seguro de que desea eliminar el cliente con NIF %s? (S/N): ", nif))) {
+//				fabrica.getBbddPersonas().eliminar(nif);
+//				System.out.printf("El cliente con NIF %s ha sido eliminado.\n", nif);
+//			}
+//		} else {
+//			System.out.println("El NIF introducido no se corresponde con el de un cliente.");
+//		}
+//		gestionClientes();
+//	}
+
 	private void listadoEmpleados() {
 		List<Persona> personas = fabrica.getBbddPersonas().listar();
 		for (Persona p : personas) {
-			if (p instanceof Empleado) {
+			if (p.esEmpleado()) {
 				System.out.println(p.toString());
 			}
 		}
@@ -163,7 +177,7 @@ public class GestionPersonas {
 
 	private void bajaClientes() {
 		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
-		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif) instanceof Cliente) {
+		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif).esCliente()) {
 			// Ante una eliminación, pedir siempre confirmación
 			if (fabrica.getEs().getDatos().pedirBooleano(String.format("¿Está seguro de que desea eliminar el cliente con NIF %s? (S/N): ", nif))) {
 				fabrica.getBbddPersonas().eliminar(nif);
@@ -177,7 +191,7 @@ public class GestionPersonas {
 
 	private void modificarClientes() {
 		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
-		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif) instanceof Cliente) {
+		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif).esCliente()) {
 			Cliente cliente = (Cliente) fabrica.getBbddPersonas().obtener(nif);
 			System.out.printf("Está modificando el cliente con NIF/CIF %s.\n", nif);
 			System.out.println("Escriba solo los datos que quiera modificar. El resto, pulse ENTER.");
@@ -195,7 +209,7 @@ public class GestionPersonas {
 			String email = fabrica.getEs().getDatos().pedirString("Introduzca el email: ", true);
 			if (email.length() > 0) cliente.setEmail(email);
 
-			if (fabrica.getBbddPersonas().obtener(nif) instanceof ClienteEmpresa) {
+			if (((Cliente) fabrica.getBbddPersonas().obtener(nif)).esEmpresa()) {
 				String contacto = fabrica.getEs().getDatos().pedirString("Introduzca la persona de contacto: ", true);
 				if (contacto.length() > 0) ((ClienteEmpresa) cliente).setPersonaContacto(contacto);
 			} else {
@@ -212,7 +226,7 @@ public class GestionPersonas {
 	private void listadoClientes() {
 		List<Persona> personas = fabrica.getBbddPersonas().listar();
 		for (Persona p : personas) {
-			if (p instanceof Cliente) {
+			if (p.esCliente()) {
 				System.out.println(p.toString());
 			}
 		}
@@ -221,7 +235,7 @@ public class GestionPersonas {
 
 	private void comunicarPrecio() {
 		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
-		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif) instanceof Cliente) {
+		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif).esCliente()) {
 			Cliente cliente = (Cliente) fabrica.getBbddPersonas().obtener(nif);
 			if (cliente.getMuebles().size() > 0) {
 				int pos = fabrica.getEs().getMenu().menuListado("Elija el mueble del cliente: ", cliente.getMuebles().toArray()) - 1;

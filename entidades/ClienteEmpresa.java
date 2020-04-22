@@ -21,4 +21,8 @@ public class ClienteEmpresa extends Cliente
     public void setPersonaContacto(String personaContacto) {
         this.personaContacto = personaContacto;
     }
+
+    @Override public boolean esEmpresa() {
+        return true;
+    }
 }

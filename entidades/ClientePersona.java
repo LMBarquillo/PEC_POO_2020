@@ -21,4 +21,8 @@ public class ClientePersona extends Cliente
     public void setSkype(String skype) {
         this.skype = skype;
     }
+
+    @Override public boolean esEmpresa() {
+        return false;
+    }
 }

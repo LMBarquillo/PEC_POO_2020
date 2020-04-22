@@ -32,4 +32,12 @@ public class Empleado extends Persona
     public void setSalario(double salario) {
         this.salario = salario;
     }
+
+    @Override public boolean esEmpleado() {
+        return true;
+    }
+
+    @Override public boolean esCliente() {
+        return false;
+    }
 }

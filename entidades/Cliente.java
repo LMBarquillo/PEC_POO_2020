@@ -7,7 +7,7 @@ import java.util.List;
  * Clase cliente. Define un cliente que puede comprar un mueble.
  * @author Luis Miguel Barquillo Romero
  */
-public class Cliente extends Persona
+public abstract class Cliente extends Persona
 {
     private List<Mueble> muebles;
     private String email;
@@ -32,5 +32,15 @@ public class Cliente extends Persona
 
     public void setMuebles(List<Mueble> muebles) {
         this.muebles = muebles;
+    }
+
+    public abstract boolean esEmpresa();
+
+    @Override public boolean esEmpleado() {
+        return false;
+    }
+
+    @Override public boolean esCliente() {
+        return true;
     }
 }

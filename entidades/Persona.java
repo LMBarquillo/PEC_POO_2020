@@ -4,7 +4,7 @@ package entidades;
  * Clase Persona. Define los objeto de tipo persona
  * @author : Luis Miguel Barquillo
  */
-public class Persona
+public abstract class Persona
 {
     private String nombre;  // o Razón Social
     private String nif;     // o CIF
@@ -69,6 +69,9 @@ public class Persona
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+
+    public abstract boolean esEmpleado();
+    public abstract boolean esCliente();
 
     @Override public String toString() {
         return String.format("%s: %s - %s %s (%s)", nif, nombre, codigoPostal, localidad, telefono);

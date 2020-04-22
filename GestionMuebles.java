@@ -10,7 +10,7 @@ import java.util.List;
  * @author Luis Miguel Barquillo
  */
 public class GestionMuebles {
-	private Fabrica fabrica;
+	private final Fabrica fabrica;
 
 	public GestionMuebles(Fabrica fabrica) {
 		this.fabrica = fabrica;
@@ -88,7 +88,7 @@ public class GestionMuebles {
 		String nifCliente = fabrica.getEs().getDatos().pedirString("Introduzca el NIF del cliente: ");
 		if (fabrica.getBbddPersonas().existe(nifCliente)) {
 			Persona persona = fabrica.getBbddPersonas().obtener(nifCliente);
-			if (persona instanceof Cliente) {
+			if (persona.esCliente()) {
 				crearMueble((Cliente) persona);
 			} else {
 				System.out.println("El nif introducido no pertenece a un cliente.");
