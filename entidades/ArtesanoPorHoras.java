@@ -1,5 +1,6 @@
 package entidades;
 
+import constantes.Condicion;
 import constantes.Material;
 
 import java.util.Date;
@@ -23,5 +24,9 @@ public class ArtesanoPorHoras extends Artesano
 
     public void setNumHoras(int numHoras) {
         this.numHoras = numHoras;
+    }
+
+    @Override public Condicion condicion() {
+        return Condicion.POR_HORAS;
     }
 }

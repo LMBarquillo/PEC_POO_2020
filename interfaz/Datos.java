@@ -42,18 +42,26 @@ public class Datos
     }
 
     public Integer pedirEntero(String solicitud) {
-        return pedirEntero(solicitud, 0, Integer.MAX_VALUE);
+        return pedirEntero(solicitud, false, 0, Integer.MAX_VALUE);
+    }
+
+    public Integer pedirEntero(String solicitud, boolean opcional) {
+        return pedirEntero(solicitud, opcional, 0, Integer.MAX_VALUE);
     }
 
     public Integer pedirEntero(String solicitud, int min, int max) {
+        return pedirEntero(solicitud, false, min, max);
+    }
+
+    public Integer pedirEntero(String solicitud, boolean opcional, int min, int max) {
         try {
             String entero;
             do {
                 System.out.print(solicitud);
                 entero = br.readLine();
-            } while(!esEntero(entero) || !cumpleRango(entero, min, max));
+            } while(!opcional && (!esEntero(entero) || !cumpleRango(entero, min, max)));
 
-            return Integer.parseInt(entero);
+            return esEntero(entero) ? Integer.parseInt(entero) : null;
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -61,14 +69,18 @@ public class Datos
     }
 
     public Double pedirDecimal(String solicitud) {
+        return pedirDecimal(solicitud, false);
+    }
+
+    public Double pedirDecimal(String solicitud, boolean opcional) {
         try {
             String decimal;
             do {
                 System.out.print(solicitud);
                 decimal = br.readLine();
-            } while(!esDecimal(decimal));
+            } while(!opcional && !esDecimal(decimal));
 
-            return Double.parseDouble(decimal);
+            return esDecimal(decimal) ? Double.parseDouble(decimal) : null;
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -91,14 +103,18 @@ public class Datos
     }
 
     public Date pedirFecha(String solicitud) {
+        return pedirFecha(solicitud, false);
+    }
+
+    public Date pedirFecha(String solicitud, boolean opcional) {
         try {
             String fecha;
             do {
                 System.out.print(solicitud);
                 fecha = br.readLine();
-            } while(!esFecha(fecha));
+            } while(!opcional && !esFecha(fecha));
 
-            return new SimpleDateFormat("dd/MM/yyyy").parse(fecha);
+            return esFecha(fecha) ? new SimpleDateFormat("dd/MM/yyyy").parse(fecha) : null;
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }

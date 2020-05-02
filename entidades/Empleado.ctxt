@@ -1,8 +1,18 @@
 #BlueJ class context
 comment0.target=Empleado
 comment0.text=\r\n\ Clase\ Empleado.\ Define\ los\ objetos\ de\ Personas\ empleados\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
-comment1.params=
-comment1.target=java.util.Date\ getAntiguedad()
-comment2.params=antiguedad
-comment2.target=void\ setAntiguedad(java.util.Date)
-numComments=3
+comment1.params=nombre\ nif\ direccion\ codigoPostal\ localidad\ telefono\ antiguedad\ salario
+comment1.target=Empleado(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.util.Date,\ double)
+comment2.params=
+comment2.target=java.util.Date\ getAntiguedad()
+comment3.params=antiguedad
+comment3.target=void\ setAntiguedad(java.util.Date)
+comment4.params=
+comment4.target=double\ getSalario()
+comment5.params=salario
+comment5.target=void\ setSalario(double)
+comment6.params=
+comment6.target=boolean\ esEmpleado()
+comment7.params=
+comment7.target=boolean\ esCliente()
+numComments=8

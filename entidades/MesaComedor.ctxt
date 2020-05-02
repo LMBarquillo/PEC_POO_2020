@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=MesaComedor
 comment0.text=\r\n\ Clase\ MesaComedor.\ Define\ una\ mesa\ del\ tipo\ Comedor\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
-comment1.params=referencia\ cliente\ ancho\ largo\ madera\ extensible
-comment1.target=MesaComedor(java.lang.String,\ Cliente,\ int,\ int,\ constantes.Madera,\ boolean)
+comment1.params=numTrabajo\ cliente\ ancho\ largo\ madera\ extensible
+comment1.target=MesaComedor(int,\ Cliente,\ int,\ int,\ constantes.Madera,\ boolean)
 comment2.params=
 comment2.target=constantes.Madera\ getMadera()
 comment3.params=madera

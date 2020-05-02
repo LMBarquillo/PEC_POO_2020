@@ -1,5 +1,6 @@
 package entidades;
 
+import constantes.Condicion;
 import constantes.Material;
 import constantes.Turno;
 
@@ -24,5 +25,9 @@ public class ArtesanoEnPlantilla extends Artesano
 
 	public void setTurno(Turno turno) {
 		this.turno = turno;
+	}
+
+	@Override public Condicion condicion() {
+		return Condicion.EN_PLANTILLA;
 	}
 }

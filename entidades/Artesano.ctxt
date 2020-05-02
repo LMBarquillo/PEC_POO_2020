@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=Artesano
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Artesano\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=Artesano()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Artesano\r\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-numComments=3
+comment0.text=\r\n\ Clase\ Artesano.\ Define\ los\ empleados\ que\ fabrican\ los\ muebles\r\n\ @author\ Luis\ Miguel\ Barquillo\ Romero\r\n
+comment1.params=nombre\ nif\ direccion\ codigoPostal\ localidad\ telefono\ antiguedad\ salario\ especialidad
+comment1.target=Artesano(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.util.Date,\ double,\ constantes.Material)
+comment2.params=
+comment2.target=constantes.Material\ getEspecialidad()
+comment3.params=especialidad
+comment3.target=void\ setEspecialidad(constantes.Material)
+numComments=4

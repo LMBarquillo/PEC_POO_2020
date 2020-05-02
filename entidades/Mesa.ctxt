@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.target=Mesa
 comment0.text=\r\n\ Clase\ Mesa.\ Define\ una\ mesa\ gen\u00C3\u00A9rica.\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
-comment1.params=
-comment1.target=int\ getAncho()
-comment2.params=ancho
-comment2.target=void\ setAncho(int)
-comment3.params=
-comment3.target=int\ getLargo()
-comment4.params=largo
-comment4.target=void\ setLargo(int)
-comment5.params=material
-comment5.target=void\ setMaterial(constantes.Material)
+comment1.params=numTrabajo\ material\ cliente\ ancho\ largo
+comment1.target=Mesa(int,\ constantes.Material,\ Cliente,\ int,\ int)
+comment2.params=
+comment2.target=int\ getAncho()
+comment3.params=ancho
+comment3.target=void\ setAncho(int)
+comment4.params=
+comment4.target=int\ getLargo()
+comment5.params=largo
+comment5.target=void\ setLargo(int)
 comment6.params=
 comment6.target=java.lang.String\ toString()
 numComments=7

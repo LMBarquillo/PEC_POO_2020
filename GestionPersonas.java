@@ -1,3 +1,4 @@
+import constantes.Condicion;
 import constantes.Material;
 import constantes.Turno;
 import constantes.Valores;
@@ -28,6 +29,7 @@ public class GestionPersonas {
 				bajaEmpleados();
 				break;
 			case Valores.GestionEmpleados.MODIFICACION:
+				modificarEmpleados();
 				break;
 			case Valores.GestionEmpleados.LISTADO:
 				listadoEmpleados();
@@ -126,6 +128,70 @@ public class GestionPersonas {
 		System.out.println("El nuevo artesano por horas ha sido insertado correctamente");
 	}
 
+	private void modificarEmpleados() {
+		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
+		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif).esEmpleado()) {
+			Empleado empleado = (Empleado) fabrica.getBbddPersonas().obtener(nif);
+			System.out.printf("Está modificando el empleado con NIF %s.\n", nif);
+			System.out.println("Escriba solo los datos que quiera modificar. El resto, pulse ENTER.");
+
+			actualizaPersona(empleado);		// Actualización de datos comunes a toda persona.
+			Date antiguedad = fabrica.getEs().getDatos().pedirFecha("Introduzca la antiguedad (DD/MM/AAAA): ", true);
+			if(antiguedad != null) empleado.setAntiguedad(antiguedad);
+			Double salario = fabrica.getEs().getDatos().pedirDecimal("Introduzca el salario: ", true);
+			if(salario != null) empleado.setSalario(salario);
+
+			switch (empleado.categoria()) {
+				case JEFE:
+					modificarJefe((Jefe) empleado);
+					break;
+				case COMERCIAL:
+					modificarComercial((Comercial) empleado);
+					break;
+				default:
+					modificarArtesano((Artesano) empleado);
+					break;
+			}
+		}
+
+		gestionEmpleados();
+	}
+
+	private void modificarJefe(Jefe jefe) {
+		Double acciones = fabrica.getEs().getDatos().pedirDecimal("Introduzca el porcentaje de acciones: ", true);
+		if(acciones != null) jefe.setPorcentajeAcciones(acciones);
+	}
+
+	private void modificarComercial(Comercial comercial) {
+		Double comision = fabrica.getEs().getDatos().pedirDecimal("Introduzca la comisión: ", true);
+		if(comision != null) comercial.setPorcentajeComision(comision);
+	}
+
+	private void modificarArtesano(Artesano artesano) {
+		if(artesano.condicion() == Condicion.POR_HORAS) {
+			Integer horas = fabrica.getEs().getDatos().pedirEntero("Introduzca el número de horas diarias: ", true, 1, 8);
+			((ArtesanoPorHoras) artesano).setNumHoras(horas);
+		} else {
+			if(fabrica.getEs().getDatos().pedirBooleano("¿Desea cambiar el turno de trabajo? (S/N): ")) {
+				Turno turno = Turno.values()[fabrica.getEs().getMenu().menuListado("Seleccione el nuevo turno", Turno.values())-1];
+				((ArtesanoEnPlantilla) artesano).setTurno(turno);
+			}
+		}
+	}
+
+	private void actualizaPersona(Persona persona) {
+		String nombre = fabrica.getEs().getDatos().pedirString("Introduzca el nombre: ", true);
+		if (nombre.length() > 0) persona.setNombre(nombre);
+		String direccion = fabrica.getEs().getDatos().pedirString("Introduzca la dirección: ", true);
+		if (direccion.length() > 0) persona.setDireccion(direccion);
+		String codigoPostal = fabrica.getEs().getDatos().pedirString("Introduzca el C.P.:", true);
+		if (codigoPostal.length() > 0) persona.setCodigoPostal(codigoPostal);
+		String localidad = fabrica.getEs().getDatos().pedirString("Introduzca la localidad: ", true);
+		if (localidad.length() > 0) persona.setLocalidad(localidad);
+		String telefono = fabrica.getEs().getDatos().pedirString("Introduzca el teléfono: ", true);
+		if (telefono.length() > 0) persona.setTelefono(telefono);
+	}
+
 	private void bajaEmpleados() {
 		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
 		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif).esEmpleado()) {
@@ -196,16 +262,7 @@ public class GestionPersonas {
 			System.out.printf("Está modificando el cliente con NIF/CIF %s.\n", nif);
 			System.out.println("Escriba solo los datos que quiera modificar. El resto, pulse ENTER.");
 
-			String nombre = fabrica.getEs().getDatos().pedirString("Introduzca el nombre: ", true);
-			if (nombre.length() > 0) cliente.setNombre(nombre);
-			String direccion = fabrica.getEs().getDatos().pedirString("Introduzca la dirección: ", true);
-			if (direccion.length() > 0) cliente.setDireccion(direccion);
-			String codigoPostal = fabrica.getEs().getDatos().pedirString("Introduzca el C.P.:", true);
-			if (codigoPostal.length() > 0) cliente.setCodigoPostal(codigoPostal);
-			String localidad = fabrica.getEs().getDatos().pedirString("Introduzca la localidad: ", true);
-			if (localidad.length() > 0) cliente.setLocalidad(localidad);
-			String telefono = fabrica.getEs().getDatos().pedirString("Introduzca el teléfono: ", true);
-			if (telefono.length() > 0) cliente.setTelefono(telefono);
+			actualizaPersona(cliente);
 			String email = fabrica.getEs().getDatos().pedirString("Introduzca el email: ", true);
 			if (email.length() > 0) cliente.setEmail(email);
 

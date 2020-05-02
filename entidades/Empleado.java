@@ -1,12 +1,14 @@
 package entidades;
 
+import constantes.Categoria;
+
 import java.util.Date;
 
 /**
  * Clase Empleado. Define los objetos de Personas empleados
  * @author Luis Miguel Barquillo
  */
-public class Empleado extends Persona
+public abstract class Empleado extends Persona
 {
     private Date antiguedad;
     private double salario;
@@ -32,6 +34,8 @@ public class Empleado extends Persona
     public void setSalario(double salario) {
         this.salario = salario;
     }
+
+    public abstract Categoria categoria();
 
     @Override public boolean esEmpleado() {
         return true;

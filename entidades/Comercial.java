@@ -1,5 +1,7 @@
 package entidades;
 
+import constantes.Categoria;
+
 import java.util.Date;
 
 /**
@@ -21,5 +23,9 @@ public class Comercial extends Empleado
 
     public void setPorcentajeComision(double porcentajeComision) {
         this.porcentajeComision = porcentajeComision;
+    }
+
+    @Override public Categoria categoria() {
+        return Categoria.COMERCIAL;
     }
 }

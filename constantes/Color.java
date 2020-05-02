@@ -1,5 +1,8 @@
 package constantes;
 
+/**
+ * Clase enumeradora Color. Representa los distintos colores para algunos muebles.
+ */
 public enum Color
 {
     ROJO("Rojo"),
@@ -11,7 +14,7 @@ public enum Color
     MARRON("Marrón"),
     VIOLETA("Violeta");
 
-    private String color;
+    private final String color;
 
     Color(String color) {
         this.color = color;

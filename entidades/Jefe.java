@@ -1,5 +1,7 @@
 package entidades;
 
+import constantes.Categoria;
+
 import java.util.Date;
 
 /**
@@ -21,5 +23,9 @@ public class Jefe extends Empleado
 
     public void setPorcentajeAcciones(double porcentajeAcciones) {
         this.porcentajeAcciones = porcentajeAcciones;
+    }
+
+    @Override public Categoria categoria() {
+        return Categoria.JEFE;
     }
 }

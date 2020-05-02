@@ -1,5 +1,7 @@
 package entidades;
 
+import constantes.Categoria;
+import constantes.Condicion;
 import constantes.Material;
 
 import java.util.Date;
@@ -8,7 +10,7 @@ import java.util.Date;
  * Clase Artesano. Define los empleados que fabrican los muebles
  * @author Luis Miguel Barquillo Romero
  */
-public class Artesano extends Empleado
+public abstract class Artesano extends Empleado
 {
     private Material especialidad;
 
@@ -23,5 +25,11 @@ public class Artesano extends Empleado
 
 	public void setEspecialidad(Material especialidad) {
 		this.especialidad = especialidad;
+	}
+
+	public abstract Condicion condicion();
+
+	@Override public Categoria categoria() {
+		return Categoria.ARTESANO;
 	}
 }
