@@ -177,7 +177,7 @@ public class Menu
      */
     private int mostrarMenuArtesanoMuebles() {
         mostrarCabecera();
-        System.out.println("- 1. Ver mis trabajos                            -");
+        System.out.println("- 1. Ver mis trabajos en progreso                -");
         System.out.println("- 2. Cambiar estado de un trabajo                -");
         System.out.println("- 3. Añadir anotación a un trabajo               -");
         System.out.println("- 4. Volver al menú anterior                     -");
