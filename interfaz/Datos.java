@@ -22,10 +22,21 @@ public class Datos
         this.br = br;
     }
 
+    /**
+     * Pedir una cadena de texto por teclado
+     * @param solicitud Solicitud que se muestra al usuario
+     * @return Devuelve la cadena introducida
+     */
     public String pedirString(String solicitud) {
         return pedirString(solicitud, false);
     }
 
+    /**
+     * Pedir una cadena de texto por teclado (Sobrecarga)
+     * @param solicitud Solicitud que se muestra al usuario
+     * @param opcional Indica si es opcional y puede dejarlo en blanco
+     * @return Devuelve la cadena introducida
+     */
     public String pedirString(String solicitud, boolean opcional) {
         try {
             String lectura;
@@ -41,18 +52,44 @@ public class Datos
         return "";
     }
 
+    /**
+     * Pedir un número entero por teclado
+     * @param solicitud Solicitud que se muestra al usuario
+     * @return Devuelve el número introducido
+     */
     public Integer pedirEntero(String solicitud) {
         return pedirEntero(solicitud, false, 0, Integer.MAX_VALUE);
     }
 
+    /**
+     * Pedir un número entero por teclado (Sobrecarga)
+     * @param solicitud Solicitud que se muestra al usuario
+     * @param opcional Indica si es opcional y puede dejarlo en blanco
+     * @return Devuelve el número introducido
+     */
     public Integer pedirEntero(String solicitud, boolean opcional) {
         return pedirEntero(solicitud, opcional, 0, Integer.MAX_VALUE);
     }
 
+    /**
+     * Pedir un número entero por teclado (Sobrecarga 2)
+     * @param solicitud Solicitud que se muestra al usuario
+     * @param min Valor mínimo admitido
+     * @param max Valor máximo admitido
+     * @return Devuelve el número introducido
+     */
     public Integer pedirEntero(String solicitud, int min, int max) {
         return pedirEntero(solicitud, false, min, max);
     }
 
+    /**
+     * Pedir un número entero por teclado (Sobrecarga 3)
+     * @param solicitud Solicitud que se muestra al usuario
+     * @param opcional Indica si es opcional y puede dejarlo en blanco
+     * @param min Valor mínimo admitido
+     * @param max Valor máximo admitido
+     * @return Devuelve el número introducido
+     */
     public Integer pedirEntero(String solicitud, boolean opcional, int min, int max) {
         try {
             String entero;
@@ -68,10 +105,20 @@ public class Datos
         return null;
     }
 
+    /**
+     * Pedir un número decimal por teclado
+     * @param solicitud Solicitud que se muestra al usuario
+     * @return Devuelve el número introducido
+     */
     public Double pedirDecimal(String solicitud) {
         return pedirDecimal(solicitud, false);
     }
 
+    /* Pedir un número decimal por teclado (Sobrecarga)
+     * @param solicitud Solicitud que se muestra al usuario
+     * @param opcional Indica si es opcional y puede dejarlo en blanco
+     * @return Devuelve el número introducido
+     */
     public Double pedirDecimal(String solicitud, boolean opcional) {
         try {
             String decimal;
@@ -87,6 +134,11 @@ public class Datos
         return null;
     }
 
+    /**
+     * Pedir un valor booleano por teclado
+     * @param solicitud Solicitud que se muestra al usuario
+     * @return Devuelve el número introducido
+     */
     public Boolean pedirBooleano(String solicitud) {
         try {
             String booleano;
@@ -102,10 +154,21 @@ public class Datos
         return null;
     }
 
+    /**
+     * Pedir una fecha por teclado
+     * @param solicitud Solicitud que se muestra al usuario
+     * @return Devuelve la fecha introducida
+     */
     public Date pedirFecha(String solicitud) {
         return pedirFecha(solicitud, false);
     }
 
+    /**
+     * Pedir una fecha por teclado (Sobrecarga)
+     * @param solicitud Solicitud que se muestra al usuario
+     * @param opcional Indica si es opcional y puede dejarlo en blanco
+     * @return Devuelve la fecha introducida
+     */
     public Date pedirFecha(String solicitud, boolean opcional) {
         try {
             String fecha;
@@ -121,11 +184,23 @@ public class Datos
         return null;
     }
 
+    /**
+     * Analiza si una cadena contiene un número y está entre un rango determinado
+     * @param s Cadena a analizar
+     * @param min Mínimo valor
+     * @param max Máximo valor
+     * @return Devuelve si la cadena cumple el rango
+     */
     private boolean cumpleRango(String s, int min, int max) {
         int value = Integer.parseInt(s);
         return min <= value && value <= max;
     }
 
+    /**
+     * Comprueba si una cadena contiene un número entero
+     * @param s Cadena a comprobar
+     * @return Devuelve si es un número entero
+     */
     private boolean esEntero(String s) {
         try {
             Integer.parseInt(s);
@@ -135,6 +210,11 @@ public class Datos
         }
     }
 
+    /**
+     * Comprueba si una cadena contiene un número decimal
+     * @param s Cadena a comprobar
+     * @return Devuelve si es un número decimal
+     */
     private boolean esDecimal(String s) {
         try {
             Double.parseDouble(s);
@@ -144,6 +224,11 @@ public class Datos
         }
     }
 
+    /**
+     * Comprueba si una cadena contiene una fecha
+     * @param s Cadena a comprobar
+     * @return Devuelve si es una fecha
+     */
     private boolean esFecha(String s) {
         try {
             new SimpleDateFormat("dd/MM/yyyy").parse(s);
@@ -153,6 +238,11 @@ public class Datos
         }
     }
 
+    /**
+     * Comprueba si una cadena es una letra del conjunto ("S","s","N","n")
+     * @param s Cadena a comprobar
+     * @return Devuelve si pertenece al conjunto indicado
+     */
     private boolean esSN(String s) {
         return s.length() == 1 && (s.toUpperCase().equals(TRUE) || s.toUpperCase().equals(FALSE));
     }

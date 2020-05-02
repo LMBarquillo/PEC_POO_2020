@@ -19,6 +19,9 @@ public class GestionPersonas {
 		this.fabrica = fabrica;
 	}
 
+	/**
+	 * Método para las acciones principales de gestión de empleados
+	 */
 	public void gestionEmpleados() {
 		int opcion = fabrica.getEs().getMenu().menuGestionEmpleados();
 		switch (opcion) {
@@ -39,6 +42,9 @@ public class GestionPersonas {
 		}
 	}
 
+	/**
+	 * Método para las acciones de gestión de clientes
+	 */
 	public void gestionClientes() {
 		int opcion = fabrica.getEs().getMenu().menuGestionClientes();
 		switch (opcion) {
@@ -65,7 +71,9 @@ public class GestionPersonas {
 		}
 	}
 
-
+	/**
+	 * Método para dar de alta un nuevo empleado
+	 */
 	private void altaEmpleados() {
 		Empleado empleado;
 		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
@@ -95,18 +103,51 @@ public class GestionPersonas {
 		gestionEmpleados();
 	}
 
+	/**
+	 * Método para dar de alta un Jefe
+	 * @param nombre Nombre
+	 * @param nif Nif
+	 * @param direccion Dirección
+	 * @param cp Código postal
+	 * @param localidad Localidad
+	 * @param telefono Teléfono
+	 * @param antiguedad Antiguedad en la empresa
+	 * @param salario Salario mensual
+	 */
 	private void altaJefe(String nombre, String nif, String direccion, String cp, String localidad, String telefono, Date antiguedad, double salario) {
 		double acciones = fabrica.getEs().getDatos().pedirDecimal("Introduzca el porcentaje de acciones: ");
 		fabrica.getBbddPersonas().insertar(new Jefe(nombre, nif, direccion, cp, localidad, telefono, antiguedad, salario, acciones));
 		System.out.println("El nuevo jefe ha sido insertado correctamente");
 	}
 
+	/**
+	 * Método para dar de alta un empleado Comercial
+	 * @param nombre Nombre
+	 * @param nif Nif
+	 * @param direccion Dirección
+	 * @param cp Código postal
+	 * @param localidad Localidad
+	 * @param telefono Teléfono
+	 * @param antiguedad Antiguedad en la empresa
+	 * @param salario Salario mensual
+	 */
 	private void altaComercial(String nombre, String nif, String direccion, String cp, String localidad, String telefono, Date antiguedad, double salario) {
 		double comision = fabrica.getEs().getDatos().pedirDecimal("Introduzca el porcentaje de comisión: ");
 		fabrica.getBbddPersonas().insertar(new Comercial(nombre, nif, direccion, cp, localidad, telefono, antiguedad, salario, comision));
 		System.out.println("El nuevo comercial ha sido insertado correctamente");
 	}
 
+	/**
+	 * Método para dar de alta un Artesano
+	 * @param nombre Nombre
+	 * @param nif Nif
+	 * @param direccion Dirección
+	 * @param cp Código postal
+	 * @param localidad Localidad
+	 * @param telefono Teléfono
+	 * @param antiguedad Antiguedad en la empresa
+	 * @param salario Salario mensual
+	 */
 	private void altaArtesano(String nombre, String nif, String direccion, String cp, String localidad, String telefono, Date antiguedad, double salario) {
 		Material especialidad = Material.values()[fabrica.getEs().getMenu().menuListado("¿Cuál es su especialidad?", Material.values())-1];
 		if(fabrica.getEs().getDatos().pedirBooleano("¿El artesano está en plantilla? (S/N): ")) {
@@ -116,18 +157,45 @@ public class GestionPersonas {
 		}
 	}
 
+	/**
+	 * Método para dar de alta un Artesano que se encuentra en plantilla
+	 * @param nombre Nombre
+	 * @param nif Nif
+	 * @param direccion Dirección
+	 * @param cp Código postal
+	 * @param localidad Localidad
+	 * @param telefono Teléfono
+	 * @param antiguedad Antiguedad en la empresa
+	 * @param salario Salario mensual
+	 * @param especialidad Especialidad del artesano
+	 */
 	private void altaArtesanoPlantilla(String nombre, String nif, String direccion, String cp, String localidad, String telefono, Date antiguedad, double salario, Material especialidad) {
 		Turno turno = Turno.values()[fabrica.getEs().getMenu().menuListado("¿Qué turno realiza?", Turno.values())-1];
 		fabrica.getBbddPersonas().insertar(new ArtesanoEnPlantilla(nombre, nif, direccion, cp, localidad, telefono, antiguedad, salario, especialidad, turno));
 		System.out.println("El nuevo artesano en plantilla ha sido insertado correctamente");
 	}
 
+	/**
+	 * Método para dar de alta un Artesano que trabaja por horas
+	 * @param nombre Nombre
+	 * @param nif Nif
+	 * @param direccion Dirección
+	 * @param cp Código postal
+	 * @param localidad Localidad
+	 * @param telefono Teléfono
+	 * @param antiguedad Antiguedad en la empresa
+	 * @param salario Salario mensual
+	 * @param especialidad Especialidad del artesano
+	 */
 	private void altaArtesanoPorHoras(String nombre, String nif, String direccion, String cp, String localidad, String telefono, Date antiguedad, double salario, Material especialidad) {
 		int horas = fabrica.getEs().getDatos().pedirEntero("¿Cuántas horas diarias realiza?", 1, 8);
 		fabrica.getBbddPersonas().insertar(new ArtesanoPorHoras(nombre, nif, direccion, cp, localidad, telefono, antiguedad, salario, especialidad, horas));
 		System.out.println("El nuevo artesano por horas ha sido insertado correctamente");
 	}
 
+	/**
+	 * Método para modificar los datos de los empleados
+	 */
 	private void modificarEmpleados() {
 		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
 		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif).esEmpleado()) {
@@ -157,16 +225,25 @@ public class GestionPersonas {
 		gestionEmpleados();
 	}
 
+	/**
+	 * Método para la modificación de los valores propios de un empleado Jefe
+	 */
 	private void modificarJefe(Jefe jefe) {
 		Double acciones = fabrica.getEs().getDatos().pedirDecimal("Introduzca el porcentaje de acciones: ", true);
 		if(acciones != null) jefe.setPorcentajeAcciones(acciones);
 	}
 
+	/**
+	 * Método para la modificación de los valores propios de un empleado Comercial
+	 */
 	private void modificarComercial(Comercial comercial) {
 		Double comision = fabrica.getEs().getDatos().pedirDecimal("Introduzca la comisión: ", true);
 		if(comision != null) comercial.setPorcentajeComision(comision);
 	}
 
+	/**
+	 * Método para la modificación de los valores propios de un empleado Artesano
+	 */
 	private void modificarArtesano(Artesano artesano) {
 		if(artesano.condicion() == Condicion.POR_HORAS) {
 			Integer horas = fabrica.getEs().getDatos().pedirEntero("Introduzca el número de horas diarias: ", true, 1, 8);
@@ -179,6 +256,9 @@ public class GestionPersonas {
 		}
 	}
 
+	/**
+	 * Método para la modificación de los valores genéricos de todos los objetos que heredan de Persona
+	 */
 	private void actualizaPersona(Persona persona) {
 		String nombre = fabrica.getEs().getDatos().pedirString("Introduzca el nombre: ", true);
 		if (nombre.length() > 0) persona.setNombre(nombre);
@@ -192,6 +272,9 @@ public class GestionPersonas {
 		if (telefono.length() > 0) persona.setTelefono(telefono);
 	}
 
+	/**
+	 * Método para dar de baja un empleado en la empresa
+	 */
 	private void bajaEmpleados() {
 		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
 		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif).esEmpleado()) {
@@ -205,6 +288,9 @@ public class GestionPersonas {
 		gestionEmpleados();
 	}
 
+	/**
+	 * Método para mostrar un listado de todos los empleados
+	 */
 	private void listadoEmpleados() {
 		List<Persona> personas = fabrica.getBbddPersonas().listar();
 		for (Persona p : personas) {
@@ -215,6 +301,9 @@ public class GestionPersonas {
 		gestionEmpleados();
 	}
 
+	/**
+	 * Método para dar de alta un nuevo cliente
+	 */
 	private void altaClientes() {
 		Cliente cliente;
 		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
@@ -241,6 +330,9 @@ public class GestionPersonas {
 		gestionClientes();
 	}
 
+	/**
+	 * Método para dar de baja a un cliente
+	 */
 	private void bajaClientes() {
 		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
 		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif).esCliente()) {
@@ -255,6 +347,9 @@ public class GestionPersonas {
 		gestionClientes();
 	}
 
+	/**
+	 * Método para modificar los datos de un cliente
+	 */
 	private void modificarClientes() {
 		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
 		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif).esCliente()) {
@@ -280,6 +375,9 @@ public class GestionPersonas {
 		gestionClientes();
 	}
 
+	/**
+	 * Método para generar un listado con los clientes que se encuentran en el sistema
+	 */
 	private void listadoClientes() {
 		List<Persona> personas = fabrica.getBbddPersonas().listar();
 		for (Persona p : personas) {
@@ -290,6 +388,9 @@ public class GestionPersonas {
 		gestionClientes();
 	}
 
+	/**
+	 * Método para asignar precio a un mueble y comunicárselo al cliente.
+	 */
 	private void comunicarPrecio() {
 		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
 		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif).esCliente()) {
@@ -304,6 +405,7 @@ public class GestionPersonas {
 				System.out.println("Se le comunicará al cliente la siguiente información:");
 				System.out.printf("Mueble: %s\n", mueble);
 				System.out.printf("Precio: %.2f\n", mueble.getPrecio());
+				// En este punto, nuestra aplicación podría enviar un email al cliente con la información
 			} else {
 				System.out.println("El cliente introducido no ha pedido ningún mueble.");
 			}
@@ -313,6 +415,9 @@ public class GestionPersonas {
 		gestionClientes();
 	}
 
+	/**
+	 * Método para notificar a un cliente de la entrega de su mueble
+	 */
 	private void avisarEntrega() {
 		int id = fabrica.getEs().getDatos().pedirEntero("Introduzca el Número de Trabajo: ");
 		if (fabrica.getBbddMuebles().existe(id)) {

@@ -24,6 +24,9 @@ public class Fabrica
     private GestionMuebles gestionMuebles;
     private GestionPersonas gestionPersonas;
 
+    /**
+     * Constructor. Inicializa nuestras propiedades.
+     */
     public Fabrica() {
         es = new EntradaSalida();
         bbddMuebles = new BBDDMuebles();
@@ -34,12 +37,19 @@ public class Fabrica
         insertMockupData();     // Insertar datos de ejemplo para tests
     }
 
+    /**
+     * El main del programa. Aquí empieza todo
+     * @param args
+     */
     public static void main(String[] args) {
         Fabrica fabrica = new Fabrica();
-
         fabrica.principal();
     }
 
+    /**
+     * Método principal. Es llamdo desde main para comenzar la ejecución del programa.
+     * Esta técnica nos permite usar métodos y propiedades de la propia clase sin necesidad de ponerlos static.
+     */
     public void principal() {
         int opcion = es.getMenu().menuPrincipal();
         switch (opcion) {
@@ -57,6 +67,8 @@ public class Fabrica
                 System.exit(0);
         }
     }
+
+    /* GETTER Y SETTERS */
 
     public EntradaSalida getEs() {
         return es;
@@ -98,8 +110,10 @@ public class Fabrica
         this.bbddPersonas = bbddPersonas;
     }
 
+    /**
+     * Método para la inserción de datos de prueba para testear la aplicación
+     */
     public void insertMockupData() {
-        /* DATOS HARDCODED PARA TESTEAR LA APLICACIÓN */
         Cliente cliente1 = new ClientePersona("Manuel Pérez", "04326587R", "Calle del pez, 2", "28080", "Madrid", "658945236", "manuperez@gmail.com", "manu2864");
         Cliente cliente2 = new ClienteEmpresa("Bar Paco","B45956836", "Calle del Río", "45600", "Talavera", "925683641", "barpaco@gmail.com", "Paco");
         bbddPersonas.insertar(cliente1);

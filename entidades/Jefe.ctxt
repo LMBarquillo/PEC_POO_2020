@@ -7,4 +7,6 @@ comment2.params=
 comment2.target=double\ getPorcentajeAcciones()
 comment3.params=porcentajeAcciones
 comment3.target=void\ setPorcentajeAcciones(double)
-numComments=4
+comment4.params=
+comment4.target=constantes.Categoria\ categoria()
+numComments=5

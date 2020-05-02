@@ -90,6 +90,11 @@ public class Menu
         return leerOpcion(mostrarMenuListado(encabezado, listado));
     }
 
+    /**
+     * Lee una opción numérica del teclado, desde 1 hasta max
+     * @param max Máximo valor aceptado
+     * @return Valor leído
+     */
     private int leerOpcion(int max) {
         try {
             String lectura;
@@ -107,6 +112,12 @@ public class Menu
         return -1;
     }
 
+    /**
+     * Detecta si una string es número y está dentro del rango [1,max]
+     * @param s cadena de entrada
+     * @param max Máximo valor admitido
+     * @return si es incorrecto
+     */
     private boolean incorrecto(String s, int max) {
         return opcion(s) < 1 || opcion(s) > max;
     }
@@ -119,6 +130,10 @@ public class Menu
         }
     }
 
+    /**
+     * Muestra menú principal
+     * @return número de opciones
+     */
     private int mostrarMenuPrincipal() {
         mostrarCabecera();
         System.out.println("- 1. Gestión de muebles                          -");
@@ -129,6 +144,10 @@ public class Menu
         return 4;
     }
 
+    /**
+     * Muestra menú principal de muebles
+     * @return número de opciones
+     */
     private int mostrarMenuPrincipalMuebles() {
         mostrarCabecera();
         System.out.println("- 1. Acciones de jefatura                        -");
@@ -138,6 +157,10 @@ public class Menu
         return 3;
     }
 
+    /**
+     * Muestra menú de jefatura para gestión de muebles
+     * @return número de opciones
+     */
     private int mostrarMenuJefeMuebles() {
         mostrarCabecera();
         System.out.println("- 1. Recepcionar un pedido                       -");
@@ -148,9 +171,13 @@ public class Menu
         return 4;
     }
 
+    /**
+     * Muestra menú de artesanos para gestión de muebles
+     * @return número de opciones
+     */
     private int mostrarMenuArtesanoMuebles() {
         mostrarCabecera();
-        System.out.println("- 1. Ver mis trabajos por estado determinado     -");
+        System.out.println("- 1. Ver mis trabajos                            -");
         System.out.println("- 2. Cambiar estado de un trabajo                -");
         System.out.println("- 3. Añadir anotación a un trabajo               -");
         System.out.println("- 4. Volver al menú anterior                     -");
@@ -158,6 +185,10 @@ public class Menu
         return 4;
     }
 
+    /**
+     * Muestra menú de gestión de empleados
+     * @return número de opciones
+     */
     private int mostrarMenuGestionEmpleados() {
         mostrarCabecera();
         System.out.println("- 1. Alta de nuevo empleado                      -");
@@ -169,6 +200,10 @@ public class Menu
         return 5;
     }
 
+    /**
+     * Muestra menú de gestión de clientes
+     * @return número de opciones
+     */
     private int mostrarMenuGestionClientes() {
         mostrarCabecera();
         System.out.println("- 1. Alta de nuevo cliente                       -");
@@ -182,6 +217,10 @@ public class Menu
         return 7;
     }
 
+    /**
+     * Muestra menú de selección de tipo de mueble
+     * @return número de opciones
+     */
     private int mostrarMenuTipoMueble() {
         System.out.println("Tipo de mueble: ");
         System.out.println(" - 1. Mesa");
@@ -190,6 +229,10 @@ public class Menu
         return 2;
     }
 
+    /**
+     * Muestra menú de selección de tipo de mesa
+     * @return número de opciones
+     */
     private int mostrarMenuTipoMesa() {
         System.out.println("Tipo de mesa: ");
         System.out.println(" - 1. Mesa de Comedor");
@@ -199,6 +242,10 @@ public class Menu
         return 3;
     }
 
+    /**
+     * Muestra menú de selección de tipo de mesa de café
+     * @return número de opciones
+     */
     private int mostrarMenuTipoMesaCafe() {
         System.out.println("Tipo de mesa de café: ");
         System.out.println(" - 1. Mesa de Café de Madera");
@@ -207,6 +254,10 @@ public class Menu
         return 2;
     }
 
+    /**
+     * Muestra menú de selección de tipo de silla
+     * @return número de opciones
+     */
     private int mostrarMenuTipoSilla() {
         System.out.println("Tipo de silla: ");
         System.out.println(" - 1. Silla Plegable");
@@ -216,6 +267,10 @@ public class Menu
         return 3;
     }
 
+    /**
+     * Muestra menú de selección de tipo de silla de oficina
+     * @return número de opciones
+     */
     private int mostrarMenuTipoSillaOficina() {
         System.out.println("Tipo de silla de oficina: ");
         System.out.println(" - 1. Con ruedas");
@@ -224,6 +279,10 @@ public class Menu
         return 2;
     }
 
+    /**
+     * Muestra menú de selección de tipo de empleado
+     * @return número de opciones
+     */
     private int mostrarMenuTipoEmpleado() {
         System.out.println("Tipo de empleado: ");
         System.out.println(" - 1. Jefe");
@@ -233,36 +292,66 @@ public class Menu
         return 3;
     }
 
+    /**
+     * Muestra menú de selección de tipos de madera
+     * @return número de opciones
+     */
     private int mostrarMenuMadera() {
         System.out.println("¿Qué tipo de madera desea?");
         return mostrarValores(Madera.values());
     }
 
+    /**
+     * Muestra menú de selección de formas
+     * @return número de opciones
+     */
     private int mostrarMenuForma() {
         System.out.println("¿Qué forma desea que tenga?");
         return mostrarValores(Forma.values());
     }
 
+    /**
+     * Muestra menú de selección de colores
+     * @return número de opciones
+     */
     private int mostrarMenuColor() {
         System.out.println("¿Qué color desea?");
         return mostrarValores(Color.values());
     }
 
+    /**
+     * Muestra menú de selección de material
+     * @return número de opciones
+     */
     private int mostrarMenuMaterial() {
         System.out.println("¿Qué tipo de material desea?");
         return mostrarValores(Material.values());
     }
 
+    /**
+     * Muestra menú de selección de estados
+     * @return número de opciones
+     */
     private int mostrarMenuEstado() {
         System.out.println("¿Qué estado desea ponerle?");
         return mostrarValores(Estado.values());
     }
 
+    /**
+     * Muestra menú de selección genérico a partir de una colección de valores
+     * generalmente obtenidos a partir de los tipos enumeradores
+     * @return número de opciones
+     */
     private int mostrarMenuListado(String encabezado, Object[] valores) {
         System.out.println(encabezado);
         return mostrarValores(valores);
     }
 
+    /**
+     * Muestra los valores de un array y solicita elección
+     * @param values valores a mostrar
+     * @return cantidad de valores mostrados
+     */
     public int mostrarValores(Object[] values) {
         for(int i=0; i<values.length; i++){
             System.out.printf(" - %d. %s\n", i+1, values[i].toString());
@@ -271,6 +360,9 @@ public class Menu
         return values.length;
     }
 
+    /**
+     * Encabezado de los menús
+     */
     private void mostrarCabecera() {
         System.out.println();
         System.out.println("--------------------------------------------------");
@@ -278,11 +370,17 @@ public class Menu
         System.out.println("--------------------------------------------------");
     }
 
+    /**
+     * Pie de los menús
+     */
     private void mostrarPie() {
         System.out.println("--------------------------------------------------");
         System.out.print("- Escoja una opción: ");
     }
 
+    /**
+     * Despedida. Se usa para cerrar el BufferedReader de lectura de teclado.
+     */
     public void mostrarDespedida() {
         System.out.println();
         System.out.println("--------------------------------------------------");
