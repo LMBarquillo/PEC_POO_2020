@@ -18,11 +18,11 @@ import java.util.Date;
  */
 public class Fabrica
 {
-    private EntradaSalida es;
-    private BBDDMuebles bbddMuebles;
-    private BBDDPersonas bbddPersonas;
-    private GestionMuebles gestionMuebles;
-    private GestionPersonas gestionPersonas;
+    private final EntradaSalida es;
+    private final BBDDMuebles bbddMuebles;
+    private final BBDDPersonas bbddPersonas;
+    private final GestionMuebles gestionMuebles;
+    private final GestionPersonas gestionPersonas;
 
     /**
      * Constructor. Inicializa nuestras propiedades.
@@ -34,7 +34,7 @@ public class Fabrica
         gestionMuebles = new GestionMuebles(this);
         gestionPersonas = new GestionPersonas(this);
 
-        insertMockupData();     // Insertar datos de ejemplo para tests
+        insertarDatosMockup();     // Insertar datos de ejemplo para tests
     }
 
     /**
@@ -74,46 +74,26 @@ public class Fabrica
         return es;
     }
 
-    public void setEs(EntradaSalida es) {
-        this.es = es;
-    }
-
     public GestionMuebles getGestionMuebles() {
         return gestionMuebles;
-    }
-
-    public void setGestionMuebles(GestionMuebles gestionMuebles) {
-        this.gestionMuebles = gestionMuebles;
     }
 
     public GestionPersonas getGestionPersonas() {
         return gestionPersonas;
     }
 
-    public void setGestionPersonas(GestionPersonas gestionPersonas) {
-        this.gestionPersonas = gestionPersonas;
-    }
-
     public BBDDMuebles getBbddMuebles() {
         return bbddMuebles;
-    }
-
-    public void setBbddMuebles(BBDDMuebles bbddMuebles) {
-        this.bbddMuebles = bbddMuebles;
     }
 
     public BBDDPersonas getBbddPersonas() {
         return bbddPersonas;
     }
 
-    public void setBbddPersonas(BBDDPersonas bbddPersonas) {
-        this.bbddPersonas = bbddPersonas;
-    }
-
     /**
      * Método para la inserción de datos de prueba para testear la aplicación
      */
-    public void insertMockupData() {
+    public void insertarDatosMockup() {
         Cliente cliente1 = new ClientePersona("Manuel Pérez", "04326587R", "Calle del pez, 2", "28080", "Madrid", "658945236", "manuperez@gmail.com", "manu2864");
         Cliente cliente2 = new ClienteEmpresa("Bar Paco","B45956836", "Calle del Río", "45600", "Talavera", "925683641", "barpaco@gmail.com", "Paco");
         bbddPersonas.insertar(cliente1);

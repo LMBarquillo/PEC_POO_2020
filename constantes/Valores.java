@@ -71,33 +71,51 @@ public interface Valores
         int VOLVER = 7;
     }
 
+    /**
+     * Definición de los valores del menú que pide seleccionar el tipo de mueble
+     */
     interface TipoMuebles {
         int MESA = 1;
         int SILLA = 2;
     }
 
+    /**
+     * Definición de los valores del menú que pide seleccionar el tipo de mesa
+     */
     interface TipoMesa {
         int COMEDOR = 1;
         int CAFE = 2;
         int DORMITORIO = 3;
     }
 
+    /**
+     * Definición de los valores del menú que pide seleccionar el tipo de mesa de café
+     */
     interface TipoMesaCafe {
         int MADERA = 1;
         int CRISTAL = 2;
     }
 
+    /**
+     * Definición de los valores del menú que pide seleccionar el tipo de silla
+     */
     interface TipoSilla {
         int PLEGABLE = 1;
         int COCINA = 2;
         int OFICINA = 3;
     }
 
+    /**
+     * Definición de los valores del menú que pide seleccionar el tipo de silla de oficina
+     */
     interface TipoSillaOficina {
         int CON_RUEDAS = 1;
         int SIN_RUEDAS = 2;
     }
 
+    /**
+     * Definición de los valores del menú que pide seleccionar el tipo de empleado
+     */
     interface TipoEmpleado {
         int JEFE = 1;
         int COMERCIAL = 2;
