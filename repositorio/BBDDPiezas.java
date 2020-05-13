@@ -16,7 +16,7 @@ public class BBDDPiezas implements BBDD<String, Pieza>
 {
     private final Map<String, Pieza> piezas;
 
-    public BBDDPiezas(Map<String, Pieza> piezas) {
+    public BBDDPiezas() {
         this.piezas = new HashMap<>();
     }
 
@@ -30,6 +30,14 @@ public class BBDDPiezas implements BBDD<String, Pieza>
 
     @Override public Pieza obtener(String referencia) {
         return piezas.get(referencia);
+    }
+
+    public List<Pieza> obtener(List<String> referencias) {
+        List<Pieza> piezas = new ArrayList<>();
+        for(String r : referencias) {
+            if(existe(r)) piezas.add(obtener(r));
+        }
+        return piezas;
     }
 
     @Override public List<Pieza> listar() {

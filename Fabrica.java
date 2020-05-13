@@ -6,6 +6,7 @@ import entidades.*;
 import interfaz.EntradaSalida;
 import repositorio.BBDDMuebles;
 import repositorio.BBDDPersonas;
+import repositorio.BBDDPiezas;
 
 import java.util.Date;
 
@@ -21,6 +22,7 @@ public class Fabrica
     private final EntradaSalida es;
     private final BBDDMuebles bbddMuebles;
     private final BBDDPersonas bbddPersonas;
+    private final BBDDPiezas bbddPiezas;
     private final GestionMuebles gestionMuebles;
     private final GestionPersonas gestionPersonas;
 
@@ -31,6 +33,7 @@ public class Fabrica
         es = new EntradaSalida();
         bbddMuebles = new BBDDMuebles();
         bbddPersonas = new BBDDPersonas();
+        bbddPiezas = new BBDDPiezas();
         gestionMuebles = new GestionMuebles(this);
         gestionPersonas = new GestionPersonas(this);
 
@@ -90,6 +93,10 @@ public class Fabrica
         return bbddPersonas;
     }
 
+    public BBDDPiezas getBbddPiezas() {
+        return bbddPiezas;
+    }
+
     /**
      * Método para la inserción de datos de prueba para testear la aplicación
      */
@@ -109,5 +116,16 @@ public class Fabrica
         bbddMuebles.insertar(silla);
         bbddMuebles.insertar(new MesaComedor(2, cliente2, 100, 160, Madera.NOGAL, true));
         bbddMuebles.insertar(new SillaOficinaConRuedas(3, cliente2, true, true, 5));
+        
+        bbddPiezas.insertar(new Pieza("TMAD","Tablero madera"));
+        bbddPiezas.insertar(new Pieza("PMAD","Pata madera (Set 4 piezas)"));
+        bbddPiezas.insertar(new Pieza("TCRI","Tablero cristal"));
+        bbddPiezas.insertar(new Pieza("RMET","Revistero metálico"));
+        bbddPiezas.insertar(new Pieza("TLAT","Tirador de latón (Set 5 piezas)"));
+        bbddPiezas.insertar(new Pieza("RACO","Revestimiento para acolchado"));
+        bbddPiezas.insertar(new Pieza("EACO","Espuma de acolchado"));
+        bbddPiezas.insertar(new Pieza("AMET","Armazón metálico"));
+        bbddPiezas.insertar(new Pieza("RSIL","Rueda para sillas (Set 5 piezas)"));
+        bbddPiezas.insertar(new Pieza("TANT","Taco antideslizante (Set 5 piezas)"));
     }
 }

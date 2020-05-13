@@ -10,6 +10,11 @@ public class Pieza
     private String referencia;
     private String descripcion;
 
+    public Pieza(String referencia, String descripcion) {
+        this.referencia = referencia;
+        this.descripcion = descripcion;
+    }
+
     public String getReferencia() {
         return referencia;
     }
