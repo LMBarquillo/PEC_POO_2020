@@ -27,6 +27,7 @@ public class Mueble
         this.material = material;
         this.cliente = cliente;
         this.notas = new ArrayList<>();
+        this.piezas = new ArrayList<>();
     }
 
     public int getNumTrabajo() {

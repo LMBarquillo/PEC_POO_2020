@@ -44,7 +44,8 @@ public interface Valores
         int VER_TRABAJOS = 1;
         int CAMBIAR_ESTADO = 2;
         int ANADIR_ANOTACION = 3;
-        int VOLVER = 4;
+        int LISTAR_PIEZAS = 4;
+        int VOLVER = 5;
     }
 
     /**

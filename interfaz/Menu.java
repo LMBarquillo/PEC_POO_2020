@@ -180,9 +180,10 @@ public class Menu
         System.out.println("- 1. Ver mis trabajos en progreso                -");
         System.out.println("- 2. Cambiar estado de un trabajo                -");
         System.out.println("- 3. Añadir anotación a un trabajo               -");
-        System.out.println("- 4. Volver al menú anterior                     -");
+        System.out.println("- 4. Listado de piezas disponibles               -");
+        System.out.println("- 5. Volver al menú anterior                     -");
         mostrarPie();
-        return 4;
+        return 5;
     }
 
     /**

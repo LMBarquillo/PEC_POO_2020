@@ -96,6 +96,9 @@ public class GestionMuebles {
 			case Valores.ArtesanoMuebles.ANADIR_ANOTACION:
 				crearNotaMueble(nif);
 				break;
+			case Valores.ArtesanoMuebles.LISTAR_PIEZAS:
+				listarPiezas(nif);
+				break;
 			case Valores.ArtesanoMuebles.VOLVER:
 				gestionPrincipalMuebles();
 		}
@@ -182,7 +185,12 @@ public class GestionMuebles {
 			if(lista.size() > 0) {
 				System.out.println("Listado de muebles asignados: ");
 				for(Mueble mueble : lista) {
-					System.out.printf("  %d - %s - Estado: %s\n", mueble.getNumTrabajo(), mueble.toString(), mueble.getEstado().toString());
+					System.out.printf("  %d - %s\n", mueble.getNumTrabajo(), mueble.toString());
+					System.out.printf("  Estado: %s\n", mueble.getEstado().toString());
+					System.out.println("  Piezas necesarias:");
+					for(Pieza pieza : mueble.getPiezas()) {
+						System.out.printf("  - %s\n", pieza.toString());
+					}
 				}
 			} else {
 				System.out.println("Actualmente no tienes ningún mueble asignado.");
@@ -228,6 +236,17 @@ public class GestionMuebles {
 			System.out.println("El número de trabajo introducido no existe.");
 		}
 
+		menuGestionArtesanos(nif);
+	}
+
+	/**
+	 * Método para listar las piezas disponibles, referencias y descripción
+	 */
+	private void listarPiezas(String nif) {
+		System.out.println("Listado de piezas disponibles: ");
+		for(Pieza p : fabrica.getBbddPiezas().listar()) {
+			System.out.println(" - " + p.toString());
+		}
 		menuGestionArtesanos(nif);
 	}
 
