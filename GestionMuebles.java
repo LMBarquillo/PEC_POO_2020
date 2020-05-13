@@ -62,6 +62,9 @@ public class GestionMuebles {
 			case Valores.JefeMuebles.INSPECCIONAR:
 				inspeccionarPedido();
 				break;
+			case Valores.JefeMuebles.LISTAR_TRABAJOS:
+				listarTrabajosArtesanos();
+				break;
 			case Valores.JefeMuebles.VOLVER:
 				gestionPrincipalMuebles();
 		}
@@ -150,6 +153,27 @@ public class GestionMuebles {
 	}
 
 	/**
+	 * Método para listar el trabajo de un artesano concreto
+	 */
+	private void listarTrabajosArtesanos() {
+		String nif = solicitarNifArtesano();
+		List<Mueble> muebles = new ArrayList<>();
+		for(Mueble mueble : fabrica.getBbddMuebles().listar()) {
+			if(mueble.hasArtesano() && mueble.getArtesano().getNif().equals(nif)) {
+				muebles.add(mueble);
+			}
+		}
+		if(muebles.size() > 0) {
+			System.out.println("Lista de trabajos del artesano " + muebles.get(0).getArtesano().getNombre() + ": ");
+			for(Mueble mueble : muebles) {
+				mostrarEstadoTrabajo(mueble);
+			}
+		} else {
+			System.out.println("El artesano seleccionado no tiene trabajos asignados");
+		}
+	}
+
+	/**
 	 * Método para seleccionar un pedido al que poderle asignar un artesano
 	 */
 	private void asignarPedido() {
@@ -185,18 +209,26 @@ public class GestionMuebles {
 			if(lista.size() > 0) {
 				System.out.println("Listado de muebles asignados: ");
 				for(Mueble mueble : lista) {
-					System.out.printf("  %d - %s\n", mueble.getNumTrabajo(), mueble.toString());
-					System.out.printf("  Estado: %s\n", mueble.getEstado().toString());
-					System.out.println("  Piezas necesarias:");
-					for(Pieza pieza : mueble.getPiezas()) {
-						System.out.printf("  - %s\n", pieza.toString());
-					}
+					mostrarEstadoTrabajo(mueble);
 				}
 			} else {
 				System.out.println("Actualmente no tienes ningún mueble asignado.");
 			}
 
 		menuGestionArtesanos(nif);
+	}
+
+	/**
+	 * Método para mostrar el estado de un trabajo y las piezas necesarias
+	 * @param mueble Mueble que vamos a mostrar
+	 */
+	private void mostrarEstadoTrabajo(Mueble mueble) {
+		System.out.printf("  %d - %s\n", mueble.getNumTrabajo(), mueble.toString());
+		System.out.printf("  Estado: %s\n", mueble.getEstado().toString());
+		System.out.println("  Piezas necesarias:");
+		for(Pieza pieza : mueble.getPiezas()) {
+			System.out.printf("  - %s\n", pieza.toString());
+		}
 	}
 
 	/**
@@ -265,17 +297,27 @@ public class GestionMuebles {
 	 * @param mueble Mueble que queremos asignar
 	 */
 	private void asignarArtesano(Mueble mueble) {
+		String nif = solicitarNifArtesano();
+
+		mueble.setArtesano((Artesano) fabrica.getBbddPersonas().obtener(nif));
+		System.out.printf("El trabajo número %d ha sido asignado a %s\n", mueble.getNumTrabajo(), mueble.getArtesano().getNombre());
+		gestionJefeMuebles();
+	}
+
+	/**
+	 * Método para solicitar el nif de un artesano
+	 * @return Devuelve el nif del artesano tras asegurarse que existe.
+	 */
+	private String solicitarNifArtesano() {
 		String nif;
 		do {
-			nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF del artesano al que desea asignar el trabajo: ");
+			nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF del artesano: ");
 			if(!esArtesano(nif)) {
 				System.out.println("El nif introducido no pertenece a un artesano.");
 			}
 		} while (!esArtesano(nif));
 
-		mueble.setArtesano((Artesano) fabrica.getBbddPersonas().obtener(nif));
-		System.out.printf("El trabajo número %d ha sido asignado a %s\n", mueble.getNumTrabajo(), mueble.getArtesano().getNombre());
-		gestionJefeMuebles();
+		return nif;
 	}
 
 	/**

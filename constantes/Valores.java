@@ -34,7 +34,8 @@ public interface Valores
         int RECEPCIONAR = 1;
         int ASIGNAR = 2;
         int INSPECCIONAR = 3;
-        int VOLVER = 4;
+        int LISTAR_TRABAJOS = 4;
+        int VOLVER = 5;
     }
 
     /**
