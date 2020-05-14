@@ -19,6 +19,7 @@ public class Mueble
     private Cliente cliente;            // El cliente que ha pedido el mueble
     private List<String> notas;         // Las notas de progreso dejadas por el artesano
     private Double precio;              // Inicialmente es nulo hasta que se comunica al cliente, por eso usamos la clase envoltorio
+    private List<Pieza> piezas;         // Las piezas necesarias para fabricar el mueble
 
     public Mueble(int numTrabajo, Material material, Cliente cliente) {
         this.numTrabajo = numTrabajo;
@@ -26,6 +27,7 @@ public class Mueble
         this.material = material;
         this.cliente = cliente;
         this.notas = new ArrayList<>();
+        this.piezas = new ArrayList<>();
     }
 
     public int getNumTrabajo() {
@@ -86,5 +88,17 @@ public class Mueble
 
     public void setPrecio(Double precio) {
         this.precio = precio;
+    }
+
+    public void setNotas(List<String> notas) {
+        this.notas = notas;
+    }
+
+    public List<Pieza> getPiezas() {
+        return piezas;
+    }
+
+    public void setPiezas(List<Pieza> piezas) {
+        this.piezas = piezas;
     }
 }

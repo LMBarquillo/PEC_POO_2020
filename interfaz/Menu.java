@@ -166,9 +166,11 @@ public class Menu
         System.out.println("- 1. Recepcionar un pedido                       -");
         System.out.println("- 2. Asignar pedido a un artesano                -");
         System.out.println("- 3. Inspeccionar progreso de un pedido          -");
-        System.out.println("- 4. Volver al menú anterior                     -");
+        System.out.println("- 4. Mostrar las fichas de un artesano           -");
+        System.out.println("- 5. Ver trabajos por estado determinado         -");
+        System.out.println("- 6. Volver al menú anterior                     -");
         mostrarPie();
-        return 4;
+        return 6;
     }
 
     /**
@@ -180,9 +182,10 @@ public class Menu
         System.out.println("- 1. Ver mis trabajos en progreso                -");
         System.out.println("- 2. Cambiar estado de un trabajo                -");
         System.out.println("- 3. Añadir anotación a un trabajo               -");
-        System.out.println("- 4. Volver al menú anterior                     -");
+        System.out.println("- 4. Listado de piezas disponibles               -");
+        System.out.println("- 5. Volver al menú anterior                     -");
         mostrarPie();
-        return 4;
+        return 5;
     }
 
     /**
@@ -211,10 +214,11 @@ public class Menu
         System.out.println("- 3. Modificar un cliente                        -");
         System.out.println("- 4. Listado de clientes                         -");
         System.out.println("- 5. Comunicación de precios de pedidos          -");
-        System.out.println("- 6. Avisar de pedido listo para entrega         -");
-        System.out.println("- 7. Volver al menú anterior                     -");
+        System.out.println("- 6. Listar pedidos finalizados                  -");
+        System.out.println("- 7. Avisar de pedido listo para entrega         -");
+        System.out.println("- 8. Volver al menú anterior                     -");
         mostrarPie();
-        return 7;
+        return 8;
     }
 
     /**
@@ -333,7 +337,7 @@ public class Menu
      * @return número de opciones
      */
     private int mostrarMenuEstado() {
-        System.out.println("¿Qué estado desea ponerle?");
+        System.out.println("Selecciones un estado de la lista:");
         return mostrarValores(Estado.values());
     }
 

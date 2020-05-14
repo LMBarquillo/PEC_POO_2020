@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Pieza
+comment0.text=\r\n\ Clase\ Pieza.\ Define\ las\ piezas\ necesarias\ para\ crear\ muebles\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=referencia\ descripcion
+comment1.target=Pieza(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getReferencia()
+comment3.params=referencia
+comment3.target=void\ setReferencia(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getDescripcion()
+comment5.params=descripcion
+comment5.target=void\ setDescripcion(java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

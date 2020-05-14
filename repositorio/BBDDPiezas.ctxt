@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=BBDDPiezas
+comment0.text=\r\n\ Clase\ BBDDPiezas.\ Crea\ un\ sistema\ de\ almacenamiento\ para\ piezas\r\n\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=piezas
+comment1.target=BBDDPiezas(java.util.Map)
+comment2.params=referencia
+comment2.target=boolean\ existe(java.lang.String)
+comment3.params=pieza
+comment3.target=boolean\ existe(entidades.Pieza)
+comment4.params=referencia
+comment4.target=entidades.Pieza\ obtener(java.lang.String)
+comment5.params=
+comment5.target=java.util.List\ listar()
+comment6.params=pieza
+comment6.target=entidades.Pieza\ insertar(entidades.Pieza)
+comment7.params=referencia\ pieza
+comment7.target=entidades.Pieza\ guardar(java.lang.String,\ entidades.Pieza)
+comment8.params=referencia
+comment8.target=entidades.Pieza\ eliminar(java.lang.String)
+numComments=9

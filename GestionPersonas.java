@@ -1,9 +1,7 @@
-import constantes.Condicion;
-import constantes.Material;
-import constantes.Turno;
-import constantes.Valores;
+import constantes.*;
 import entidades.*;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -62,6 +60,9 @@ public class GestionPersonas {
 				break;
 			case Valores.GestionClientes.COMUNICAR_PRECIO:
 				comunicarPrecio();
+				break;
+			case Valores.GestionClientes.PEDIDOS_FINALIZADOS:
+				listadoFinalizados();
 				break;
 			case Valores.GestionClientes.AVISAR_ENTREGA:
 				avisarEntrega();
@@ -416,6 +417,27 @@ public class GestionPersonas {
 	}
 
 	/**
+	 * Método para listar los muebles que están finalizados para poder confirmar la entrega al cliente.
+	 */
+	private void listadoFinalizados() {
+		List<Mueble> finalizados = new ArrayList<>();
+		for(Mueble mueble : fabrica.getBbddMuebles().listar()) {
+			if(mueble.getEstado() == Estado.FINALIZADO) {
+				finalizados.add(mueble);
+			}
+		}
+		if(finalizados.size() > 0) {
+			System.out.println("Listado de pedidos finalizados para confirmar a cliente: ");
+			for(Mueble mueble : finalizados) {
+				System.out.printf(" (%s) %s - %s", mueble.getCliente().getNif(), mueble.getCliente().getNombre(), mueble.toString());
+			}
+		} else {
+			System.out.println("No existen muebles en estado FINALIZADO");
+		}
+		gestionClientes();
+	}
+
+	/**
 	 * Método para notificar a un cliente de la entrega de su mueble
 	 */
 	private void avisarEntrega() {
@@ -423,10 +445,19 @@ public class GestionPersonas {
 		if (fabrica.getBbddMuebles().existe(id)) {
 			Mueble mueble = fabrica.getBbddMuebles().obtener(id);
 			System.out.printf("El mueble introducido ha sido pedido por %s\n", mueble.getCliente().getNombre());
-			if(fabrica.getEs().getDatos().pedirBooleano("¿Desea notificarle que ya está disponible para la recogida? (S/N): ")) {
-				// En este punto enviaríamos un email.
-				System.out.printf("Se le ha enviado una notificación al cliente al email: %s\n", mueble.getCliente().getEmail());
-				System.out.printf("Puede avisarle personalmente en el teléfono: %s\n", mueble.getCliente().getTelefono());
+			if(mueble.getEstado() == Estado.FINALIZADO) {
+				if (fabrica.getEs().getDatos().pedirBooleano("¿Desea notificarle que ya está disponible para la recogida? (S/N): ")) {
+					// En este punto enviaríamos un email.
+					System.out.printf("Se le ha enviado una notificación al cliente al email: %s\n", mueble.getCliente().getEmail());
+					System.out.printf("Puede avisarle personalmente en el teléfono: %s\n", mueble.getCliente().getTelefono());
+					// Tras la notificación, lo marcamos como ENTREGADO
+					mueble.setEstado(Estado.ENTREGADO);
+				}
+			} else if(mueble.getEstado() == Estado.ENTREGADO) {
+				System.out.println("El mueble ya ha sido entregado al cliente");
+			} else {
+				System.out.println("El mueble no está FINALIZADO. Su estado es " + mueble.getEstado().toString());
+				System.out.println("No se le puede notificar al cliente aún.");
 			}
 		} else {
 			System.out.println("El trabajo introducido no existe.");

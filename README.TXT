@@ -1,12 +1,11 @@
 ------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
+PROYECTO ASIGNATURA PROGRAMACIÓN ORIENTADA A OBJETOS
+GRADO DE INGENIERÍA EN TECNOLOGÍAS DE LA INFORMACIÓN (UNED)
+CURSO 2019-2020
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE: PRÁCTICA EVALUABLE POO 2019-2020
+PURPOSE OF PROJECT: EDUCATIONAL
+VERSION or DATE: 1.0.1
+AUTHORS: LUIS MIGUEL BARQUILLO ROMERO
+

@@ -34,7 +34,9 @@ public interface Valores
         int RECEPCIONAR = 1;
         int ASIGNAR = 2;
         int INSPECCIONAR = 3;
-        int VOLVER = 4;
+        int TRABAJOS_POR_ARTESANO = 4;
+        int TRABAJOS_POR_ESTADO = 5;
+        int VOLVER = 6;
     }
 
     /**
@@ -44,7 +46,8 @@ public interface Valores
         int VER_TRABAJOS = 1;
         int CAMBIAR_ESTADO = 2;
         int ANADIR_ANOTACION = 3;
-        int VOLVER = 4;
+        int LISTAR_PIEZAS = 4;
+        int VOLVER = 5;
     }
 
     /**
@@ -67,8 +70,9 @@ public interface Valores
         int MODIFICACION = 3;
         int LISTADO = 4;
         int COMUNICAR_PRECIO = 5;
-        int AVISAR_ENTREGA = 6;
-        int VOLVER = 7;
+        int PEDIDOS_FINALIZADOS = 6;
+        int AVISAR_ENTREGA = 7;
+        int VOLVER = 8;
     }
 
     /**
