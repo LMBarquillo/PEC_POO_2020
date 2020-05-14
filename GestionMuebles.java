@@ -159,7 +159,7 @@ public class GestionMuebles {
 		String nif = solicitarNifArtesano();
 		List<Mueble> muebles = new ArrayList<>();
 		for(Mueble mueble : fabrica.getBbddMuebles().listar()) {
-			if(mueble.hasArtesano() && mueble.getArtesano().getNif().equals(nif)) {
+			if(mueble.hasArtesano() && mueble.getArtesano().getNif().equalsIgnoreCase(nif)) {
 				muebles.add(mueble);
 			}
 		}
@@ -202,7 +202,9 @@ public class GestionMuebles {
 	private void verTrabajos(String nif) {
 			List<Mueble> lista = new ArrayList<>();
 			for(Mueble mueble : fabrica.getBbddMuebles().listar()) {
-				if(mueble.hasArtesano() && mueble.getArtesano().getNif().equals(nif) && mueble.getEstado() != Estado.FINALIZADO) {
+				if(mueble.hasArtesano() && mueble.getArtesano().getNif().equalsIgnoreCase(nif) &&
+						mueble.getEstado() != Estado.FINALIZADO &&
+						mueble.getEstado() != Estado.ENTREGADO) {
 					lista.add(mueble);
 				}
 			}
@@ -239,7 +241,7 @@ public class GestionMuebles {
 		int trabajo = fabrica.getEs().getDatos().pedirEntero("Introduce el trabajo que desea modificar: ");
 		if(fabrica.getBbddMuebles().existe(trabajo)) {
 			if(fabrica.getBbddMuebles().obtener(trabajo).hasArtesano() &&
-					fabrica.getBbddMuebles().obtener(trabajo).getArtesano().getNif().equals(nif)) {
+					fabrica.getBbddMuebles().obtener(trabajo).getArtesano().getNif().equalsIgnoreCase(nif)) {
 				cambiarEstado(fabrica.getBbddMuebles().obtener(trabajo));
 			} else {
 				System.out.println("El trabajo introducido no te ha sido asignado.");
@@ -259,7 +261,7 @@ public class GestionMuebles {
 		int trabajo = fabrica.getEs().getDatos().pedirEntero("Introduce el trabajo al que deseas añadir una nota: ");
 		if(fabrica.getBbddMuebles().existe(trabajo)) {
 			Mueble mueble = fabrica.getBbddMuebles().obtener(trabajo);
-			if(mueble.getArtesano() != null && mueble.getArtesano().getNif().equals(nif)) {
+			if(mueble.getArtesano() != null && mueble.getArtesano().getNif().equalsIgnoreCase(nif)) {
 				mueble.addNota(fabrica.getEs().getDatos().pedirString("Introduce la nota: "));
 			} else {
 				System.out.println("El número de trabajo introducido no te ha sido asignado, y no puedes añadir notas.");

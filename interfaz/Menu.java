@@ -213,10 +213,11 @@ public class Menu
         System.out.println("- 3. Modificar un cliente                        -");
         System.out.println("- 4. Listado de clientes                         -");
         System.out.println("- 5. Comunicación de precios de pedidos          -");
-        System.out.println("- 6. Avisar de pedido listo para entrega         -");
-        System.out.println("- 7. Volver al menú anterior                     -");
+        System.out.println("- 6. Listar pedidos finalizados                  -");
+        System.out.println("- 7. Avisar de pedido listo para entrega         -");
+        System.out.println("- 8. Volver al menú anterior                     -");
         mostrarPie();
-        return 7;
+        return 8;
     }
 
     /**

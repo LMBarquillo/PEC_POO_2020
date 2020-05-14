@@ -7,9 +7,9 @@ package constantes;
  */
 public enum Estado
 {
-    PEDIDO("Pedido"), FABRICANDO("En fabricación"), DETENIDO("Fabricación detenida"), FINALIZADO("Finalizado");
+    PEDIDO("Pedido"), FABRICANDO("En fabricación"), DETENIDO("Fabricación detenida"), FINALIZADO("Finalizado"), ENTREGADO("Entregado");
 
-    private String estado;
+    private final String estado;
 
     Estado(String estado) {
         this.estado = estado;

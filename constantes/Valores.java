@@ -69,8 +69,9 @@ public interface Valores
         int MODIFICACION = 3;
         int LISTADO = 4;
         int COMUNICAR_PRECIO = 5;
-        int AVISAR_ENTREGA = 6;
-        int VOLVER = 7;
+        int PEDIDOS_FINALIZADOS = 6;
+        int AVISAR_ENTREGA = 7;
+        int VOLVER = 8;
     }
 
     /**
