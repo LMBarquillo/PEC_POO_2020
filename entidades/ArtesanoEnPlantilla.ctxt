@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=ArtesanoEnPlantilla
+comment0.text=\r\n\ Clase\ ArtesanoEnPlantilla.\ Define\ los\ artesanos\ que\ se\ encuentran\ contratados\ en\ plantilla.\r\n\ @author\ Luis\ Miguel\ Barquillo\ Romero\r\n
+comment1.params=nombre\ nif\ direccion\ codigoPostal\ localidad\ telefono\ antiguedad\ salario\ especialidad\ turno
+comment1.target=ArtesanoEnPlantilla(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.util.Date,\ double,\ constantes.Material,\ constantes.Turno)
+comment2.params=
+comment2.target=constantes.Turno\ getTurno()
+comment3.params=turno
+comment3.target=void\ setTurno(constantes.Turno)
+comment4.params=
+comment4.target=constantes.Condicion\ condicion()
+numComments=5
