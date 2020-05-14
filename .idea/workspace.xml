@@ -16,12 +16,31 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/Piezas" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5aa6636b-b521-4c61-84c4-57ef74acc779" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.TXT" beforeDir="false" afterPath="$PROJECT_DIR$/README.TXT" afterDir="false" />
+    <list default="true" id="5aa6636b-b521-4c61-84c4-57ef74acc779" name="Default Changelist" comment="Reutilizado método de listar detenidos para poder listar por cualquier estado.">
+      <change beforePath="$PROJECT_DIR$/Fabrica.class" beforeDir="false" afterPath="$PROJECT_DIR$/Fabrica.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fabrica.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/Fabrica.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionMuebles.class" beforeDir="false" afterPath="$PROJECT_DIR$/GestionMuebles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionMuebles.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/GestionMuebles.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionPersonas$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/GestionPersonas$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionPersonas.class" beforeDir="false" afterPath="$PROJECT_DIR$/GestionPersonas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constantes/Valores$ArtesanoMuebles.class" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Valores$ArtesanoMuebles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constantes/Valores$GestionClientes.class" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Valores$GestionClientes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constantes/Valores$JefeMuebles.class" beforeDir="false" afterPath="$PROJECT_DIR$/constantes/Valores$JefeMuebles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaz/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/interfaz/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositorio/BBDDPiezas.class" beforeDir="false" afterPath="$PROJECT_DIR$/repositorio/BBDDPiezas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositorio/BBDDPiezas.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/repositorio/BBDDPiezas.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositorio/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/repositorio/package.bluej" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -384,7 +403,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/Piezas" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -453,11 +484,11 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2369" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1588409690800" />
-    <state x="1955" y="19" width="1810" height="955" key="CommitChangelistDialog2" timestamp="1589477136551">
+    <state x="1955" y="19" width="1810" height="955" key="CommitChangelistDialog2" timestamp="1589478460811">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="35" y="19" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588787035926" />
-    <state x="1955" y="19" width="1810" height="955" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589477136551" />
+    <state x="1955" y="19" width="1810" height="955" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589478460811" />
     <state x="2012" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1585763586361">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
