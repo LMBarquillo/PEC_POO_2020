@@ -167,9 +167,10 @@ public class Menu
         System.out.println("- 2. Asignar pedido a un artesano                -");
         System.out.println("- 3. Inspeccionar progreso de un pedido          -");
         System.out.println("- 4. Mostrar las fichas de un artesano           -");
-        System.out.println("- 5. Volver al menú anterior                     -");
+        System.out.println("- 5. Ver trabajos detenidos (falta de piezas)    -");
+        System.out.println("- 6. Volver al menú anterior                     -");
         mostrarPie();
-        return 5;
+        return 6;
     }
 
     /**

@@ -35,7 +35,8 @@ public interface Valores
         int ASIGNAR = 2;
         int INSPECCIONAR = 3;
         int LISTAR_TRABAJOS = 4;
-        int VOLVER = 5;
+        int TRABAJOS_DETENIDOS = 5;
+        int VOLVER = 6;
     }
 
     /**

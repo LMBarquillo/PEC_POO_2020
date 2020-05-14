@@ -1,7 +1,4 @@
-import constantes.Madera;
-import constantes.Material;
-import constantes.Turno;
-import constantes.Valores;
+import constantes.*;
 import entidades.*;
 import interfaz.EntradaSalida;
 import repositorio.BBDDMuebles;
@@ -125,8 +122,14 @@ public class Fabrica
         Silla silla = new SillaCocina(1, Material.MADERA, cliente1, true, true);
         silla.setPiezas(getBbddPiezas().obtener(Arrays.asList("TMAD", "PMAD", "RACO", "EACO")));
         silla.setArtesano(artesano);
+        Mesa mesa = new MesaComedor(2, cliente1, 100, 120, Madera.ABEDUL, true);
+        mesa.setPiezas(getBbddPiezas().obtener(Arrays.asList("TMAD", "PMAD")));
+        mesa.setArtesano(artesano);
+        mesa.setEstado(Estado.DETENIDO);    // Falta de piezas
         cliente1.getMuebles().add(silla);
+        cliente1.getMuebles().add(mesa);
         bbddMuebles.insertar(silla);
+        bbddMuebles.insertar(mesa);
         bbddMuebles.insertar(new MesaComedor(2, cliente2, 100, 160, Madera.NOGAL, true));
         bbddMuebles.insertar(new SillaOficinaConRuedas(3, cliente2, true, true, 5));
 
