@@ -130,8 +130,8 @@ public class Fabrica
         cliente1.getMuebles().add(mesa);
         bbddMuebles.insertar(silla);
         bbddMuebles.insertar(mesa);
-        bbddMuebles.insertar(new MesaComedor(2, cliente2, 100, 160, Madera.NOGAL, true));
-        bbddMuebles.insertar(new SillaOficinaConRuedas(3, cliente2, true, true, 5));
+        bbddMuebles.insertar(new MesaComedor(3, cliente2, 100, 160, Madera.NOGAL, true));
+        bbddMuebles.insertar(new SillaOficinaConRuedas(4, cliente2, true, true, 5));
 
     }
 }

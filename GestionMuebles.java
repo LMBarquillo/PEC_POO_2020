@@ -62,11 +62,11 @@ public class GestionMuebles {
 			case Valores.JefeMuebles.INSPECCIONAR:
 				inspeccionarPedido();
 				break;
-			case Valores.JefeMuebles.LISTAR_TRABAJOS:
+			case Valores.JefeMuebles.TRABAJOS_POR_ARTESANO:
 				listarTrabajosArtesanos();
 				break;
-			case Valores.JefeMuebles.TRABAJOS_DETENIDOS:
-				listarTrabajosDetenidos();
+			case Valores.JefeMuebles.TRABAJOS_POR_ESTADO:
+				seleccionarEstadoTrabajos();
 				break;
 			case Valores.JefeMuebles.VOLVER:
 				gestionPrincipalMuebles();
@@ -176,22 +176,26 @@ public class GestionMuebles {
 		}
 	}
 
+	private void seleccionarEstadoTrabajos() {
+		Estado estado = Estado.values()[fabrica.getEs().getMenu().menuEstado()-1];
+		listarTrabajosPorEstado(estado);
+	}
+
 	/**
-	 * Método para mostrar la lista de los trabajos que se encuentran detenidos.
-	 * Si fuera necesario, se puede reutilizar para cualquier estado, pasando el estado por parámetro.
+	 * Método para mostrar la lista de los trabajos que se encuentran en un estado determinado.
 	 */
-	private void listarTrabajosDetenidos() {
-		List<Mueble> detenidos = new ArrayList<>();
+	private void listarTrabajosPorEstado(Estado estado) {
+		List<Mueble> listado = new ArrayList<>();
 		for(Mueble mueble : this.fabrica.getBbddMuebles().listar()) {
-			if(mueble.getEstado() == Estado.DETENIDO) detenidos.add(mueble);
+			if(mueble.getEstado() == estado) listado.add(mueble);
 		}
-		if(detenidos.size() > 0) {
-			System.out.println("Listado de trabajos detenidos por falta de piezas: ");
-			for(Mueble mueble : detenidos) {
-				System.out.printf(" (%s) %s - %s", mueble.getCliente().getNif(), mueble.getCliente().getNombre(), mueble.toString());
+		if(listado.size() > 0) {
+			System.out.printf("Listado de trabajos %s: \n", estado.toString());
+			for(Mueble mueble : listado) {
+				System.out.printf(" (%s) %s - %s\n", mueble.getCliente().getNif(), mueble.getCliente().getNombre(), mueble.toString());
 			}
 		} else {
-			System.out.println("Actualmente no hay ningún trabajo que se encuentre detenido");
+			System.out.printf("Actualmente no hay ningún trabajo en estado %s\n", estado.toString());
 		}
 		gestionJefeMuebles();
 	}

@@ -34,8 +34,8 @@ public interface Valores
         int RECEPCIONAR = 1;
         int ASIGNAR = 2;
         int INSPECCIONAR = 3;
-        int LISTAR_TRABAJOS = 4;
-        int TRABAJOS_DETENIDOS = 5;
+        int TRABAJOS_POR_ARTESANO = 4;
+        int TRABAJOS_POR_ESTADO = 5;
         int VOLVER = 6;
     }
 
