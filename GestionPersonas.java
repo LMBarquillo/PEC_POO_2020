@@ -337,10 +337,15 @@ public class GestionPersonas {
 	private void bajaClientes() {
 		String nif = fabrica.getEs().getDatos().pedirString("Introduzca el NIF/CIF: ");
 		if (fabrica.getBbddPersonas().existe(nif) && fabrica.getBbddPersonas().obtener(nif).esCliente()) {
-			// Ante una eliminación, pedir siempre confirmación
-			if (fabrica.getEs().getDatos().pedirBooleano(String.format("¿Está seguro de que desea eliminar el cliente con NIF %s? (S/N): ", nif))) {
-				fabrica.getBbddPersonas().eliminar(nif);
-				System.out.printf("El cliente con NIF %s ha sido eliminado.\n", nif);
+			Cliente c = (Cliente) fabrica.getBbddPersonas().obtener(nif);
+			if(c.getMuebles().size() == 0) {
+				// Ante una eliminación, pedir siempre confirmación
+				if (fabrica.getEs().getDatos().pedirBooleano(String.format("¿Está seguro de que desea eliminar el cliente con NIF %s? (S/N): ", nif))) {
+					fabrica.getBbddPersonas().eliminar(nif);
+					System.out.printf("El cliente con NIF %s ha sido eliminado.\n", nif);
+				}
+			} else {
+				System.out.println("El cliente no puede eliminarse porque tiene muebles pedidos.");
 			}
 		} else {
 			System.out.println("El NIF introducido no se corresponde con el de un cliente.");
