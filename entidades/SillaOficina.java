@@ -1,35 +1,29 @@
 package entidades;
 
+import constantes.Material;
 
 /**
- * Write a description of class SillaOficina here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Clase SillaOficina. Describe las sillas de tipo Oficina
+ * @author Luis Miguel Barquillo
  */
 public class SillaOficina extends Silla
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private boolean reclinable;
 
-    /**
-     * Constructor for objects of class SillaOficina
-     */
-    public SillaOficina()
-    {
-        // initialise instance variables
-        x = 0;
+    public SillaOficina(int numTrabajo, Material material, Cliente cliente, boolean acolchada, boolean reclinable) {
+        super(numTrabajo, material, cliente, acolchada);
+        this.reclinable = reclinable;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public boolean isReclinable() {
+        return reclinable;
+    }
+
+    public void setReclinable(boolean reclinable) {
+        this.reclinable = reclinable;
+    }
+
+    @Override public String toString() {
+        return super.toString() + " de oficina" + (isReclinable() ? " reclinable " : " estática ");
     }
 }

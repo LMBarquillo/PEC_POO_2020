@@ -1,37 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/Piezas" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5aa6636b-b521-4c61-84c4-57ef74acc779" name="Default Changelist" comment="" />
+    <list default="true" id="5aa6636b-b521-4c61-84c4-57ef74acc779" name="Default Changelist" comment="Reutilizado método de listar detenidos para poder listar por cualquier estado.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GestionPersonas.java" beforeDir="false" afterPath="$PROJECT_DIR$/GestionPersonas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entidades/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/entidades/package.bluej" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="development" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Y55xNtNayF3a0IuEAcHbE5iXMO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PEC.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunManager">
-    <configuration name="Run local" type="JarApplication">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/../PEC.jar" />
-      <option name="WORKING_DIRECTORY" value="E:\ITI\Asignaturas\1.2. Programación Orientada a Objetos\PEC 2019-2020\Proyecto BlueJ\PEC2020_LMB" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <configuration name="Run local" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Fabrica" />
+      <module name="PEC2020_LMB" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
-      <method v="2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Fabrica" />
+      <module name="PEC2020_LMB" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
   </component>
   <component name="SvnConfiguration">
@@ -44,45 +103,456 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582219860503</updated>
-      <workItem from="1582219861732" duration="1012000" />
+      <workItem from="1582219861732" duration="5478000" />
+      <workItem from="1582736519881" duration="2247000" />
+      <workItem from="1582739908528" duration="351000" />
+      <workItem from="1582740270598" duration="5395000" />
+      <workItem from="1582823578713" duration="250000" />
+      <workItem from="1582823845823" duration="554000" />
+      <workItem from="1583341663144" duration="7256000" />
+      <workItem from="1584465766106" duration="4610000" />
+      <workItem from="1584510785347" duration="66000" />
+      <workItem from="1584609976802" duration="9270000" />
+      <workItem from="1584683458304" duration="125000" />
+      <workItem from="1585386047691" duration="14007000" />
+      <workItem from="1585544236829" duration="25000" />
+      <workItem from="1585757431681" duration="9042000" />
+      <workItem from="1585803399496" duration="71000" />
+      <workItem from="1587198729414" duration="10655000" />
+      <workItem from="1587358470794" duration="21000" />
+      <workItem from="1587571819013" duration="4840000" />
+      <workItem from="1588405897991" duration="9629000" />
+      <workItem from="1588568014192" duration="34000" />
+      <workItem from="1588785579058" duration="730000" />
+      <workItem from="1588787391283" duration="519000" />
+      <workItem from="1589386255732" duration="5449000" />
+      <workItem from="1589432527238" duration="778000" />
+      <workItem from="1589473810951" duration="4202000" />
+      <workItem from="1589518731784" duration="216000" />
+      <workItem from="1589818781457" duration="356000" />
     </task>
+    <task id="LOCAL-00001" summary="Definición de constantes con enumeradores de todo tipo. Añadidas propiedades a varios tipos de muebles.">
+      <created>1582741865136</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582741865136</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Acabados toString() de las mesas">
+      <created>1582742669012</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582742669012</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Acabadas clases silla e hijas">
+      <created>1582744642125</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1582744642125</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Asignación de estados, clientes y artesanos a los muebles.">
+      <created>1582745631458</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582745631458</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Creado primer menú funcional">
+      <created>1583344351694</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583344351694</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Creado gestión de Usuarios y Clientes">
+      <created>1584470346784</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584470346784</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Finalizar clases entidades de las personas.">
+      <created>1584613495058</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1584613495058</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Modificar propiedades de los Muebles para facilitar los constructores">
+      <created>1584614578764</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1584614578764</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Añadida referencias a los muebles y finalizar BBDD's">
+      <created>1584618535625</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1584618535625</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Proceso de creación de mesa de Comedor">
+      <created>1585394565027</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1585394565027</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Proceso de creación de mesa de todos los tipos de mesa">
+      <created>1585397016990</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1585397016990</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Cambiar ID de muebles a Integer y autogenerar el número de trabajo.">
+      <created>1585759833039</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1585759833039</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Asignar trabajos a un artesano.">
+      <created>1585762049156</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1585762049156</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Inspeccionar pedido.">
+      <created>1585763103665</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1585763103665</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Cambiar las anotaciones de los muebles por una lista de String, para meter varias notas por mueble.">
+      <created>1585765387844</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1585765387844</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Cambiar estado de un pedido por un artesano.">
+      <created>1585766184005</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1585766184005</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Mostrar a los artesanos solo los muebles que no se hayan finalizado o entegado.">
+      <created>1585766402913</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1585766402913</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Proceso de añadir notas por parte de un artesano.">
+      <created>1587199911780</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1587199911780</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Restringir acceso a funciones de jefatura">
+      <created>1587202112114</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1587202112114</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Añadir y modificar clientes">
+      <created>1587205430731</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1587205430731</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Comunicación de precios de muebles a clientes y listado de clientes.">
+      <created>1587209896721</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1587209896721</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Avisar entregas">
+      <created>1587572428676</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1587572428676</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Alta y listado de empleados">
+      <created>1587575389887</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1587575389887</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Añadir clases abstractas para identificar tipos de objeto.">
+      <created>1587576220649</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1587576220649</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Baja empleados">
+      <created>1587576318976</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1587576318976</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Gestión de empleados terminado.">
+      <created>1588410973896</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1588410973897</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Añadir multitud de comentarios y Javadoc">
+      <created>1588414965260</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1588414965260</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Correcciones menores">
+      <created>1588417763946</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1588417763946</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Añadidos javadoc faltantes">
+      <created>1588787037872</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1588787037872</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Creación de clase piezas y BBDDPiezas">
+      <created>1589387024317</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1589387024317</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Añadir piezas necesarias a cada tipo de mueble">
+      <created>1589388558108</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1589388558108</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Mostrar piezas necesarias al ver trabajos del Artesano">
+      <created>1589389473039</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1589389473039</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Nueva opción del jefe para ver los trabajos de un artesano determinado">
+      <created>1589390440986</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1589390440986</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Creación de listado de pedidos finalizados. Añadido estado ENTREGADO.">
+      <created>1589474977901</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1589474977901</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Añadir listado de pedidos detenidos por falta de piezas.">
+      <created>1589476210502</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1589476210502</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Reutilizado método de listar detenidos para poder listar por cualquier estado.">
+      <created>1589477137418</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1589477137418</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/Piezas" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Cambiar ID de muebles a Integer y autogenerar el número de trabajo." />
+    <MESSAGE value="Asignar trabajos a un artesano." />
+    <MESSAGE value="Inspeccionar pedido." />
+    <MESSAGE value="Cambiar las anotaciones de los muebles por una lista de String, para meter varias notas por mueble." />
+    <MESSAGE value="Cambiar estado de un pedido por un artesano." />
+    <MESSAGE value="Mostrar a los artesanos solo los muebles que no se hayan finalizado o entegado." />
+    <MESSAGE value="Proceso de añadir notas por parte de un artesano." />
+    <MESSAGE value="Restringir acceso a funciones de jefatura" />
+    <MESSAGE value="Añadir y modificar clientes" />
+    <MESSAGE value="Comunicación de precios de muebles a clientes y listado de clientes." />
+    <MESSAGE value="Avisar entregas" />
+    <MESSAGE value="Alta y listado de empleados" />
+    <MESSAGE value="Añadir clases abstractas para identificar tipos de objeto." />
+    <MESSAGE value="Baja empleados" />
+    <MESSAGE value="Gestión de empleados terminado." />
+    <MESSAGE value="Añadir multitud de comentarios y Javadoc" />
+    <MESSAGE value="Correcciones menores" />
+    <MESSAGE value="Añadidos javadoc faltantes" />
+    <MESSAGE value="Creación de clase piezas y BBDDPiezas" />
+    <MESSAGE value="Añadir piezas necesarias a cada tipo de mueble" />
+    <MESSAGE value="Mostrar piezas necesarias al ver trabajos del Artesano" />
+    <MESSAGE value="Nueva opción del jefe para ver los trabajos de un artesano determinado" />
+    <MESSAGE value="Creación de listado de pedidos finalizados. Añadido estado ENTREGADO." />
+    <MESSAGE value="Añadir listado de pedidos detenidos por falta de piezas." />
+    <MESSAGE value="Reutilizado método de listar detenidos para poder listar por cualquier estado." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reutilizado método de listar detenidos para poder listar por cualquier estado." />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2334" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582220548689">
+    <state x="2472" y="178" key="#Project_Structure" timestamp="1583343532688">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2334" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582220548689" />
-    <state x="2728" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1582219887426">
+    <state x="2472" y="178" key="#Project_Structure/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1583343532688" />
+    <state x="2302" y="45" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583344098423">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2728" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582219887426" />
-    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1582220518698">
+    <state x="2302" y="45" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1583344098423" />
+    <state x="2634" y="389" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1582740257933">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2660" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582220518698" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1582220550214">
+    <state x="2634" y="389" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582740257933" />
+    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1589388617774">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582220550214" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1582220550214">
+    <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589388617774" />
+    <state x="2609" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1583343825211">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582220550214" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1582220550213">
+    <state x="2609" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1583343825211" />
+    <state x="2728" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1582740401004">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582220550213" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1582220550214">
+    <state x="2728" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582740401004" />
+    <state x="2369" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588409690800">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582220550214" />
-    <state x="2360" y="94" key="SettingsEditor" timestamp="1582220527114">
+    <state x="2369" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1588409690800" />
+    <state x="1955" y="19" width="1810" height="955" key="CommitChangelistDialog2" timestamp="1589478460811">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2360" y="94" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1582220527114" />
+    <state x="35" y="19" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588787035926" />
+    <state x="1955" y="19" width="1810" height="955" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589478460811" />
+    <state x="2012" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1585763586361">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2012" y="92" width="1736" height="856" key="DiffContextDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585763586361" />
+    <state x="2208" y="145" width="477" height="594" key="FileChooserDialogImpl" timestamp="1589518941358">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588787402318" />
+    <state x="2208" y="145" width="477" height="594" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589518941358" />
+    <state width="1877" height="529" key="GridCell.Tab.0.bottom" timestamp="1589478683177">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="529" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589478683177" />
+    <state width="1877" height="529" key="GridCell.Tab.0.center" timestamp="1589478683176">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="529" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589478683176" />
+    <state width="1877" height="529" key="GridCell.Tab.0.left" timestamp="1589478683176">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="529" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589478683176" />
+    <state width="1877" height="529" key="GridCell.Tab.0.right" timestamp="1589478683177">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="529" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589478683177" />
+    <state width="1877" height="529" key="GridCell.Tab.1.bottom" timestamp="1589478683177">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="529" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589478683177" />
+    <state width="1877" height="529" key="GridCell.Tab.1.center" timestamp="1589478683177">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="529" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589478683177" />
+    <state width="1877" height="529" key="GridCell.Tab.1.left" timestamp="1589478683177">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="529" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589478683177" />
+    <state width="1877" height="529" key="GridCell.Tab.1.right" timestamp="1589478683177">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="529" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589478683177" />
+    <state x="2360" y="94" key="SettingsEditor" timestamp="1584616561178">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2360" y="94" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1584616561178" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1587576301727">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1587576301727" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589477138162">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588787040093" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589477138162" />
+    <state x="71" y="-15" width="1893" height="999" maximized="true" key="dock-window-1" timestamp="1589475829005">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="71" y="-15" width="1893" height="999" maximized="true" key="dock-window-1/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589475829005" />
+    <state x="321" y="0" width="1615" height="999" maximized="true" key="dock-window-2" timestamp="1585393357524">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="321" y="0" width="1615" height="999" maximized="true" key="dock-window-2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585393357524" />
+    <state x="2587" y="253" width="585" height="534" key="find.popup" timestamp="1589473829386">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2587" y="253" width="585" height="534" key="find.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589473829386" />
+    <state x="2586" y="139" key="refactoring.ChangeSignatureDialog" timestamp="1583347886620">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2586" y="139" key="refactoring.ChangeSignatureDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1583347886620" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585765187839">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1585765187839" />
   </component>
 </project>

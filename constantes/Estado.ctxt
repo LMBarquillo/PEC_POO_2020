@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Estado
+comment0.text=\r\n\ Clase\ enumeradora\ Estado.\ Define\ el\ estado\ de\ fabricaci\u00F3n\ de\ los\ muebles.\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=estado
+comment1.target=Estado(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3

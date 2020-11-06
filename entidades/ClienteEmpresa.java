@@ -2,34 +2,27 @@ package entidades;
 
 
 /**
- * Write a description of class ClienteEmpresa here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Clase ClienteEmpresa. Define a los clientes que son de tipo Persona Jurídica
+ * @author Luis Miguel Barquillo Romero
  */
 public class ClienteEmpresa extends Cliente
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private String personaContacto;
 
-    /**
-     * Constructor for objects of class ClienteEmpresa
-     */
-    public ClienteEmpresa()
-    {
-        // initialise instance variables
-        x = 0;
+    public ClienteEmpresa(String nombre, String nif, String direccion, String codigoPostal, String localidad, String telefono, String email, String personaContacto) {
+        super(nombre, nif, direccion, codigoPostal, localidad, telefono, email);
+        this.personaContacto = personaContacto;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public String getPersonaContacto() {
+        return personaContacto;
+    }
+
+    public void setPersonaContacto(String personaContacto) {
+        this.personaContacto = personaContacto;
+    }
+
+    @Override public boolean esEmpresa() {
+        return true;
     }
 }

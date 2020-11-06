@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=ArtesanoPorHoras
+comment0.text=\r\n\ Clase\ ArtesanoPorHoras.\ Define\ los\ Artesanos\ que\ trabajan\ por\ horas.\r\n\ @author\ Luis\ Miguel\ Barquillo\ Romero\r\n
+comment1.params=nombre\ nif\ direccion\ codigoPostal\ localidad\ telefono\ antiguedad\ salario\ especialidad\ numHoras
+comment1.target=ArtesanoPorHoras(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.util.Date,\ double,\ constantes.Material,\ int)
+comment2.params=
+comment2.target=int\ getNumHoras()
+comment3.params=numHoras
+comment3.target=void\ setNumHoras(int)
+comment4.params=
+comment4.target=constantes.Condicion\ condicion()
+numComments=5

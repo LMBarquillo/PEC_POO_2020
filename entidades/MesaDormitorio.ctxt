@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=MesaDormitorio
+comment0.text=\r\n\ Clase\ MesaDormitorio.\ Define\ una\ mesa\ de\ tipo\ Dormitorio\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=numTrabajo\ cliente\ ancho\ largo\ madera\ cajones
+comment1.target=MesaDormitorio(int,\ Cliente,\ int,\ int,\ constantes.Madera,\ int)
+comment2.params=
+comment2.target=constantes.Madera\ getMadera()
+comment3.params=madera
+comment3.target=void\ setMadera(constantes.Madera)
+comment4.params=
+comment4.target=int\ getCajones()
+comment5.params=cajones
+comment5.target=void\ setCajones(int)
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

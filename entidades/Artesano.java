@@ -1,35 +1,35 @@
 package entidades;
 
+import constantes.Categoria;
+import constantes.Condicion;
+import constantes.Material;
+
+import java.util.Date;
 
 /**
- * Write a description of class Artesano here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Clase Artesano. Define los empleados que fabrican los muebles
+ * @author Luis Miguel Barquillo Romero
  */
-public class Artesano extends Empleado
+public abstract class Artesano extends Empleado
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private Material especialidad;
+    
+	public Artesano(String nombre, String nif, String direccion, String codigoPostal, String localidad, String telefono, Date antiguedad, double salario, Material especialidad) {
+		super(nombre, nif, direccion, codigoPostal, localidad, telefono, antiguedad, salario);
+		this.especialidad = especialidad;
+	}
 
-    /**
-     * Constructor for objects of class Artesano
-     */
-    public Artesano()
-    {
-        // initialise instance variables
-        x = 0;
-    }
+	public Material getEspecialidad() {
+		return especialidad;
+	}
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+	public void setEspecialidad(Material especialidad) {
+		this.especialidad = especialidad;
+	}
+
+	public abstract Condicion condicion();
+
+	@Override public Categoria categoria() {
+		return Categoria.ARTESANO;
+	}
 }

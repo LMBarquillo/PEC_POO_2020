@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Datos
+comment0.text=\r\n\ Clase\ Datos.\ Solicita\ introducci\u00F3n\ de\ datos\ por\ teclado\ y\ gestiona\ la\ entrada.\r\n\ \r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=br
+comment1.target=Datos(java.io.BufferedReader)
+comment10.params=s
+comment10.target=boolean\ esDecimal(java.lang.String)
+comment11.params=s
+comment11.target=boolean\ esSN(java.lang.String)
+comment2.params=solicitud
+comment2.target=java.lang.String\ pedirString(java.lang.String)
+comment3.params=solicitud\ opcional
+comment3.target=java.lang.String\ pedirString(java.lang.String,\ boolean)
+comment4.params=solicitud
+comment4.target=java.lang.Integer\ pedirEntero(java.lang.String)
+comment5.params=solicitud\ min\ max
+comment5.target=java.lang.Integer\ pedirEntero(java.lang.String,\ int,\ int)
+comment6.params=solicitud
+comment6.target=java.lang.Double\ pedirDecimal(java.lang.String)
+comment7.params=solicitud
+comment7.target=java.lang.Boolean\ pedirBooleano(java.lang.String)
+comment8.params=s\ min\ max
+comment8.target=boolean\ cumpleRango(java.lang.String,\ int,\ int)
+comment9.params=s
+comment9.target=boolean\ esEntero(java.lang.String)
+numComments=12

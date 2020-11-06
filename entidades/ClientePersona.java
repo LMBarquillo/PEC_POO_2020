@@ -2,34 +2,27 @@ package entidades;
 
 
 /**
- * Write a description of class ClientePersona here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Clase ClientePersona. Define a los clientes que son Persona Física
+ * @author Luis Miguel Barquillo Romero
  */
 public class ClientePersona extends Cliente
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    public String skype;    // Ya no se me ocurría qué más campos meter...
 
-    /**
-     * Constructor for objects of class ClientePersona
-     */
-    public ClientePersona()
-    {
-        // initialise instance variables
-        x = 0;
+    public ClientePersona(String nombre, String nif, String direccion, String codigoPostal, String localidad, String telefono, String email, String skype) {
+        super(nombre, nif, direccion, codigoPostal, localidad, telefono, email);
+        this.skype = skype;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public String getSkype() {
+        return skype;
+    }
+
+    public void setSkype(String skype) {
+        this.skype = skype;
+    }
+
+    @Override public boolean esEmpresa() {
+        return false;
     }
 }

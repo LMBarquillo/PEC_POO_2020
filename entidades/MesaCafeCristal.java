@@ -1,35 +1,29 @@
 package entidades;
 
+import constantes.Material;
 
 /**
- * Write a description of class MesaCafeCristal here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Clase MesaCafeCristal. Define una mesa de tipo Café de Cristal
+ * @author Luis Miguel Barquillo
  */
-public class MesaCafeCristal extends Mesa
+public class MesaCafeCristal extends MesaCafe
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    public boolean labrado;
 
-    /**
-     * Constructor for objects of class MesaCafeCristal
-     */
-    public MesaCafeCristal()
-    {
-        // initialise instance variables
-        x = 0;
+    public MesaCafeCristal(int numTrabajo, Cliente cliente, int ancho, int largo, boolean revistero, boolean labrado) {
+        super(numTrabajo, Material.CRISTAL, cliente, ancho, largo, revistero);
+        this.labrado = labrado;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public boolean isLabrado() {
+        return labrado;
+    }
+
+    public void setLabrado(boolean labrado) {
+        this.labrado = labrado;
+    }
+
+    @Override public String toString() {
+        return super.toString() + " de cristal " + (labrado ? "labrado" : "sencillo");
     }
 }

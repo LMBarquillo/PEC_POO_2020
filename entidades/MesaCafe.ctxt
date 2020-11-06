@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=MesaCafe
+comment0.text=\r\n\ Clase\ MesaCafe.\ Define\ una\ mesa\ de\ tipo\ Caf\u00C3\u00A9\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=numTrabajo\ material\ cliente\ ancho\ largo\ revistero
+comment1.target=MesaCafe(int,\ constantes.Material,\ Cliente,\ int,\ int,\ boolean)
+comment2.params=
+comment2.target=boolean\ isRevistero()
+comment3.params=revistero
+comment3.target=void\ setRevistero(boolean)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

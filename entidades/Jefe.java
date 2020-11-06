@@ -1,35 +1,31 @@
 package entidades;
 
+import constantes.Categoria;
+
+import java.util.Date;
 
 /**
- * Write a description of class Jefe here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Clase Jefe. Describe los puestos de responsable de fábrica
+ * @author Luis Miguel Barquillo
  */
 public class Jefe extends Empleado
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private double porcentajeAcciones;
 
-    /**
-     * Constructor for objects of class Jefe
-     */
-    public Jefe()
-    {
-        // initialise instance variables
-        x = 0;
+    public Jefe(String nombre, String nif, String direccion, String codigoPostal, String localidad, String telefono, Date antiguedad, double salario, double porcentajeAcciones) {
+        super(nombre, nif, direccion, codigoPostal, localidad, telefono, antiguedad, salario);
+        this.porcentajeAcciones = porcentajeAcciones;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public double getPorcentajeAcciones() {
+        return porcentajeAcciones;
+    }
+
+    public void setPorcentajeAcciones(double porcentajeAcciones) {
+        this.porcentajeAcciones = porcentajeAcciones;
+    }
+
+    @Override public Categoria categoria() {
+        return Categoria.JEFE;
     }
 }

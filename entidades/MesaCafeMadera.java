@@ -1,35 +1,30 @@
 package entidades;
 
+import constantes.Madera;
+import constantes.Material;
 
 /**
- * Write a description of class MesaCafeMadera here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Clase MesaCafeMadera. Describe las mesas de tipo Café Madera
+ * @Author Luis Miguel Barquillo
  */
-public class MesaCafeMadera extends Mesa
+public class MesaCafeMadera extends MesaCafe
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private Madera madera;
 
-    /**
-     * Constructor for objects of class MesaCafeMadera
-     */
-    public MesaCafeMadera()
-    {
-        // initialise instance variables
-        x = 0;
+    public MesaCafeMadera(int numTrabajo, Cliente cliente, int ancho, int largo, boolean revistero, Madera madera) {
+        super(numTrabajo, Material.MADERA, cliente, ancho, largo, revistero);
+        this.madera = madera;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public Madera getMadera() {
+        return madera;
+    }
+
+    public void setMadera(Madera madera) {
+        this.madera = madera;
+    }
+
+    @Override public String toString() {
+        return super.toString() + " de madera de " + madera.toString();
     }
 }

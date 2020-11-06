@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=Jefe
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Jefe\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=Jefe()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Jefe\r\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-numComments=3
+comment0.text=\r\n\ Clase\ Jefe.\ Describe\ los\ puestos\ de\ responsable\ de\ f\u00E1brica\r\n\ @author\ Luis\ Miguel\ Barquillo\r\n
+comment1.params=nombre\ nif\ direccion\ codigoPostal\ localidad\ telefono\ antiguedad\ salario\ porcentajeAcciones
+comment1.target=Jefe(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.util.Date,\ double,\ double)
+comment2.params=
+comment2.target=double\ getPorcentajeAcciones()
+comment3.params=porcentajeAcciones
+comment3.target=void\ setPorcentajeAcciones(double)
+comment4.params=
+comment4.target=constantes.Categoria\ categoria()
+numComments=5

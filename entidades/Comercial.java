@@ -1,35 +1,31 @@
 package entidades;
 
+import constantes.Categoria;
+
+import java.util.Date;
 
 /**
- * Write a description of class Comercial here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Clase comercial. Describe los empleados responsables de las ventas y contacto a clientes
+ * @author Luis Miguel Barquillo Romero
  */
 public class Comercial extends Empleado
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private double porcentajeComision;
 
-    /**
-     * Constructor for objects of class Comercial
-     */
-    public Comercial()
-    {
-        // initialise instance variables
-        x = 0;
+    public Comercial(String nombre, String nif, String direccion, String codigoPostal, String localidad, String telefono, Date antiguedad, double salario, double porcentajeComision) {
+        super(nombre, nif, direccion, codigoPostal, localidad, telefono, antiguedad, salario);
+        this.porcentajeComision = porcentajeComision;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public double getPorcentajeComision() {
+        return porcentajeComision;
+    }
+
+    public void setPorcentajeComision(double porcentajeComision) {
+        this.porcentajeComision = porcentajeComision;
+    }
+
+    @Override public Categoria categoria() {
+        return Categoria.COMERCIAL;
     }
 }
